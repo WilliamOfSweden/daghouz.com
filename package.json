@@ -1,31 +1,47 @@
 {
-  "name": "gatsby-starter-hello-world",
-  "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
-  "version": "0.1.0",
-  "license": "0BSD",
-  "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "npm run develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "dependencies": {
-    "gatsby": "^3.6.2",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1"
-  },
-  "devDependencies": {
-    "prettier": "2.2.1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-hello-world"
-  },
-  "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+    "name": "daghouz.com",
+    "private": true,
+    "description": "Personal website",
+    "version": "0.1.0",
+    "license": "unlicensed",
+    "scripts": {
+        "build": "gatsby build",
+        "develop": "gatsby develop",
+        "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+        "start": "npm run develop",
+        "serve": "gatsby serve",
+        "clean": "gatsby clean",
+        "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    },
+    "dependencies": {
+        "@fontsource/comfortaa": "^4.4.5",
+        "@material-ui/core": "^4.11.4",
+        "@material-ui/icons": "^4.11.2",
+        "@react-spring/web": "^9.2.3",
+        "gatsby": "^3.6.2",
+        "gatsby-plugin-image": "^1.8.0",
+        "gatsby-plugin-material-ui": "^3.0.1",
+        "gatsby-plugin-react-helmet": "^4.8.0",
+        "gatsby-plugin-sharp": "^3.8.0",
+        "gatsby-plugin-styled-components": "^4.8.0",
+        "gatsby-source-filesystem": "^3.8.0",
+        "gatsby-transformer-sharp": "^3.8.0",
+        "react": "^17.0.1",
+        "react-dom": "^17.0.1",
+        "react-helmet": "^6.1.0",
+        "styled-components": "^5.3.0"
+    },
+    "devDependencies": {
+        "@types/react-helmet": "^6.1.1",
+        "@types/styled-components": "^5.1.10",
+        "babel-plugin-styled-components": "^1.12.0",
+        "prettier": "^2.3.2"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/WilliamOfSweden/daghouz.com"
+    },
+    "bugs": {
+        "url": "https://github.com/WilliamOfSweden/daghouz.com/issues"
+    }
 }
