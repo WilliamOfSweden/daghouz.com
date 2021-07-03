@@ -1,4 +1,11 @@
-import React, { FC, Fragment, JSXElementConstructor, ReactElement } from 'react'
+import React, { 
+    FC,
+    forwardRef,
+    Fragment,
+    JSXElementConstructor,
+    ReactElement,
+    useState 
+} from 'react'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
 import Modal from '@material-ui/core/Modal'
 import Backdrop from '@material-ui/core/Backdrop'
@@ -88,7 +95,7 @@ const useStyles = makeStyles((theme: Theme) =>
 
 interface FadeProps {
 
-    children?: React.ReactElement
+    children?: ReactElement
     in: boolean
     onEnter?: () => {}
     onExited?: () => {}
@@ -97,7 +104,7 @@ interface FadeProps {
 }
 
 
-const Fade = React.forwardRef<HTMLDivElement, FadeProps>(function Fade(props, ref) {
+const Fade = forwardRef<HTMLDivElement, FadeProps>(function Fade(props, ref) {
     
     const { in: open, children, onEnter, onExited, ...other } = props
     const style = useSpring({
@@ -152,7 +159,7 @@ const ModalComponent: FC<Props> = ({ children, buttonText, mobileOnly }) => {
 
     const classes = useStyles()
     
-    const [open, setOpen] = React.useState(false)
+    const [open, setOpen] = useState(false)
 
     const handleOpen = () => {
         
