@@ -27,7 +27,12 @@ const PriceTagIcon: FC = () => {
 
     return (
 
-        <StyledSVG id='e1eaa5f7-9ff6-4e61-ad1b-e71b0b25c5d9' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 177.426 200'>
+        <StyledSVG 
+            data-name='Layer 1'
+            id='e1eaa5f7-9ff6-4e61-ad1b-e71b0b25c5d9'
+            viewBox='0 0 177.426 200'
+            xmlns='http://www.w3.org/2000/svg'
+        >
 
             <path className='b3f9b7aa-84a0-4c8b-b279-ea5b9da51738' d='M174.3,45.755,128.836,2.726a9.961,9.961,0,0,0-13.694,0L69.679,45.755a9.73,9.73,0,0,0-3.11,7.753V186.775a10.016,10.016,0,0,0,10.017,10.016h90.805a10.016,10.016,0,0,0,10.017-10.016V53.508A9.73,9.73,0,0,0,174.3,45.755ZM121.989,57.879a16.243,16.243,0,1,1,16.242-16.242A16.242,16.242,0,0,1,121.989,57.879Z' transform='translate(0 0)'/>
   

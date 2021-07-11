@@ -34,7 +34,12 @@ const ReactLogo: FC = () => {
 
     return (
     
-        <StyledSVG id='ef4f4a65-354b-4048-996f-8a66098d04df' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg'  viewBox='0 0 538.711 100'>
+        <StyledSVG
+            data-name='Layer 1' 
+            id='ef4f4a65-354b-4048-996f-8a66098d04df'
+            viewBox='0 0 538.711 100'
+            xmlns='http://www.w3.org/2000/svg' 
+        >
             
             <g>
     

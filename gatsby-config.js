@@ -1,7 +1,11 @@
 module.exports = {
     siteMetadata: {
-        siteTitle: `William Daghouz | JAMstack Developer`,
+        ogDescription: `I create blazingly fast and artfully appealing websites and progressive web apps.`,
+        ogImageUrl: `https://daghouz.com/banner.png`,
+        ogType: 'website',
         siteDescription: `Personal website for William Daghouz, JAMstack Developer.`,
+        siteTitle: `William Daghouz | JAMstack Developer`,
+        siteUrl: `https://daghouz.com`,
     },
     plugins: [
         `gatsby-plugin-styled-components`,

@@ -24,7 +24,13 @@ const NetlifyLogo: FC = () => {
 
     return (
     
-        <StyledSVG id='a0b633ca-e66b-4e52-947d-51489f7f092f' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' viewBox='0 0 538.711 100'>
+        <StyledSVG
+            data-name='Layer 1'
+            id='a0b633ca-e66b-4e52-947d-51489f7f092f'
+            viewBox='0 0 538.711 100'
+            xmlns='http://www.w3.org/2000/svg'
+            xmlnsXlink='http://www.w3.org/1999/xlink'
+        >
 
             <defs>
 

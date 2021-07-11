@@ -24,7 +24,12 @@ const GraphQLLogo: FC = () => {
 
     return (
     
-        <StyledSVG id='abd44ff3-adac-4088-a215-b565dd26e9a1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 538.711 100'>
+        <StyledSVG 
+            data-name='Layer 1'
+            id='abd44ff3-adac-4088-a215-b565dd26e9a1'
+            viewBox='0 0 538.711 100'
+            xmlns='http://www.w3.org/2000/svg'
+        >
 
             <g id='b90cfc50-455b-4cd1-a3b9-790a152b9209' data-name='Layer 1'>
     

@@ -1,13 +1,13 @@
 import React, { FC } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
-import Box from '@material-ui/core/Box'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
+import Box from '@material-ui/core/Box'
 import Heading from '../../illustrations/heading'
 import Typography from '@material-ui/core/Typography'
-import HeroIllustration from '../../illustrations/heroIllustration'
 import ModalComponent from './modal'
 import ContactForm from './contactForm'
+import HeroIllustration from '../../illustrations/heroIllustration'
 
 
 const useStyles = makeStyles( (theme: Theme) =>
@@ -55,60 +55,56 @@ const Masthead: FC = () => {
 
     return (
 
-        <section className={ classes.heroSection }>
+        <Container className={ classes.heroSection } component='section'>
 
-            <Container>
+            <Grid container>
 
-                <Grid container>
+                <Grid item container alignContent='center' justifyContent='center' xs={ 12 } sm={ 7 } md={ 6 }>
 
-                    <Grid item container alignContent={ 'center' } justify={ 'center' } xs={ 12 } sm={ 7 } md={ 6 }>
+                    <Box maxWidth={ '80ch' } my={ `auto` }>
 
-                        <Box maxWidth={ '80ch' } my={ `auto` }>
+                        <Heading />
 
-                            <Heading />
-
-                            <Typography className={ classes.subheading } component='h1' variant='subtitle1'>
-                                    
-                                JAMstack Developer
+                        <Typography className={ classes.subheading } component='h1' variant='subtitle1'>
                                 
-                            </Typography>
+                            JAMstack Developer
+                            
+                        </Typography>
 
-                            <Typography className={ classes.paragraph } component='p' gutterBottom variant='body1'>
-                                
-                                I create blazingly fast and artfully appealing websites and progressive web apps.
-                                
-                            </Typography>
+                        <Typography className={ classes.paragraph } component='p' gutterBottom variant='body1'>
+                            
+                            I create blazingly fast and artfully appealing websites and progressive web apps.
+                            
+                        </Typography>
 
-                            <ModalComponent buttonText='Contact'>
+                        <ModalComponent buttonText='Contact'>
 
-                                <ContactForm />
+                            <ContactForm />
 
-                            </ModalComponent>
+                        </ModalComponent>
 
-                        </Box>
-
-                    </Grid>
-
-                    <Grid item xs={ 12 } sm={ 5 } md={ 6 }>
-
-                        <HeroIllustration />
-
-                    </Grid>
+                    </Box>
 
                 </Grid>
 
-                <ModalComponent buttonText='Contact' mobileOnly>
+                <Grid item xs={ 12 } sm={ 5 } md={ 6 }>
 
-                    <ContactForm />
+                    <HeroIllustration />
 
-                </ModalComponent>
+                </Grid>
 
-            </Container>
+            </Grid>
+
+            <ModalComponent buttonText='Contact' mobileOnly>
+
+                <ContactForm />
+
+            </ModalComponent>
 
             <ContactForm hidden />
 
-        </section>
-    
+        </Container>
+
     )
 
 }

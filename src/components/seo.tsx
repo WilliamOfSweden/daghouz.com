@@ -24,12 +24,25 @@ const SEO: FC<Props> = ({
         query HeaderQuery {
             site {
                 siteMetadata {
-                    siteTitle
+                    ogDescription
+                    ogImageUrl
+                    ogType
                     siteDescription
+                    siteTitle
+                    siteUrl
                 }
             }
         }
     `)
+
+    const {
+        ogDescription,
+        ogImageUrl,
+        ogType,
+        siteDescription,
+        siteTitle,
+        siteUrl
+    } = data.site.siteMetadata
   
     return (
     
@@ -39,19 +52,19 @@ const SEO: FC<Props> = ({
 
             <meta charSet='UTF-8' />
 
-            <meta name='description' content={ description ? description : data.site.siteMetadata.siteDescription } />
+            <meta name='description' content={ description ? description : siteDescription } />
 
-            <title>{ title ? title : data.site.siteMetadata.siteTitle }</title>
+            <title>{ title ? title : siteTitle }</title>
 
-            <meta property='og:url' content='https://www.daghouz.com' />
+            <meta property='og:url' content={ siteUrl } />
             
-            <meta property='og:type' content='website' />
+            <meta property='og:type' content={ ogType } />
             
-            <meta property='og:title' content='William Daghouz | Frontend Developer' />
+            <meta property='og:title' content={ siteTitle } />
             
-            <meta property='og:description' content='I create blazingly fast and artfully appealing websites and progressive web apps.' />
+            <meta property='og:description' content={ ogDescription } />
             
-            <meta property='og:image' content='https://daghouz.com/website.png' />
+            <meta property='og:image' content={ ogImageUrl } />
 
         </Helmet>
 

@@ -143,7 +143,13 @@ const HeroIllustration: FC = () => {
 
     return (
     
-        <StyledSVG id='f6fca7fd-4079-4d4a-a03d-f4ff9f275e12' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' xmlnsXlink='http://www.w3.org/1999/xlink' viewBox='0 0 1000 973.762'>
+        <StyledSVG
+            data-name='Layer 1'
+            id='f6fca7fd-4079-4d4a-a03d-f4ff9f275e12'
+            viewBox='0 0 1000 973.762'
+            xmlns='http://www.w3.org/2000/svg'
+            xmlnsXlink='http://www.w3.org/1999/xlink'
+        >
             
             <defs>
             

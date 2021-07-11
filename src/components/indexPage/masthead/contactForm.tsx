@@ -2,8 +2,8 @@
 import React, { FC } from 'react'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import styled from 'styled-components'
-import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
+import Button from '@material-ui/core/Button'
 
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -152,7 +152,6 @@ const ContactForm: FC<Props> = ({ hidden }) => {
                 multiline
                 required
                 rows={ 6 }
-                // variant='outlined'
             />
 
             <Button className={ classes.btn } fullWidth name='send' size='large' type='submit' variant='contained' >

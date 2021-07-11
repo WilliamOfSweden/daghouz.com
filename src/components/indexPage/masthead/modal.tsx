@@ -7,10 +7,10 @@ import React, {
     useState 
 } from 'react'
 import { makeStyles, createStyles, Theme } from '@material-ui/core/styles'
-import Modal from '@material-ui/core/Modal'
-import Backdrop from '@material-ui/core/Backdrop'
 import { useSpring, animated } from '@react-spring/web'
 import Button from '@material-ui/core/Button'
+import Modal from '@material-ui/core/Modal'
+import Backdrop from '@material-ui/core/Backdrop'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 import IconButton from '@material-ui/core/IconButton'

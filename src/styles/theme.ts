@@ -1,4 +1,4 @@
-import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles'
+import { createTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
 
 const PALETTE = {
@@ -11,7 +11,7 @@ const PALETTE = {
 }
 
 
-const theme = responsiveFontSizes(createMuiTheme({
+const theme = responsiveFontSizes(createTheme({
 
     overrides: {
 

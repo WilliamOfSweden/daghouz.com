@@ -25,7 +25,12 @@ const TypeScriptLogo: FC = () => {
 
     return (
     
-        <StyledSVG id='b5ebd6c2-103b-4b6f-ab69-fdae04dbfcc3' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 538.711 100'>
+        <StyledSVG
+            data-name='Layer 1'
+            id='b5ebd6c2-103b-4b6f-ab69-fdae04dbfcc3'
+            viewBox='0 0 538.711 100'
+            xmlns='http://www.w3.org/2000/svg'
+        >
             
             <rect className='e0e63445-97bb-41c6-96bc-6f205cf0b0c9' width='100' height='100' rx='9.766'/>
   

@@ -1,73 +1,98 @@
 import React, { FC } from 'react'
-import Box from '@material-ui/core/Box'
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
-import JAMstackLogo from '../../illustrations/jamStackLogo'
-import GatsbyLogo from '../../illustrations/gatsbyLogo'
-import TypeScriptLogo from '../../illustrations/typeScriptLogo'
-import ReactLogo from '../../illustrations/reactLogo'
-import NetlifyLogo from '../../illustrations/netlifyLogo'
-import GraphQLLogo from '../../illustrations/graphQLLogo'
+import TypeScriptLogo from '../../illustrations/brandLogos/typeScriptLogo'
+import ReactLogo from '../../illustrations/brandLogos/reactLogo'
+import GraphQLLogo from '../../illustrations/brandLogos/graphQLLogo'
+import GatsbyLogo from '../../illustrations/brandLogos/gatsbyLogo'
+import JAMstackLogo from '../../illustrations/brandLogos/jamStackLogo'
+import NetlifyLogo from '../../illustrations/brandLogos/netlifyLogo'
+
+
+const useStyles = makeStyles( (theme: Theme) =>
+
+    createStyles({
+
+        container: {
+
+            marginBottom: theme.spacing(15),
+            marginTop: theme.spacing(15),
+
+        },
+
+    })
+
+)
 
 
 const StackSection: FC = () => {
 
+    const classes = useStyles()
+
+    const logos = [
+
+        { 
+            key: 0,
+            component : <TypeScriptLogo />,
+        },
+        { 
+            key: 1,
+            component : <ReactLogo />,
+        },
+        { 
+            key: 2,
+            component : <GraphQLLogo />,
+        },
+        { 
+            key: 3,
+            component : <GatsbyLogo />,
+        },
+        { 
+            key: 4,
+            component : <JAMstackLogo />,
+        },
+        { 
+            key: 5,
+            component : <NetlifyLogo />,
+        },
+    
+    ]
+
     return (
 
-        <Box my={ 15 } component='section'>
+        <Container className={ classes.container } component='section'>
 
-            <Container>
+            <Typography component='h2' variant='h2' align='center'>
 
-                <Typography component='h2' variant='h2' align='center'>
+                Main Tools of Choice
 
-                    Main Tools of Choice
+            </Typography>
 
-                </Typography>
+            <Grid container spacing={ 5 }>
 
-                <Grid container spacing={ 5 }>
+                {
 
-                    <Grid item xs={ 12 } sm={ 6 } md={ 4 }>
+                    logos.map(logo => {
 
-                        <TypeScriptLogo />
+                        return (
 
-                    </Grid>
+                            <Grid item key={ logo.key } xs={ 12 } sm={ 6 } md={ 4 }>
 
-                    <Grid item xs={ 12 } sm={ 6 } md={ 4 }>
+                                { logo.component }
+    
+                            </Grid>
 
-                        <ReactLogo />
+                        )
 
-                    </Grid>
+                    })
 
-                    <Grid item xs={ 12 } sm={ 6 } md={ 4 }>
+                }
 
-                        <GraphQLLogo />
+            </Grid>
 
-                    </Grid>
-
-                    <Grid item xs={ 12 } sm={ 6 } md={ 4 }>
-
-                        <GatsbyLogo />
-
-                    </Grid>
-
-                    <Grid item xs={ 12 } sm={ 6 } md={ 4 }>
-
-                        <JAMstackLogo />
-
-                    </Grid>
-
-                    <Grid item xs={ 12 } sm={ 6 } md={ 4 }>
-
-                        <NetlifyLogo />
-
-                    </Grid>
-
-                </Grid>
-
-            </Container>
-            
-        </Box>
+        </Container>
     
     )
 
