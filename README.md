@@ -13,7 +13,7 @@
 <p>
   <a href="https://www.daghouz.com">
     <img
-      src="https://www.daghouz.com/website.png"
+      src="https://www.daghouz.com/banner.png"
       width="100%"
       alt="Website | William Daghouz"
       title="William Daghouz"

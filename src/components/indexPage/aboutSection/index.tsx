@@ -1,11 +1,14 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
+import Box from '@material-ui/core/Box'
+import theme from '../../../styles/theme'
 import Grid from '@material-ui/core/Grid'
 import { StaticImage } from 'gatsby-plugin-image'
-import Box from '@material-ui/core/Box'
+import { MDXProvider } from '@mdx-js/react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Typography from '@material-ui/core/Typography'
-import theme from '../../../styles/theme'
 
 
 const useStyles = makeStyles( (theme: Theme) =>
@@ -50,7 +53,28 @@ const useStyles = makeStyles( (theme: Theme) =>
 )
 
 
+interface MDXparagraphProps {
+
+    children: ReactNode
+
+}
+
+
+const MDXparagraph: FC<MDXparagraphProps> = ({ children }) => <Typography>{ children }</Typography>
+
+
 const AboutSection: FC = () => {
+
+    const { mdx: { body, frontmatter: { title } } } = useStaticQuery(graphql`
+        query AboutSectionQuery {
+            mdx(fileAbsolutePath: {regex: "/indexPage\/aboutSection\/index/"}) {
+                frontmatter {
+                  title
+                }
+                body
+            }
+        }
+    `)
 
     const classes = useStyles()
 
@@ -90,17 +114,17 @@ const AboutSection: FC = () => {
                             px={ 2 }
                         >
 
-                            <Typography component='h2' variant='h2' paragraph>
-                                    
-                                About me
-                                
-                            </Typography>
+                        <Typography component='h2' variant='h2' paragraph>{ title }</Typography>
 
-                            <Typography component='p' gutterBottom={ false } variant='body1'>
-                                
-                                I'm William Daghouz, a professional freelance web developer living in Norrköping, Sweden. In 2019 I decided to switch careers from law to web development. It's perhaps the best professional decision I've made so far. I now get to work with what i love, mainly creating stunning web experiences. It's the intersection of design and technology that I find so fascinating. Being able to solve problems with efficient and elegant solutions is what drives me in my work life every day.
-                                
-                            </Typography>
+                            <MDXProvider
+                                components={{
+                                    p: MDXparagraph,
+                                }}
+                            >
+
+                                <MDXRenderer>{ body }</MDXRenderer>
+
+                            </MDXProvider>
 
                         </Box>
 
