@@ -33,6 +33,7 @@
 
 - <a href="https://www.gatsbyjs.org/">Gatsby JS</a>
 - <a href="https://www.typescriptlang.org/">TypeScript</a>
+- <a href="https://mdxjs.com/">MDX</a>
 - <a href="https://styled-components.com/">Styled Components</a>
 - <a href="https://material-ui.com/">Material UI</a>
 - <a href="https://www.netlify.com/">Netlify</a>
