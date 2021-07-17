@@ -17,6 +17,12 @@ const useStyles = makeStyles( (theme: Theme) =>
 
         },
 
+        grid: {
+
+            paddingTop: theme.spacing(3.5),
+
+        }
+
     }),
 
 )
@@ -78,7 +84,7 @@ const FeaturesSection: FC = () => {
 
             </Typography>
 
-            <Grid container spacing={ 5 }>
+            <Grid className={ classes.grid } container spacing={ 5 }>
 
                 {
 

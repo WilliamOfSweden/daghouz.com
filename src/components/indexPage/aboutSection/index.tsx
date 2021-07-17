@@ -1,12 +1,11 @@
-import React, { FC, ReactNode } from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import React, { FC } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+import { useStaticQuery, graphql } from 'gatsby'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 import theme from '../../../styles/theme'
 import Grid from '@material-ui/core/Grid'
 import { StaticImage } from 'gatsby-plugin-image'
-import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Typography from '@material-ui/core/Typography'
 
@@ -51,16 +50,6 @@ const useStyles = makeStyles( (theme: Theme) =>
     }),
 
 )
-
-
-interface MDXparagraphProps {
-
-    children: ReactNode
-
-}
-
-
-const MDXparagraph: FC<MDXparagraphProps> = ({ children }) => <Typography>{ children }</Typography>
 
 
 const AboutSection: FC = () => {
@@ -114,17 +103,13 @@ const AboutSection: FC = () => {
                             px={ 2 }
                         >
 
-                        <Typography component='h2' variant='h2' paragraph>{ title }</Typography>
+                            <Typography component='h2' variant='h3'>{ title }</Typography>
 
-                            <MDXProvider
-                                components={{
-                                    p: MDXparagraph,
-                                }}
-                            >
-
-                                <MDXRenderer>{ body }</MDXRenderer>
-
-                            </MDXProvider>
+                            <MDXRenderer>
+                                
+                                { body }
+                                
+                            </MDXRenderer>
 
                         </Box>
 

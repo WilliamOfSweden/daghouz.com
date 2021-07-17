@@ -1,7 +1,7 @@
 import { createTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
 
-const PALETTE = {
+export const PALETTE = {
 
     bg: '#00003f',
     primary: '#8755eb',
@@ -14,6 +14,16 @@ const PALETTE = {
 const theme = responsiveFontSizes(createTheme({
 
     overrides: {
+
+        MuiAppBar: {
+
+            colorDefault: {
+
+                backgroundColor: PALETTE.bg,
+
+            },
+
+        },
 
         MuiButton: {
 
@@ -56,49 +66,41 @@ const theme = responsiveFontSizes(createTheme({
 
         MuiTypography: {
 
-            body1: {
-
-                fontSize: `17px`,
-
-            },
-
             h1: {
 
-                fontFamily: `Comfortaa`,
-                fontSize: `calc(0.9rem + 2.3vw) !important`,
-                fontWeight: 600,
-                letterSpacing: `4px`
+                fontFamily: `Mulish`,
+                fontSize: `calc(0.9rem + 2.8vw) !important`,
+                fontWeight: 900,
+                letterSpacing: `4px`,
+                marginBottom: `2rem`,
 
             },
 
             h2: {
 
-                fontFamily: `Comfortaa`,
-                fontSize: `calc(1.3rem + 1.3vw) !important`,
-                marginBottom: `3rem`,
+                fontFamily: `Mulish`,
+                marginBottom: `2rem`,
+                fontWeight: 600,
 
             },
 
             h3: {
 
-                fontFamily: `Comfortaa`,
-                fontSize: `calc(1rem + 0.67vw) !important`,
+                fontFamily: `Mulish`,
                 fontWeight: 600,
+                marginBottom: `1rem`,
 
             },
 
             h4: {
 
-                fontFamily: `Comfortaa`,
+                fontFamily: `Mulish`,
 
             },
 
-            subtitle1: {
+            paragraph: {
 
-                fontFamily: `Comfortaa`,
-                fontSize: `calc(1.1rem + 1.1vw) !important`,
-                letterSpacing: `3px`,
-                marginBottom: `0.33rem`,
+                marginBottom: `2rem`,
 
             }
 

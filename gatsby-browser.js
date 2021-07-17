@@ -1,1 +1,1 @@
-import "@fontsource/comfortaa"
+import "@fontsource/mulish"

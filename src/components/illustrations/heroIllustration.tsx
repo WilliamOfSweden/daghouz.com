@@ -4,7 +4,15 @@ import styled from 'styled-components'
 
 const StyledSVG = styled.svg`
 
-    width: 100%;
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+
+    @media (min-width: 600px) {
+    
+        width: 100%;
+
+    }
 
     .a18c74e0-7517-4a82-8c88-7cc5558d6cdf {
     

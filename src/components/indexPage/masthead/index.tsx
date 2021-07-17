@@ -1,11 +1,13 @@
 import React, { FC } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
+import { useStaticQuery, graphql } from 'gatsby'
+import useStore from '../../../stores/contactModalStore'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
-import Heading from '../../illustrations/heading'
-import Typography from '@material-ui/core/Typography'
-import ModalComponent from './modal'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Button from '@material-ui/core/Button'
+import ModalComponent from '../../global/animatedModal'
 import ContactForm from './contactForm'
 import HeroIllustration from '../../illustrations/heroIllustration'
 
@@ -14,33 +16,39 @@ const useStyles = makeStyles( (theme: Theme) =>
 
     createStyles({
 
+        desktopOnly: {
+
+            display: 'none',
+
+            [theme.breakpoints.up('sm')]: {
+
+                display: 'inherit',
+
+            },
+
+        },
+
         heroSection: {
 
-            paddingTop: theme.spacing(12),
+            paddingTop: theme.spacing(4),
 
             [theme.breakpoints.up('md')]: {
 
-                paddingTop: theme.spacing(5),
+                paddingTop: theme.spacing(0),
 
             }
 
         },
 
-        paragraph: {
+        mobileOnly: {
 
-            marginBottom: theme.spacing(4),
+            marginTop: theme.spacing(4),
 
             [theme.breakpoints.up('sm')]: {
 
-                marginBottom: theme.spacing(6),
-                
+                display: 'none',
+
             },
-
-        },
-
-        subheading: {
-
-            marginBottom: theme.spacing(4),
 
         },
 
@@ -50,6 +58,27 @@ const useStyles = makeStyles( (theme: Theme) =>
 
 
 const Masthead: FC = () => {
+
+    const { mdx: { body, frontmatter: { buttonText } } } = useStaticQuery(graphql`
+        query MastheadQuery {
+            mdx(fileAbsolutePath: {regex: "/indexPage\/masthead\/index/"}) {
+                frontmatter {
+                    buttonText
+                }
+                body
+            }
+        }
+    `)
+
+    interface StateProps {
+
+        activeContactModal: boolean
+
+        openContactModal: () => void
+
+    }
+
+    const openContactModal = useStore((state: StateProps) => state.openContactModal)
 
     const classes = useStyles()
 
@@ -61,23 +90,27 @@ const Masthead: FC = () => {
 
                 <Grid item container alignContent='center' justifyContent='center' xs={ 12 } sm={ 7 } md={ 6 }>
 
-                    <Box maxWidth={ '80ch' } my={ `auto` }>
+                    <Box maxWidth={ '78ch' } my={ `auto` }>
 
-                        <Heading />
+                        <MDXRenderer>
 
-                        <Typography className={ classes.subheading } component='h1' variant='subtitle1'>
-                                
-                            JAMstack Developer
-                            
-                        </Typography>
+                            { body }
 
-                        <Typography className={ classes.paragraph } component='p' gutterBottom variant='body1'>
-                            
-                            I create blazingly fast and artfully appealing websites and progressive web apps.
-                            
-                        </Typography>
+                        </MDXRenderer>
 
-                        <ModalComponent buttonText='Contact'>
+                        <Button 
+                            className={ classes.desktopOnly }
+                            color='primary'
+                            onClick={ openContactModal }
+                            variant='contained'
+                            size='large'
+                        >
+
+                            { buttonText }
+   
+                        </Button>
+
+                        <ModalComponent>
 
                             <ContactForm />
 
@@ -95,11 +128,18 @@ const Masthead: FC = () => {
 
             </Grid>
 
-            <ModalComponent buttonText='Contact' mobileOnly>
+            <Button 
+                className={ classes.mobileOnly }
+                color='primary'
+                fullWidth
+                onClick={ openContactModal }
+                variant='contained'
+                size='large'
+            >
 
-                <ContactForm />
+                { buttonText }
 
-            </ModalComponent>
+            </Button>
 
             <ContactForm hidden />
 
