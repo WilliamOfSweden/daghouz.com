@@ -1,3 +1,10 @@
+require('dotenv').config({
+
+    path: `.env.${process.env.NODE_ENV}`,
+
+})
+
+
 module.exports = {
     siteMetadata: {
         ogDescription: `I create blazingly fast and artfully appealing websites and progressive web apps.`,
@@ -15,6 +22,13 @@ module.exports = {
                 stylesProvider: {
                     injectFirst: true,
                 },
+            },
+        },
+        {
+            resolve: 'gatsby-source-graphcms',
+            options: {
+                endpoint: process.env.GCMS_ENDPOINT,
+                buildMarkdownNodes: true,
             },
         },
         {
