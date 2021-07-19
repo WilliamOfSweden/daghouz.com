@@ -3,8 +3,10 @@ import styled from 'styled-components'
 
 
 const StyledSVG = styled.svg`
+
     width: 100%;
     display: block;
+
     .not-found-page-cls-1 {
         isolation: isolate;
     }
@@ -171,6 +173,7 @@ const StyledSVG = styled.svg`
     .not-found-page-cls-53 {
         fill: url(#not-found-page-linear-gradient-50);
     }
+
 `
 
 
