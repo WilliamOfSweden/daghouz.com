@@ -46,7 +46,10 @@ const Header: FC = () => {
 
             <Container>
 
-                <Link className={ classes.socialIcons } to='/'>
+                <Link
+                    aria-label='Link to main page.'
+                    className={ classes.socialIcons } to='/'
+                >
 
                     <Logo />
 
