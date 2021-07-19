@@ -31,7 +31,12 @@ module.exports = {
               path: `${__dirname}/content/`,
             },
         },
-        `gatsby-plugin-mdx`,
+        {
+            resolve: `gatsby-plugin-mdx`,
+            options: {
+                extensions: [`.mdx`, `.md`],
+            },
+        },
         `gatsby-plugin-image`,
         `gatsby-plugin-sharp`,
         `gatsby-transformer-sharp`,
