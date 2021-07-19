@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Button from '@material-ui/core/Button'
-import Illustration404 from '../../illustrations/404Illustration'
+import Illustration404 from '../../illustrations/illustration404'
 
 
 const useStyles = makeStyles( (theme: Theme) =>

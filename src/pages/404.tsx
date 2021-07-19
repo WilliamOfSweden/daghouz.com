@@ -2,7 +2,7 @@ import React, { FC, Fragment } from 'react'
 import { PageProps } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import Masthead from '../components/404Page/masthead'
+import Masthead from '../components/404Page/masthead/'
 
 
 const NotFoundPage: FC<PageProps> = () => {
