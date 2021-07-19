@@ -7,7 +7,8 @@ import theme from '../../../styles/theme'
 import Grid from '@material-ui/core/Grid'
 import { StaticImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Typography from '@material-ui/core/Typography'
+import { MDXProvider } from '@mdx-js/react'
+import { MDXheading2small } from '../../layout/mdxProviderComponents/'
 
 
 const useStyles = makeStyles( (theme: Theme) =>
@@ -54,13 +55,16 @@ const useStyles = makeStyles( (theme: Theme) =>
 
 const AboutSection: FC = () => {
 
-    const { mdx: { body, frontmatter: { title } } } = useStaticQuery(graphql`
-        query AboutSectionQuery {
-            mdx(fileAbsolutePath: {regex: "/indexPage\/aboutSection\/index/"}) {
-                frontmatter {
-                  title
+    const { graphCmsPageSection: { content: { markdownNode: { childMdx: { body } } } } } = useStaticQuery(graphql`
+        query IndexPageAboutSectionQuery {
+            graphCmsPageSection(title: {eq: "Index Page - About-section"}) {
+                content {
+                    markdownNode {
+                        childMdx {
+                            body
+                        }
+                    }
                 }
-                body
             }
         }
     `)
@@ -103,13 +107,15 @@ const AboutSection: FC = () => {
                             px={ 2 }
                         >
 
-                            <Typography component='h2' variant='h3'>{ title }</Typography>
+                            <MDXProvider components={ { h2: MDXheading2small } }>
 
-                            <MDXRenderer>
-                                
-                                { body }
-                                
-                            </MDXRenderer>
+                                <MDXRenderer>
+                                    
+                                    { body }
+                                    
+                                </MDXRenderer>
+
+                            </MDXProvider>
 
                         </Box>
 

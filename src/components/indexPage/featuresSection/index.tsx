@@ -1,10 +1,10 @@
-import React, { FC } from 'react'
+import React, { FC, ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
-import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { MDXProvider } from '@mdx-js/react'
 
 
 const useStyles = makeStyles( (theme: Theme) =>
@@ -27,50 +27,44 @@ const useStyles = makeStyles( (theme: Theme) =>
 
 )
 
+interface Props {
+    
+    children: ReactNode
+
+}
+
+
+const GridContainer: FC<Props> = ({ children }) => {
+
+    const classes = useStyles()
+
+    return (
+    
+        <Grid className={ classes.grid } container spacing={ 5 }>{ children }</Grid>
+
+    )
+
+}
+
+
+const GridItem: FC<Props> = ({ children }) => <Grid item xs={ 12 } sm={ 6 }>{ children }</Grid>
+
 
 const FeaturesSection: FC = () => {
 
-    const { allMdx: { edges }, mdx: { frontmatter: { title } } } = useStaticQuery(graphql`
-        query FeaturesSectionQuery {
-            allMdx(
-                sort: {fields: frontmatter___key}
-                filter: {fileAbsolutePath: {regex: "/indexPage\/featuresSection\/features/"}}
-                ) {
-                edges {
-                    node {
-                        frontmatter {
-                            key
-                            title
+    const { graphCmsPageSection: { content: { markdownNode: { childMdx: { body } } } } } = useStaticQuery(graphql`
+        query IndexPageFeaturesSectionQuery {
+            graphCmsPageSection(title: {eq: "Index Page - Features-section"}) {
+                content {
+                    markdownNode {
+                        childMdx {
+                            body
                         }
-                        body
                     }
-                }
-            }
-            mdx(fileAbsolutePath: {regex: "indexPage\/featuresSection\/index.mdx/"}) {
-                frontmatter {
-                  title
                 }
             }
         }
     `)
-
-    interface FeatureProps {
-
-        node: {
-
-            frontmatter: {
-
-                key: number
-
-                title: string
-
-            }
-
-            body: string
-
-        }
-
-    }
 
     const classes = useStyles()
 
@@ -78,35 +72,11 @@ const FeaturesSection: FC = () => {
 
         <Container className={ classes.container } component='section'>
 
-            <Typography align='center' component='h2' variant='h2'>
+            <MDXProvider components={ { ul: GridContainer, li: GridItem } }>
 
-                { title }
+                <MDXRenderer>{ body }</MDXRenderer>
 
-            </Typography>
-
-            <Grid className={ classes.grid } container spacing={ 5 }>
-
-                {
-
-                    edges.map((feature: FeatureProps) => {
-
-                        const { body, frontmatter: { key } } = feature.node
- 
-                        return (
-
-                            <Grid key={ key.toString() } item xs={ 12 } sm={ 6 }>
-
-                                <MDXRenderer>{ body }</MDXRenderer>
-
-                            </Grid>               
-
-                        )
-
-                    })
-
-                }
-
-            </Grid>
+            </MDXProvider>  
 
         </Container>
 
