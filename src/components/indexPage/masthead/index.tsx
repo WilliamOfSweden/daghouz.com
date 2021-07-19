@@ -59,13 +59,17 @@ const useStyles = makeStyles( (theme: Theme) =>
 
 const Masthead: FC = () => {
 
-    const { mdx: { body, frontmatter: { buttonText } } } = useStaticQuery(graphql`
-        query MastheadQuery {
-            mdx(fileAbsolutePath: {regex: "/indexPage\/masthead\/index/"}) {
-                frontmatter {
-                    buttonText
+    const { graphCmsPageSection: { buttonText, content: { markdownNode: { childMdx: { body } } } } } = useStaticQuery(graphql`
+        query IndexPageMastheadQuery {
+            graphCmsPageSection(title: {eq: "Index Page - Masthead"}) {
+                buttonText
+                content {
+                    markdownNode {
+                        childMdx {
+                            body
+                        }
+                    }
                 }
-                body
             }
         }
     `)
