@@ -5,7 +5,7 @@
 </p>
 
 
-<h1 align="center">
+<h1>
     Personal website, blog and portfolio - William Daghouz.
 </h1>
 
