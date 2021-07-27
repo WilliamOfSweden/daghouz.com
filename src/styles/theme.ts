@@ -69,7 +69,7 @@ const theme = responsiveFontSizes(createTheme({
             h1: {
 
                 fontFamily: `Mulish`,
-                fontSize: `calc(0.9rem + 2.8vw) !important`,
+                fontSize: `calc(1rem + 2.4vw) !important`,
                 fontWeight: 900,
                 letterSpacing: `4px`,
                 marginBottom: `2rem`,
@@ -80,14 +80,14 @@ const theme = responsiveFontSizes(createTheme({
 
                 fontFamily: `Mulish`,
                 marginBottom: `2rem`,
-                fontWeight: 600,
+                fontWeight: 800,
 
             },
 
             h3: {
 
                 fontFamily: `Mulish`,
-                fontWeight: 600,
+                fontWeight: 700,
                 marginBottom: `1rem`,
 
             },
