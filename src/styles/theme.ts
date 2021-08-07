@@ -1,138 +1,80 @@
 import { createTheme, responsiveFontSizes } from '@material-ui/core/styles'
 
-
 export const PALETTE = {
-
     bg: '#00003f',
     primary: '#8755eb',
     secondary: `#fff`,
     ternary: '#00bfff',
-
 }
 
-
-const theme = responsiveFontSizes(createTheme({
-
-    overrides: {
-
-        MuiAppBar: {
-
-            colorDefault: {
-
-                backgroundColor: PALETTE.bg,
-
-            },
-
-        },
-
-        MuiButton: {
-
-            containedPrimary: {
-
-                letterSpacing: `2px`,
-                minWidth: `250px`,
-
-            }
-
-        },
-        
-        MuiCssBaseline: {
-            
-            '@global': {
-
-                body: {
-
-                    overflowY: `scroll`,
-                    overflowX: `hidden`,
-
+const theme = responsiveFontSizes(
+    createTheme({
+        overrides: {
+            MuiAppBar: {
+                colorDefault: {
+                    backgroundColor: PALETTE.bg,
                 },
-
-                '#gatsby-focus-wrapper': {
-
-                    overflowX: `hidden`,
-
+            },
+            MuiButton: {
+                containedPrimary: {
+                    letterSpacing: `2px`,
+                    minWidth: `250px`,
                 },
-
-                a: {
-
-                    color: PALETTE.ternary,
-                    textDecoration: `none`,
-    
+            },
+            MuiCssBaseline: {
+                '@global': {
+                    body: {
+                        overflowY: `scroll`,
+                        overflowX: `hidden`,
+                    },
+                    '#gatsby-focus-wrapper': {
+                        overflowX: `hidden`,
+                    },
+                    a: {
+                        color: PALETTE.ternary,
+                        textDecoration: `none`,
+                    },
                 },
-
             },
-
+            MuiTypography: {
+                h1: {
+                    fontFamily: `Mulish`,
+                    fontSize: `calc(1rem + 2.4vw) !important`,
+                    fontWeight: 900,
+                    letterSpacing: `4px`,
+                    marginBottom: `2rem`,
+                },
+                h2: {
+                    fontFamily: `Mulish`,
+                    marginBottom: `2rem`,
+                    fontWeight: 800,
+                },
+                h3: {
+                    fontFamily: `Mulish`,
+                    fontWeight: 700,
+                    marginBottom: `1rem`,
+                },
+                h4: {
+                    fontFamily: `Mulish`,
+                },
+                paragraph: {
+                    marginBottom: `2rem`,
+                },
+            },
         },
-
-        MuiTypography: {
-
-            h1: {
-
-                fontFamily: `Mulish`,
-                fontSize: `calc(1rem + 2.4vw) !important`,
-                fontWeight: 900,
-                letterSpacing: `4px`,
-                marginBottom: `2rem`,
-
+        palette: {
+            type: 'dark',
+            primary: {
+                main: PALETTE.primary,
             },
-
-            h2: {
-
-                fontFamily: `Mulish`,
-                marginBottom: `2rem`,
-                fontWeight: 800,
-
+            secondary: {
+                main: PALETTE.secondary,
             },
-
-            h3: {
-
-                fontFamily: `Mulish`,
-                fontWeight: 700,
-                marginBottom: `1rem`,
-
+            background: {
+                default: PALETTE.bg,
             },
-
-            h4: {
-
-                fontFamily: `Mulish`,
-
-            },
-
-            paragraph: {
-
-                marginBottom: `2rem`,
-
-            }
-
         },
-
-    },
-
-    palette: {
-
-        type: 'dark',
-        
-        primary: {
-
-            main: PALETTE.primary,
-
-        },
-
-        secondary: {
-
-            main: PALETTE.secondary,
-
-        },
-
-        background: {
-
-            default: PALETTE.bg,
-
-        }
-      
-    },
-
-}))
-
+    })
+)
 
 export default theme

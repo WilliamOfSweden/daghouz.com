@@ -4,11 +4,9 @@
   </a>
 </p>
 
-
 <h1>
     Personal website, blog and portfolio - William Daghouz.
 </h1>
-
 
 <p>
   <a href="https://www.daghouz.com">
@@ -24,7 +22,6 @@
 <a href="https://www.daghouz.com">www.daghouz.com</a>
 
 ---
-
 
 ## Tech Stack
 

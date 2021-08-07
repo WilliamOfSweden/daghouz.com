@@ -9,132 +9,93 @@ import Box from '@material-ui/core/Box'
 import IconButton from '@material-ui/core/IconButton'
 import CloseIcon from '@material-ui/icons/Close'
 
-
 const useStyles = makeStyles((theme: Theme) =>
-
     createStyles({
-
         box: {
-
             backgroundColor: theme.palette.primary.main,
-
         },
-
         container: {
-
             '&:focus': {
- 
-                outline: `none`, 
-            
+                outline: `none`,
             },
-
         },
-
         icon: {
-
             fill: theme.palette.secondary.main,
-
         },
-
         iconButton: {
-
             display: `flex`,
             marginRight: '-16px',
-
         },
-
         modal: {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
         },
-
-    }),
-
+    })
 )
 
-
 interface Props {
-
     children: ReactElement<any, string | JSXElementConstructor<any>> | undefined
-
 }
 
-
 const ModalComponent: FC<Props> = ({ children }) => {
-
     const classes = useStyles()
 
     interface StateProps {
-
         activeContactModal: boolean
-
         closeContactModal: () => void
-
     }
 
-    const activeContactModal = useStore((state: StateProps) => state.activeContactModal)
+    const activeContactModal = useStore(
+        (state: StateProps) => state.activeContactModal
+    )
 
-    const closeContactModal = useStore((state: StateProps) => state.closeContactModal)
+    const closeContactModal = useStore(
+        (state: StateProps) => state.closeContactModal
+    )
 
     return (
-
         <Modal
             aria-labelledby='spring-modal-title'
             aria-describedby='spring-modal-description'
-            className={ classes.modal }
-            open={ activeContactModal }
-            onClose={ closeContactModal }
+            className={classes.modal}
+            open={activeContactModal}
+            onClose={closeContactModal}
             closeAfterTransition
-            BackdropComponent={ Backdrop }
+            BackdropComponent={Backdrop}
             BackdropProps={{
                 timeout: 500,
             }}
         >
-
-            <Container className={ classes.container } maxWidth='sm'>
-            
-                <Fade in={ activeContactModal }>
-
+            <Container className={classes.container} maxWidth='sm'>
+                <Fade in={activeContactModal}>
                     <Box
                         borderRadius='10px'
-                        className={ classes.box }
-                        pb={ 5 }
-                        pt={ 1 }
-                        px={ 5 }
+                        className={classes.box}
+                        pb={5}
+                        pt={1}
+                        px={5}
                         width='100%'
                     >
-
                         <Box
                             display='flex'
                             justifyContent='flex-end'
                             width='100%'
                         >
-
                             <IconButton
-                                className={ classes.iconButton }
-                                onClick={ closeContactModal }
+                                className={classes.iconButton}
+                                onClick={closeContactModal}
                             >
-
-                                <CloseIcon className={ classes.icon } />
-
+                                <CloseIcon className={classes.icon} />
                             </IconButton>
-
                         </Box>
 
-                        { children }
-
+                        {children}
                     </Box>
-
                 </Fade>
-
             </Container>
-        
         </Modal>
-
     )
-
 }
-
 
 export default ModalComponent

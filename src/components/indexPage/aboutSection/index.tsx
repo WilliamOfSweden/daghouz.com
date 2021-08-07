@@ -10,54 +10,40 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXheading2small } from '../../layout/mdxProviderComponents/'
 
-
-const useStyles = makeStyles( (theme: Theme) =>
-
+const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-
         container: {
-
             marginTop: theme.spacing(15),
-
         },
-
         flexContainer: {
-
             [theme.breakpoints.up('sm')]: {
-
                 flexDirection: 'row-reverse',
-                
             },
-
         },
-
         flexItem: {
-
             [theme.breakpoints.up('sm')]: {
-            
                 padding: theme.spacing(5),
-
-            }
-
+            },
         },
-
         imageWrapper: {
-
             display: 'flex',
             alignItems: 'center',
-
-        }
-
-    }),
-
+        },
+    })
 )
 
-
 const AboutSection: FC = () => {
-
-    const { graphCmsPageSection: { content: { markdownNode: { childMdx: { body } } } } } = useStaticQuery(graphql`
+    const {
+        graphCmsPageSection: {
+            content: {
+                markdownNode: {
+                    childMdx: { body },
+                },
+            },
+        },
+    } = useStaticQuery(graphql`
         query IndexPageAboutSectionQuery {
-            graphCmsPageSection(title: {eq: "Index Page - About-section"}) {
+            graphCmsPageSection(title: { eq: "Index Page - About-section" }) {
                 content {
                     markdownNode {
                         childMdx {
@@ -72,64 +58,45 @@ const AboutSection: FC = () => {
     const classes = useStyles()
 
     return (
-            
-        <Container className={ classes.container } component='section'>
-
-            <Box borderRadius={ 15 } bgcolor={ theme.palette.primary.main } py={ 2 }>
-
-                <Grid className={ classes.flexContainer } container>
-
-                    <Grid className={ classes.imageWrapper } item xs={ 12 } sm={ 5 } md={ 6 }>
-
-                        <Box borderRadius={ 15 } overflow='hidden' width='100%'>
-
+        <Container className={classes.container} component='section'>
+            <Box borderRadius={15} bgcolor={theme.palette.primary.main} py={2}>
+                <Grid className={classes.flexContainer} container>
+                    <Grid
+                        className={classes.imageWrapper}
+                        item
+                        xs={12}
+                        sm={5}
+                        md={6}
+                    >
+                        <Box borderRadius={15} overflow='hidden' width='100%'>
                             <StaticImage
                                 src='../../../images/space.png'
                                 alt='Building'
                                 loading='eager'
-                                formats={ ['auto', 'webp', 'avif'] }
+                                formats={['auto', 'webp', 'avif']}
                                 placeholder='none'
                                 layout='fullWidth'
                             />
-
                         </Box>
-
                     </Grid>
-
-                    <Grid item xs={ 12 } sm={ 7 } md={ 6 }>
-
+                    <Grid item xs={12} sm={7} md={6}>
                         <Box
-                            className={ classes.flexItem }
+                            className={classes.flexItem}
                             display='flex'
                             flexDirection='column'
                             height='100%'
                             justifyContent='center'
-                            px={ 2 }
+                            px={2}
                         >
-
-                            <MDXProvider components={ { h2: MDXheading2small } }>
-
-                                <MDXRenderer>
-                                    
-                                    { body }
-                                    
-                                </MDXRenderer>
-
+                            <MDXProvider components={{ h2: MDXheading2small }}>
+                                <MDXRenderer>{body}</MDXRenderer>
                             </MDXProvider>
-
                         </Box>
-
                     </Grid>
-
                 </Grid>
-
             </Box>
-
         </Container>
-    
     )
-
 }
-
 
 export default AboutSection
