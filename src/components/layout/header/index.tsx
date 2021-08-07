@@ -31,40 +31,42 @@ const Header: FC = () => {
             position='static'
         >
             <Container>
-                <Link
-                    aria-label='Link to main page.'
-                    className={classes.socialIcons}
-                    to='/'
-                >
-                    <Logo />
-                </Link>
-                <a
-                    aria-label='Link to Linkedin account.'
-                    className={classes.socialIcons}
-                    href='https://linkedin.com/in/william-daghouz/'
-                    rel='noreferrer noopener'
-                    target='_blank'
-                >
-                    <LinkedInIcon />
-                </a>
-                <a
-                    aria-label='Link to GitHub account.'
-                    className={classes.socialIcons}
-                    href='https://github.com/WilliamOfSweden/'
-                    rel='noreferrer noopener'
-                    target='_blank'
-                >
-                    <GitHubIcon />
-                </a>
-                <a
-                    aria-label='Link to Twitter account.'
-                    className={classes.socialIcons}
-                    href='https://twitter.com/WilliamDaghouz/'
-                    rel='noreferrer noopener'
-                    target='_blank'
-                >
-                    <TwitterIcon />
-                </a>
+                <nav>
+                    <Link
+                        aria-label='Link to main page.'
+                        className={classes.socialIcons}
+                        to='/'
+                    >
+                        <Logo />
+                    </Link>
+                    <a
+                        aria-label='Link to Linkedin account.'
+                        className={classes.socialIcons}
+                        href='https://linkedin.com/in/william-daghouz/'
+                        rel='noreferrer noopener'
+                        target='_blank'
+                    >
+                        <LinkedInIcon />
+                    </a>
+                    <a
+                        aria-label='Link to GitHub account.'
+                        className={classes.socialIcons}
+                        href='https://github.com/WilliamOfSweden/'
+                        rel='noreferrer noopener'
+                        target='_blank'
+                    >
+                        <GitHubIcon />
+                    </a>
+                    <a
+                        aria-label='Link to Twitter account.'
+                        className={classes.socialIcons}
+                        href='https://twitter.com/WilliamDaghouz/'
+                        rel='noreferrer noopener'
+                        target='_blank'
+                    >
+                        <TwitterIcon />
+                    </a>
+                </nav>
             </Container>
         </AppBar>
     )
