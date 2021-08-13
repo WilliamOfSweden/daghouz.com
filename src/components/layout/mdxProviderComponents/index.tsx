@@ -10,7 +10,9 @@ interface Props {
 }
 
 const MDXheading1: FC<Props> = ({ children }) => (
-    <Typography variant='h1'>{children}</Typography>
+    <Typography component='h1' variant='h2' style={{ fontWeight: 900 }}>
+        {children}
+    </Typography>
 )
 
 const MDXheading2: FC<Props> = ({ children }) => (
