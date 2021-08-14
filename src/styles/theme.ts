@@ -37,6 +37,12 @@ const theme = responsiveFontSizes(
                 },
             },
             MuiTypography: {
+                h1: {
+                    fontFamily: `Mulish`,
+                    fontWeight: 900,
+                    letterSpacing: `4px`,
+                    marginBottom: `2rem`,
+                },
                 h2: {
                     fontFamily: `Mulish`,
                     marginBottom: `2rem`,
