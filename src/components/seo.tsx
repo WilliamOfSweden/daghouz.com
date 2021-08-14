@@ -40,7 +40,7 @@ const SEO: FC<Props> = ({ description, title }) => {
                 name='description'
                 content={description ? description : siteDescription}
             />
-            <title>{title ? title : siteTitle}</title>
+            <title>{title ? `William Daghouz | ${title}` : siteTitle}</title>
             <meta property='og:url' content={siteUrl} />
             <meta property='og:type' content={ogType} />
             <meta property='og:title' content={siteTitle} />

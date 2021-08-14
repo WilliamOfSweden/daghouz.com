@@ -8,7 +8,7 @@ module.exports = {
         ogImageUrl: `https://daghouz.com/banner.png`,
         ogType: 'website',
         siteDescription: `Personal website for William Daghouz, JAMstack Developer.`,
-        siteTitle: `William Daghouz | JAMstack Developer`,
+        siteTitle: `William Daghouz | Full Stack Web Developer`,
         siteUrl: `https://daghouz.com`,
     },
     plugins: [
