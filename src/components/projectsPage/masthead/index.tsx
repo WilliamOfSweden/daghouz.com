@@ -8,7 +8,6 @@ import Box from '@material-ui/core/Box'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Button from '@material-ui/core/Button'
 import MyCanvas from './canvas'
-import { Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
@@ -26,7 +25,6 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         mobileOnly: {
             marginTop: theme.spacing(4),
-
             [theme.breakpoints.up('sm')]: {
                 display: 'none',
             },
@@ -37,7 +35,6 @@ const useStyles = makeStyles((theme: Theme) =>
 const Masthead: FC = () => {
     const {
         graphCmsPageSection: {
-            // buttonText,
             content: {
                 markdownNode: {
                     childMdx: { body },
