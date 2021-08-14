@@ -55,6 +55,8 @@ const theme = responsiveFontSizes(
                 },
                 h4: {
                     fontFamily: `Mulish`,
+                    fontWeight: 700,
+                    marginBottom: `1rem`,
                 },
                 paragraph: {
                     marginBottom: `2rem`,
