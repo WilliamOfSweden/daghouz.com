@@ -18,7 +18,7 @@ const TorusComponent: FC = () => {
             castShadow
             ref={mesh}
             args={[1.5, 0.75, 24, 24]}
-            position={[5, 0, 0]}
+            position={[7, 0, 0]}
         >
             <meshStandardMaterial
                 color='#000055'

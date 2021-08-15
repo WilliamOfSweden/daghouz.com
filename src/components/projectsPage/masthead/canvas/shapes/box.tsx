@@ -18,7 +18,7 @@ const BoxComponent: FC = () => {
             ref={mesh}
             radius={0.3}
             args={[2, 2, 2]}
-            position={[3, 0, -8]}
+            position={[5, 0, -8]}
         >
             <meshStandardMaterial
                 color='darkorange'
