@@ -13,22 +13,27 @@ const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         btn: {
             [theme.breakpoints.up('sm')]: {
-                width: `20px !important`,
+                width: `initial`,
             },
         },
         projectWrapper: {
-            marginBottom: theme.spacing(5),
-            marginTop: theme.spacing(15),
+            marginBottom: theme.spacing(10),
             '&:nth-child(odd)': {
                 flexDirection: `row-reverse`,
             },
+            [theme.breakpoints.up('md')]: {
+                marginBottom: theme.spacing(20),
+            },
         },
-        image: {
-            borderRadius: `10px`,
+        img: {
+            '& > picture > img': {
+                borderRadius: `10px`,
+            },
         },
         textWrapper: {
-            [theme.breakpoints.down('md')]: {
-                paddingTop: `0 !important`,
+            paddingTop: `0 !important`,
+            [theme.breakpoints.up('md')]: {
+                paddingTop: `1.6rem !important`,
             },
         },
     })
@@ -95,13 +100,7 @@ const ProjectsSection: FC = () => {
                         container
                         spacing={8}
                     >
-                        <Grid
-                            container
-                            alignContent='center'
-                            item
-                            xs={12}
-                            md={6}
-                        >
+                        <Grid item xs={12} md={6}>
                             <a
                                 aria-label='Link to project website.'
                                 href={`https://${project.node.projectLink}`}
@@ -109,7 +108,7 @@ const ProjectsSection: FC = () => {
                                 target='_blank'
                             >
                                 <GatsbyImage
-                                    className={classes.image}
+                                    className={classes.img}
                                     alt={project.node.imageAlt}
                                     image={project.node.image.gatsbyImageData}
                                 />
@@ -117,8 +116,6 @@ const ProjectsSection: FC = () => {
                         </Grid>
                         <Grid
                             className={classes.textWrapper}
-                            container
-                            alignContent='center'
                             item
                             xs={12}
                             md={6}

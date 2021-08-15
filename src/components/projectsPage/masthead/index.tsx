@@ -21,6 +21,7 @@ const useStyles = makeStyles((theme: Theme) =>
             paddingTop: theme.spacing(4),
             [theme.breakpoints.up('md')]: {
                 paddingTop: theme.spacing(0),
+                marginBottom: theme.spacing(10),
             },
         },
         mobileOnly: {
