@@ -11,12 +11,6 @@ import MyCanvas from './canvas'
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
-        desktopOnly: {
-            display: 'none',
-            [theme.breakpoints.up('sm')]: {
-                display: 'inherit',
-            },
-        },
         heroSection: {
             paddingTop: theme.spacing(4),
             [theme.breakpoints.up('sm')]: {
@@ -24,12 +18,6 @@ const useStyles = makeStyles((theme: Theme) =>
             },
             [theme.breakpoints.up('md')]: {
                 paddingTop: theme.spacing(0),
-            },
-        },
-        mobileOnly: {
-            marginTop: theme.spacing(4),
-            [theme.breakpoints.up('sm')]: {
-                display: 'none',
             },
         },
     })
@@ -83,15 +71,6 @@ const Masthead: FC = () => {
                 >
                     <Box maxWidth={'78ch'} my={`auto`}>
                         <MDXRenderer>{body}</MDXRenderer>
-                        <Button
-                            className={classes.desktopOnly}
-                            color='primary'
-                            onClick={openContactModal}
-                            variant='contained'
-                            size='large'
-                        >
-                            {'Contact Me'}
-                        </Button>
                     </Box>
                 </Grid>
                 <Grid item xs={12} sm={5} md={6}>
