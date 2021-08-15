@@ -1,4 +1,4 @@
-import React, { FC, Suspense } from 'react'
+import React, { FC } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { softShadows } from '@react-three/drei'
 import SphereComponent from './shapes/sphere'
@@ -41,14 +41,12 @@ const MyCanvas: FC = () => {
                 intensity={2.5}
             />
             <pointLight position={[0, -10, 0]} intensity={1.5} />
-            <Suspense fallback={null}>
-                <group position={[0, -4, 0]}>
-                    <PlaneComponent />
-                    <SphereComponent />
-                    <BoxComponent />
-                    <TorusComponent />
-                </group>
-            </Suspense>
+            <group position={[0, -4, 0]}>
+                <PlaneComponent />
+                <SphereComponent />
+                <BoxComponent />
+                <TorusComponent />
+            </group>
         </Canvas>
     )
 }
