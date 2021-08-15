@@ -19,9 +19,11 @@ const useStyles = makeStyles((theme: Theme) =>
         },
         heroSection: {
             paddingTop: theme.spacing(4),
+            [theme.breakpoints.up('sm')]: {
+                marginBottom: theme.spacing(10),
+            },
             [theme.breakpoints.up('md')]: {
                 paddingTop: theme.spacing(0),
-                marginBottom: theme.spacing(10),
             },
         },
         mobileOnly: {

@@ -42,7 +42,7 @@ const MyCanvas: FC = () => {
             />
             <pointLight position={[0, -10, 0]} intensity={1.5} />
             <Suspense fallback={null}>
-                <group position={[0, -5, 0]}>
+                <group position={[0, -4, 0]}>
                     <PlaneComponent />
                     <SphereComponent />
                     <BoxComponent />

@@ -10,6 +10,16 @@ module.exports = {
         siteDescription: `Personal website for William Daghouz, JAMstack Developer.`,
         siteTitle: `William Daghouz | Full Stack Web Developer`,
         siteUrl: `https://daghouz.com`,
+        navLinks: [
+            {
+                name: 'Home',
+                link: '/',
+            },
+            {
+                name: 'Projects',
+                link: '/projects',
+            },
+        ],
     },
     plugins: [
         `gatsby-plugin-styled-components`,
