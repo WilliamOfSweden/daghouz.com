@@ -5,11 +5,9 @@ import { Torus } from '@react-three/drei'
 const TorusComponent: FC = () => {
     const mesh = useRef<THREE.Mesh>(null!)
 
-    useFrame((state, delta) => {
-        // mesh.current.rotation.y += args[1]
-        // mesh.current.rotation.x += args[1]
-        mesh.current.rotation.y = state.clock.getElapsedTime()
-        mesh.current.rotation.x = state.clock.getElapsedTime()
+    useFrame(state => {
+        mesh.current.rotation.y = state.clock.getElapsedTime() / 2
+        mesh.current.rotation.x = state.clock.getElapsedTime() / 3
     })
 
     return (
