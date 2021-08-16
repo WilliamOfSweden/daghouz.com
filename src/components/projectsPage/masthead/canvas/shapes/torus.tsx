@@ -1,16 +1,15 @@
-import React, { FC, useMemo, useRef } from 'react'
+import React, { FC, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Torus } from '@react-three/drei'
 
 const TorusComponent: FC = () => {
     const mesh = useRef<THREE.Mesh>(null!)
-    const factor = useMemo(() => 0.5 + Math.random(), [])
 
-    useFrame(state => {
-        const t = 1 + Math.sin(state.clock.getElapsedTime() * factor) / 5
-        mesh.current.position.y = t
-        mesh.current.rotation.y += t / 1000
-        mesh.current.rotation.x += t / 1000
+    useFrame((state, delta) => {
+        // mesh.current.rotation.y += args[1]
+        // mesh.current.rotation.x += args[1]
+        mesh.current.rotation.y = state.clock.getElapsedTime()
+        mesh.current.rotation.x = state.clock.getElapsedTime()
     })
 
     return (

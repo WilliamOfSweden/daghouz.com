@@ -1,14 +1,13 @@
-import React, { FC, useRef, useMemo } from 'react'
+import React, { FC, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Sphere } from '@react-three/drei'
 
 const SphereComponent: FC = () => {
     const mesh = useRef<THREE.Mesh>(null!)
-    const factor = useMemo(() => 0.5 + Math.random(), [])
 
     useFrame(state => {
-        const t = 1 + Math.sin(state.clock.getElapsedTime() * factor) / 5
-        mesh.current.position.y = t * 2 + 1.5
+        mesh.current.position.y =
+            Math.sin(state.clock.getElapsedTime() * 0.8) + 3
     })
 
     return (

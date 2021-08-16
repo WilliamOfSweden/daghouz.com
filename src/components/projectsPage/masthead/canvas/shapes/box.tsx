@@ -1,15 +1,14 @@
-import React, { FC, useRef, useMemo } from 'react'
+import React, { FC, useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { RoundedBox } from '@react-three/drei'
 
 const BoxComponent: FC = () => {
     const mesh = useRef<THREE.Mesh>(null!)
-    const factor = useMemo(() => 0.5 + Math.random(), [])
 
     useFrame(state => {
-        const t = 1 + Math.sin(state.clock.getElapsedTime() * factor) / 5
-        mesh.current.position.y = t * 2 + 8
-        mesh.current.rotation.z = t + 10
+        mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) + 7.5
+        mesh.current.rotation.z = state.clock.getElapsedTime()
+        mesh.current.rotation.y = Math.sin(state.clock.getElapsedTime())
     })
 
     return (
