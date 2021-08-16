@@ -12,7 +12,7 @@ import TwitterIcon from '../../illustrations/icons/social/twitterIcon'
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({
         activeLink: {
-            color: `#ddd!important`,
+            color: `#fff !important`,
         },
         desktopOnly: {
             display: `none`,
@@ -21,11 +21,14 @@ const useStyles = makeStyles((theme: Theme) =>
             },
         },
         link: {
-            color: `#fff`,
-            fontSize: `1rem`,
+            color: `#ddd`,
+            fontFamily: `Mulish`,
+            fontSize: `0.8rem`,
+            letterSpacing: `1px`,
             marginLeft: `3rem`,
+            textTransform: `uppercase`,
             '&:hover': {
-                textDecoration: `underline`,
+                color: `#fff`,
             },
         },
         mainHeader: {
