@@ -1,12 +1,10 @@
 import React, { FC } from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { useStaticQuery, graphql } from 'gatsby'
-import useStore from '../../../stores/contactModalStore'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import Button from '@material-ui/core/Button'
 import MyCanvas from './canvas'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -45,15 +43,6 @@ const Masthead: FC = () => {
             }
         }
     `)
-
-    interface StateProps {
-        activeContactModal: boolean
-        openContactModal: () => void
-    }
-
-    const openContactModal = useStore(
-        (state: StateProps) => state.openContactModal
-    )
 
     const classes = useStyles()
 
