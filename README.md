@@ -1,11 +1,5 @@
-<p align="center">
-  <a href="https://www.daghouz.com">
-    <img alt="William Daghouz | Logo" src="https://www.daghouz.com/logo.svg" width="60" />
-  </a>
-</p>
-
 <h1>
-    Personal website, blog and portfolio - William Daghouz.
+    Personal website & portfolio - William Daghouz.
 </h1>
 
 <p>
@@ -21,7 +15,7 @@
 
 <a href="https://www.daghouz.com">www.daghouz.com</a>
 
----
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3bbc070d-35c3-40e4-b7b1-f1ec825bdf9c/deploy-status)](https://app.netlify.com/sites/daghouz/deploys)
 
 ## Tech Stack
 
