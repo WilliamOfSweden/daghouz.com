@@ -7,19 +7,19 @@ import Header from './header'
 import MDXProviderComponentsObject from './mdxProviderComponents/'
 
 interface Props {
-    children: ReactNode
+  children: ReactNode
 }
 
 const Layout: FC<Props> = ({ children }) => {
-    return (
-        <ThemeProvider theme={theme}>
-            <CssBaseline />
-            <Header />
-            <MDXProvider components={MDXProviderComponentsObject}>
-                <main>{children}</main>
-            </MDXProvider>
-        </ThemeProvider>
-    )
+  return (
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <Header />
+      <MDXProvider components={MDXProviderComponentsObject}>
+        <main>{children}</main>
+      </MDXProvider>
+    </ThemeProvider>
+  )
 }
 
 export default Layout

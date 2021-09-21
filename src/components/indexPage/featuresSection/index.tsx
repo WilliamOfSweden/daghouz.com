@@ -7,70 +7,68 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 
 const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        container: {
-            marginTop: theme.spacing(20),
-        },
-        grid: {
-            paddingTop: theme.spacing(3.5),
-        },
-    })
+  createStyles({
+    container: {
+      marginTop: theme.spacing(20),
+    },
+    grid: {
+      paddingTop: theme.spacing(3.5),
+    },
+  })
 )
 
 interface Props {
-    children: ReactNode
+  children: ReactNode
 }
 
 const GridContainer: FC<Props> = ({ children }) => {
-    const classes = useStyles()
+  const classes = useStyles()
 
-    return (
-        <Grid className={classes.grid} container spacing={5}>
-            {children}
-        </Grid>
-    )
+  return (
+    <Grid className={classes.grid} container spacing={5}>
+      {children}
+    </Grid>
+  )
 }
 
 const GridItem: FC<Props> = ({ children }) => (
-    <Grid item xs={12} sm={6}>
-        {children}
-    </Grid>
+  <Grid item xs={12} sm={6}>
+    {children}
+  </Grid>
 )
 
 const FeaturesSection: FC = () => {
-    const {
-        graphCmsPageSection: {
-            content: {
-                markdownNode: {
-                    childMdx: { body },
-                },
-            },
+  const {
+    graphCmsPageSection: {
+      content: {
+        markdownNode: {
+          childMdx: { body },
         },
-    } = useStaticQuery(graphql`
-        query IndexPageFeaturesSectionQuery {
-            graphCmsPageSection(
-                title: { eq: "Index Page - Features-section" }
-            ) {
-                content {
-                    markdownNode {
-                        childMdx {
-                            body
-                        }
-                    }
-                }
+      },
+    },
+  } = useStaticQuery(graphql`
+    query IndexPageFeaturesSectionQuery {
+      graphCmsPageSection(title: { eq: "Index Page - Features-section" }) {
+        content {
+          markdownNode {
+            childMdx {
+              body
             }
+          }
         }
-    `)
+      }
+    }
+  `)
 
-    const classes = useStyles()
+  const classes = useStyles()
 
-    return (
-        <Container className={classes.container} component='section'>
-            <MDXProvider components={{ ul: GridContainer, li: GridItem }}>
-                <MDXRenderer>{body}</MDXRenderer>
-            </MDXProvider>
-        </Container>
-    )
+  return (
+    <Container className={classes.container} component='section'>
+      <MDXProvider components={{ ul: GridContainer, li: GridItem }}>
+        <MDXRenderer>{body}</MDXRenderer>
+      </MDXProvider>
+    </Container>
+  )
 }
 
 export default FeaturesSection

@@ -10,146 +10,138 @@ import Button from '@material-ui/core/Button'
 import OpenInNewIcon from '@material-ui/icons/OpenInNew'
 
 const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        btn: {
-            [theme.breakpoints.up('sm')]: {
-                width: `initial`,
-            },
-        },
-        projectWrapper: {
-            marginBottom: theme.spacing(10),
-            '&:nth-child(odd)': {
-                flexDirection: `row-reverse`,
-            },
-            [theme.breakpoints.up('md')]: {
-                marginBottom: theme.spacing(20),
-            },
-        },
-        img: {
-            '& > picture > img': {
-                borderRadius: `10px`,
-            },
-        },
-        textWrapper: {
-            paddingTop: `0 !important`,
-            [theme.breakpoints.up('md')]: {
-                paddingTop: `1.6rem !important`,
-            },
-        },
-    })
+  createStyles({
+    btn: {
+      [theme.breakpoints.up('sm')]: {
+        width: `initial`,
+      },
+    },
+    projectWrapper: {
+      marginBottom: theme.spacing(10),
+      '&:nth-child(odd)': {
+        flexDirection: `row-reverse`,
+      },
+      [theme.breakpoints.up('md')]: {
+        marginBottom: theme.spacing(20),
+      },
+    },
+    img: {
+      '& > picture > img': {
+        borderRadius: `10px`,
+      },
+    },
+    textWrapper: {
+      paddingTop: `0 !important`,
+      [theme.breakpoints.up('md')]: {
+        paddingTop: `1.6rem !important`,
+      },
+    },
+  })
 )
 
 interface DataProps {
-    allGraphCmsProject: {
-        edges: {
-            node: {
-                clientName: string
-                imageAlt: string
-                description: {
-                    markdownNode: {
-                        childMdx: {
-                            body: string
-                        }
-                    }
-                }
-                image: {
-                    gatsbyImageData: IGatsbyImageData
-                }
-                projectLink: string
+  allGraphCmsProject: {
+    edges: {
+      node: {
+        clientName: string
+        imageAlt: string
+        description: {
+          markdownNode: {
+            childMdx: {
+              body: string
             }
-        }[]
-    }
+          }
+        }
+        image: {
+          gatsbyImageData: IGatsbyImageData
+        }
+        projectLink: string
+      }
+    }[]
+  }
 }
 
 const ProjectsSection: FC = () => {
-    const {
-        allGraphCmsProject: { edges },
-    } = useStaticQuery<DataProps>(graphql`
-        query ProjectsPageProjectsSectionQuery {
-            allGraphCmsProject {
-                edges {
-                    node {
-                        clientName
-                        imageAlt
-                        description {
-                            markdownNode {
-                                childMdx {
-                                    body
-                                }
-                            }
-                        }
-                        image {
-                            gatsbyImageData
-                        }
-                        projectLink
-                    }
+  const {
+    allGraphCmsProject: { edges },
+  } = useStaticQuery<DataProps>(graphql`
+    query ProjectsPageProjectsSectionQuery {
+      allGraphCmsProject {
+        edges {
+          node {
+            clientName
+            imageAlt
+            description {
+              markdownNode {
+                childMdx {
+                  body
                 }
+              }
             }
+            image {
+              gatsbyImageData
+            }
+            projectLink
+          }
         }
-    `)
+      }
+    }
+  `)
 
-    const classes = useStyles()
+  const classes = useStyles()
 
-    return (
-        <Container component='section'>
-            {edges.map(project => {
-                return (
-                    <Grid
-                        key={project.node.clientName}
-                        className={classes.projectWrapper}
-                        container
-                        spacing={8}
-                    >
-                        <Grid item xs={12} md={6}>
-                            <a
-                                aria-label='Link to project website.'
-                                href={`https://${project.node.projectLink}`}
-                                rel='noreferrer noopener'
-                                target='_blank'
-                            >
-                                <GatsbyImage
-                                    className={classes.img}
-                                    alt={project.node.imageAlt}
-                                    image={project.node.image.gatsbyImageData}
-                                />
-                            </a>
-                        </Grid>
-                        <Grid
-                            className={classes.textWrapper}
-                            item
-                            xs={12}
-                            md={6}
-                        >
-                            <Typography variant='h4' component='h2'>
-                                {project.node.clientName}
-                            </Typography>
-                            <MDXRenderer>
-                                {
-                                    project.node.description.markdownNode
-                                        .childMdx.body
-                                }
-                            </MDXRenderer>
-                            <Button
-                                aria-label='Link to project website.'
-                                className={classes.btn}
-                                component='a'
-                                color='primary'
-                                variant='contained'
-                                href={`https://${project.node.projectLink}`}
-                                size='large'
-                                rel='noreferrer noopener'
-                                target='_blank'
-                                fullWidth
-                            >
-                                Visit
-                                <OpenInNewIcon style={{ marginLeft: `1rem` }} />
-                            </Button>
-                        </Grid>
-                    </Grid>
-                )
-            })}
-        </Container>
-    )
+  return (
+    <Container component='section'>
+      {edges.map(project => {
+        return (
+          <Grid
+            key={project.node.clientName}
+            className={classes.projectWrapper}
+            container
+            spacing={8}
+          >
+            <Grid item xs={12} md={6}>
+              <a
+                aria-label='Link to project website.'
+                href={`https://${project.node.projectLink}`}
+                rel='noreferrer noopener'
+                target='_blank'
+              >
+                <GatsbyImage
+                  className={classes.img}
+                  alt={project.node.imageAlt}
+                  image={project.node.image.gatsbyImageData}
+                />
+              </a>
+            </Grid>
+            <Grid className={classes.textWrapper} item xs={12} md={6}>
+              <Typography variant='h4' component='h2'>
+                {project.node.clientName}
+              </Typography>
+              <MDXRenderer>
+                {project.node.description.markdownNode.childMdx.body}
+              </MDXRenderer>
+              <Button
+                aria-label='Link to project website.'
+                className={classes.btn}
+                component='a'
+                color='primary'
+                variant='contained'
+                href={`https://${project.node.projectLink}`}
+                size='large'
+                rel='noreferrer noopener'
+                target='_blank'
+                fullWidth
+              >
+                Visit
+                <OpenInNewIcon style={{ marginLeft: `1rem` }} />
+              </Button>
+            </Grid>
+          </Grid>
+        )
+      })}
+    </Container>
+  )
 }
 
 export default ProjectsSection

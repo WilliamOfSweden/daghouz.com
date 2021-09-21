@@ -6,15 +6,15 @@ import SEO from '../components/seo'
 import ProjectsSection from '../components/projectsPage/projectsSection/'
 
 const ProjectsPage: FC<PageProps> = () => {
-    return (
-        <Fragment>
-            <SEO title='Projects' />
-            <Layout>
-                <Masthead />
-                <ProjectsSection />
-            </Layout>
-        </Fragment>
-    )
+  return (
+    <Fragment>
+      <SEO title='Projects' />
+      <Layout>
+        <Masthead />
+        <ProjectsSection />
+      </Layout>
+    </Fragment>
+  )
 }
 
 export default ProjectsPage
