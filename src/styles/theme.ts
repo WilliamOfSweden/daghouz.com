@@ -38,23 +38,23 @@ const theme = responsiveFontSizes(
       },
       MuiTypography: {
         h1: {
-          fontFamily: `Mulish`,
+          fontFamily: `Mulish, Arial, Sans-Serif`,
           fontWeight: 900,
           letterSpacing: `4px`,
           marginBottom: `2rem`,
         },
         h2: {
-          fontFamily: `Mulish`,
+          fontFamily: `Mulish, Arial, Sans-Serif`,
           marginBottom: `2rem`,
           fontWeight: 800,
         },
         h3: {
-          fontFamily: `Mulish`,
+          fontFamily: `Mulish, Arial, Sans-Serif`,
           fontWeight: 700,
           marginBottom: `1rem`,
         },
         h4: {
-          fontFamily: `Mulish`,
+          fontFamily: `Mulish, Arial, Sans-Serif`,
           fontWeight: 700,
           marginBottom: `1rem`,
         },
