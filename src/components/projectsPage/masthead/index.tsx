@@ -53,7 +53,7 @@ const Masthead: FC = () => {
           item
           container
           alignContent='center'
-          justifyContent='center'
+          justifyContent='flex-start'
           xs={12}
           sm={7}
           md={6}
