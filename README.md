@@ -2,22 +2,19 @@
   Personal website & portfolio - William Daghouz.
 </h1>
 
-<p>
-  <a href="https://www.daghouz.com">
-    <img
-      src="https://www.daghouz.com/banner.png"
-      width="100%"
-      alt="Website | William Daghouz"
-      title="William Daghouz"
-    />
-  </a>
-</p>
+<a href="https://www.daghouz.com">
+  <img
+    src="https://www.daghouz.com/banner.png"
+    width="100%"
+    alt="Website | William Daghouz"
+    title="William Daghouz"
+  />
+</a>
 
+<br>
 <br>
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3bbc070d-35c3-40e4-b7b1-f1ec825bdf9c/deploy-status)](https://app.netlify.com/sites/daghouz/deploys) &nbsp; [![wakatime](https://wakatime.com/badge/github/WilliamOfSweden/daghouz.com.svg)](https://wakatime.com/badge/github/WilliamOfSweden/daghouz.com) &nbsp; [![code style: prettier](https://img.shields.io/badge/code_style-prettier-8755eb.svg?style=flat-square)](https://github.com/prettier/prettier)
-
-<br>
 
 <div style="display: flex; justify-content: space-between;">
 <a href='https://gatsbyjs.org/' rel='noreferrer noopener' target='_blank'>
