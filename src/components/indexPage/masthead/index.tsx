@@ -28,7 +28,6 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     mobileOnly: {
       marginTop: theme.spacing(4),
-
       [theme.breakpoints.up('sm')]: {
         display: 'none',
       },
@@ -100,7 +99,6 @@ const Masthead = () => {
             </ModalComponent>
           </Box>
         </Grid>
-
         <Grid item xs={12} sm={5} md={6}>
           <HeroIllustration />
         </Grid>
