@@ -1,8 +1,9 @@
-import React, { FC, useRef } from 'react'
+import React, { useRef } from 'react'
+
 import { useFrame } from '@react-three/fiber'
 import { RoundedBox } from '@react-three/drei'
 
-const BoxComponent: FC = () => {
+const BoxComponent = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {

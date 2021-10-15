@@ -1,9 +1,10 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { useStaticQuery, graphql } from 'gatsby'
 import AppBar from '@material-ui/core/AppBar'
 import Container from '@material-ui/core/Container'
 import { Link } from 'gatsby'
+
 import Logo from '../../illustrations/logo'
 import LinkedInIcon from '../../illustrations/icons/social/linkedInIcon'
 import GitHubIcon from '../../illustrations/icons/social/githubIcon'
@@ -46,7 +47,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const Header: FC = () => {
+const Header = () => {
   interface DataProps {
     site: {
       siteMetadata: {

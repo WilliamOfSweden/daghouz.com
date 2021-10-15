@@ -1,14 +1,15 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { Canvas } from '@react-three/fiber'
 import { softShadows } from '@react-three/drei'
-import SphereComponent from './shapes/sphere'
+
 import PlaneComponent from './shapes/plane'
+import SphereComponent from './shapes/sphere'
 import BoxComponent from './shapes/box'
 import TorusComponent from './shapes/torus'
 
 softShadows()
 
-const MyCanvas: FC = () => {
+const MyCanvas = () => {
   return (
     <Canvas
       shadows

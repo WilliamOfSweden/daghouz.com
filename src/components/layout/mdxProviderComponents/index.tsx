@@ -1,5 +1,6 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import Typography from '@material-ui/core/Typography'
+
 import FastForwardIcon from '../../illustrations/icons/fastForwardIcon'
 import PriceTagIcon from '../../illustrations/icons/priceTagIcon'
 import BoxesIcon from '../../illustrations/icons/boxesIcon'
@@ -9,29 +10,29 @@ interface Props {
   children: ReactNode
 }
 
-const MDXheading1: FC<Props> = ({ children }) => (
+const MDXheading1 = ({ children }: Props) => (
   <Typography component='h1' variant='h2' style={{ fontWeight: 900 }}>
     {children}
   </Typography>
 )
 
-const MDXheading2: FC<Props> = ({ children }) => (
+const MDXheading2 = ({ children }: Props) => (
   <Typography align='center' variant='h2'>
     {children}
   </Typography>
 )
 
-const MDXheading3: FC<Props> = ({ children }) => (
+const MDXheading3 = ({ children }: Props) => (
   <Typography variant='h3'>{children}</Typography>
 )
 
-const MDXparagraph: FC<Props> = ({ children }) => (
+const MDXparagraph = ({ children }: Props) => (
   <Typography component='p' paragraph>
     {children}
   </Typography>
 )
 
-export const MDXheading2small: FC<Props> = ({ children }) => (
+export const MDXheading2small = ({ children }: Props) => (
   <Typography component='h2' variant='h3'>
     {children}
   </Typography>

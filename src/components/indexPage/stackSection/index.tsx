@@ -1,8 +1,9 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Typography from '@material-ui/core/Typography'
 import Grid from '@material-ui/core/Grid'
+
 import TypeScriptLogo from '../../illustrations/brandLogos/typeScriptLogo'
 import ReactLogo from '../../illustrations/brandLogos/reactLogo'
 import GraphQLLogo from '../../illustrations/brandLogos/graphQLLogo'
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const StackSection: FC = () => {
+const StackSection = () => {
   const classes = useStyles()
 
   const logos = [

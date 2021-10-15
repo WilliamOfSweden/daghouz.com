@@ -1,13 +1,14 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { useStaticQuery, graphql } from 'gatsby'
 import Container from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
-import theme from '../../../styles/theme'
 import Grid from '@material-ui/core/Grid'
 import { StaticImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
+
+import theme from '../../../styles/theme'
 import { MDXheading2small } from '../../layout/mdxProviderComponents/'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const AboutSection: FC = () => {
+const AboutSection = () => {
   const {
     graphCmsPageSection: {
       content: {

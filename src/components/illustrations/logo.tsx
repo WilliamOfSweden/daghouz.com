@@ -1,5 +1,6 @@
-import React, { FC } from 'react'
+import React from 'react'
 import styled from 'styled-components'
+
 import { PALETTE } from '../../styles/theme'
 
 const StyledSVG = styled.svg`
@@ -12,7 +13,7 @@ const StyledSVG = styled.svg`
   }
 `
 
-const Logo: FC = () => {
+const Logo = () => {
   return (
     <StyledSVG
       data-name='Layer 1'

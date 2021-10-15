@@ -13,15 +13,12 @@ const Fade = forwardRef<HTMLDivElement, Props>((props, ref) => {
 
   const style = useSpring({
     from: { opacity: 0 },
-
     to: { opacity: open ? 1 : 0 },
-
     onStart: () => {
       if (open && onEnter) {
         onEnter()
       }
     },
-
     onRest: () => {
       if (!open && onExited) {
         onExited()

@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { Helmet } from 'react-helmet'
 
@@ -7,7 +7,7 @@ interface Props {
   title?: string
 }
 
-const SEO: FC<Props> = ({ description, title }) => {
+const SEO = ({ description, title }: Props) => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {

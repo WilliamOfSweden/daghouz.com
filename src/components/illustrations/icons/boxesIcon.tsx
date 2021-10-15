@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import styled from 'styled-components'
 
 const StyledSVG = styled.svg`
@@ -15,7 +15,7 @@ const StyledSVG = styled.svg`
   }
 `
 
-const BoxesIcon: FC = () => {
+const BoxesIcon = () => {
   return (
     <StyledSVG
       data-name='Layer 1'

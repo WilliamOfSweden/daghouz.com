@@ -1,8 +1,8 @@
-import React, { FC, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Sphere } from '@react-three/drei'
 
-const SphereComponent: FC = () => {
+const SphereComponent = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {

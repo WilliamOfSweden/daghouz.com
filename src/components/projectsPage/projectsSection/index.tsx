@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import Container from '@material-ui/core/Container'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
@@ -27,7 +27,7 @@ interface DataProps {
   }
 }
 
-const ProjectsSection: FC = () => {
+const ProjectsSection = () => {
   const {
     allGraphCmsProject: { edges },
   } = useStaticQuery<DataProps>(graphql`

@@ -1,10 +1,10 @@
-import React, { FC, ReactNode } from 'react'
+import React, { ReactNode } from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
-import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
@@ -21,7 +21,7 @@ interface Props {
   children: ReactNode
 }
 
-const GridContainer: FC<Props> = ({ children }) => {
+const GridContainer = ({ children }: Props) => {
   const classes = useStyles()
 
   return (
@@ -31,13 +31,13 @@ const GridContainer: FC<Props> = ({ children }) => {
   )
 }
 
-const GridItem: FC<Props> = ({ children }) => (
+const GridItem = ({ children }: Props) => (
   <Grid item xs={12} sm={6}>
     {children}
   </Grid>
 )
 
-const FeaturesSection: FC = () => {
+const FeaturesSection = () => {
   const {
     graphCmsPageSection: {
       content: {

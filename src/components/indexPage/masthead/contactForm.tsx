@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles'
 import styled from 'styled-components'
 import TextField from '@material-ui/core/TextField'
@@ -45,7 +45,7 @@ interface Props {
   hidden?: boolean
 }
 
-const ContactForm: FC<Props> = ({ hidden }) => {
+const ContactForm = ({ hidden }: Props) => {
   const classes = useStyles()
 
   return (

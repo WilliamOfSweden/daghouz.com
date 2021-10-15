@@ -1,8 +1,8 @@
-import React, { FC, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Torus } from '@react-three/drei'
 
-const TorusComponent: FC = () => {
+const TorusComponent = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {

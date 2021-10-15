@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 import Container from '@material-ui/core/Container'
@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Button from '@material-ui/core/Button'
+
 import Illustration404 from '../../illustrations/illustration404'
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -32,7 +33,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const Masthead: FC = () => {
+const Masthead = () => {
   const {
     graphCmsPageSection: {
       buttonText,
@@ -77,7 +78,6 @@ const Masthead: FC = () => {
               className={classes.desktopOnly}
               color='primary'
               component={Link}
-              // fullWidth={ false }
               size='large'
               to='/'
               variant='contained'

@@ -1,12 +1,13 @@
-import React, { FC } from 'react'
+import React from 'react'
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { useStaticQuery, graphql } from 'gatsby'
-import useStore from '../../../stores/contactModalStore'
 import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Button from '@material-ui/core/Button'
+
+import useStore from '../../../stores/contactModalStore'
 import ModalComponent from '../../global/animatedModal'
 import ContactForm from './contactForm'
 import HeroIllustration from '../../illustrations/heroIllustration'
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 )
 
-const Masthead: FC = () => {
+const Masthead = () => {
   const {
     graphCmsPageSection: {
       buttonText,

@@ -1,6 +1,6 @@
-import React, { FC } from 'react'
+import React from 'react'
 
-const PlaneComponent: FC = () => {
+const PlaneComponent = () => {
   return (
     <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2, 0]} receiveShadow>
       <planeBufferGeometry args={[100, 100]} />
