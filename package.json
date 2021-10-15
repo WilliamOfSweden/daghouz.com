@@ -1,9 +1,10 @@
 {
+    "author": "William Daghouz",
     "name": "daghouz.com",
     "private": true,
     "description": "Personal website",
     "version": "0.1.0",
-    "license": "unlicensed",
+    "license": "UNLICENSED",
     "scripts": {
         "build": "gatsby build",
         "develop": "gatsby develop",
