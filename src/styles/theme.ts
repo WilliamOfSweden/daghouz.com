@@ -45,8 +45,9 @@ const theme = responsiveFontSizes(
         },
         h2: {
           fontFamily: `Mulish, Arial, Sans-Serif`,
-          marginBottom: `2rem`,
+          fontSize: 'calc(1.6rem + 2vw)',
           fontWeight: 800,
+          marginBottom: `2rem`,
         },
         h3: {
           fontFamily: `Mulish, Arial, Sans-Serif`,
