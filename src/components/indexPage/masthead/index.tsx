@@ -8,8 +8,8 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Button from '@material-ui/core/Button'
 
 import useStore from '../../../stores/contactModalStore'
-import ModalComponent from '../../global/animatedModal'
-import ContactForm from './contactForm'
+import ModalComponent from '../../common/animatedModal/'
+import ContactForm from '../../common/contactForm'
 import HeroIllustration from '../../illustrations/heroIllustration'
 
 const useStyles = makeStyles((theme: Theme) =>

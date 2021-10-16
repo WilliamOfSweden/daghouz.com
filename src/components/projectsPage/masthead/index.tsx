@@ -5,11 +5,21 @@ import Container from '@material-ui/core/Container'
 import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
+import Button from '@material-ui/core/Button'
 
+import useStore from '../../../stores/contactModalStore'
 import MyCanvas from './canvas'
+import ModalComponent from '../../common/animatedModal/'
+import ContactForm from '../../common/contactForm'
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    desktopOnly: {
+      display: 'none',
+      [theme.breakpoints.up('sm')]: {
+        display: 'inherit',
+      },
+    },
     heroSection: {
       paddingTop: theme.spacing(4),
       [theme.breakpoints.up('sm')]: {
@@ -17,6 +27,12 @@ const useStyles = makeStyles((theme: Theme) =>
       },
       [theme.breakpoints.up('md')]: {
         paddingTop: theme.spacing(0),
+      },
+    },
+    mobileOnly: {
+      marginTop: theme.spacing(4),
+      [theme.breakpoints.up('sm')]: {
+        display: 'none',
       },
     },
   })
@@ -45,6 +61,15 @@ const Masthead = () => {
     }
   `)
 
+  interface StateProps {
+    activeContactModal: boolean
+    openContactModal: () => void
+  }
+
+  const openContactModal = useStore(
+    (state: StateProps) => state.openContactModal
+  )
+
   const classes = useStyles()
 
   return (
@@ -61,6 +86,18 @@ const Masthead = () => {
         >
           <Box maxWidth={'78ch'} my={`auto`}>
             <MDXRenderer>{body}</MDXRenderer>
+            <Button
+              className={classes.desktopOnly}
+              color='primary'
+              onClick={openContactModal}
+              variant='contained'
+              size='large'
+            >
+              Contact Me
+            </Button>
+            <ModalComponent>
+              <ContactForm />
+            </ModalComponent>
           </Box>
         </Grid>
         <Grid item xs={12} sm={5} md={6}>
@@ -68,6 +105,17 @@ const Masthead = () => {
             <MyCanvas />
           </Box>
         </Grid>
+        <Button
+          className={classes.mobileOnly}
+          color='primary'
+          fullWidth
+          onClick={openContactModal}
+          variant='contained'
+          size='large'
+        >
+          Contact Me
+        </Button>
+        <ContactForm hidden />
       </Grid>
     </Container>
   )

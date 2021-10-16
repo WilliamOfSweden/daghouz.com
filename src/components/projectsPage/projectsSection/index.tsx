@@ -1,9 +1,18 @@
 import React from 'react'
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
 import { useStaticQuery, graphql } from 'gatsby'
 import Container from '@material-ui/core/Container'
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 import ProjectItem from './projectItem'
+
+const useStyles = makeStyles((theme: Theme) =>
+  createStyles({
+    container: {
+      marginTop: theme.spacing(15),
+    },
+  })
+)
 
 interface DataProps {
   allGraphCmsProject: {
@@ -54,8 +63,10 @@ const ProjectsSection = () => {
     }
   `)
 
+  const classes = useStyles()
+
   return (
-    <Container component='section'>
+    <Container className={classes.container} component='section'>
       {edges.map(project => (
         <ProjectItem key={project.node.clientName} node={project.node} />
       ))}
