@@ -1899,10 +1899,10 @@
     "@react-spring/shared" "~9.3.0"
     "@react-spring/types" "~9.3.0"
 
-"@react-three/drei@^7.7.0":
-  version "7.14.3"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.14.3.tgz#4631af9217cdffe553362547e5c6906c0103137f"
-  integrity sha512-r+z5/VJmX+GduxD+ACLpWrDqkRNiMbgYzwzvkTNRXxf+yUlbOGT0jaasTJcq4AOtg+Y5YoKDUieuQVAJ12O44w==
+"@react-three/drei@^7.15.1":
+  version "7.15.1"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.15.1.tgz#33055069db641c9f284ccc1b77b8e877edacbc16"
+  integrity sha512-PCtu8+V5lTCCstmO3IHB3jvBGtAUtbEddUyqdaDyCVBQVqp0xbmYD/ohcf2IWKjCBwfcF7e8xaf05Jm1On3FWg==
   dependencies:
     "@babel/runtime" "^7.11.2"
     detect-gpu "^3.1.21"
@@ -1919,10 +1919,10 @@
     utility-types "^3.10.0"
     zustand "^3.5.13"
 
-"@react-three/fiber@^7.0.6":
-  version "7.0.15"
-  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.15.tgz#1f3b4a6166987b821b0ee3a7e75b16ff4f1aab66"
-  integrity sha512-EeCbOlcUASskZjdCFnBgtSNyol+Kg09DEQXvCUOzqax2oMBrWKXmj9MogNG9Yzvm2dtSTmEUqe6eN8Rs8Z2nyQ==
+"@react-three/fiber@^7.0.16":
+  version "7.0.16"
+  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-7.0.16.tgz#cc309b89247a94fe790f6325f2e145048f27ff78"
+  integrity sha512-yIRMFfkHBMcii/GkRjOsEAMnvcbn/8jdI/b83zfH5sX8MEKZU1Bi1PmSQNcMbqZOY8eZQl4DCLxwBa4asA6Fig==
   dependencies:
     "@babel/runtime" "^7.13.10"
     react-merge-refs "^1.1.0"
@@ -3832,9 +3832,9 @@ content-type@^1.0.4, content-type@~1.0.4:
   integrity sha512-hIP3EEPs8tB9AT1L+NUqtwOAps4mk2Zob89MWXMHjHWg9milF/j4osnnQLXBCBFBk/tvIG/tUc9mOUJiPBhPXA==
 
 contentful-management@^7.5.1:
-  version "7.44.0"
-  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.44.0.tgz#25be9fac767fec64affd783a04c581185b79218f"
-  integrity sha512-r8zopi0yFTbc3c2QDj5sU+G+uTanHcB+h0vUd2THIZ9n62IKQdEd5sBNm1wYwmnZCPerX4kxHK8DEmeWT5zmsw==
+  version "7.44.1"
+  resolved "https://registry.yarnpkg.com/contentful-management/-/contentful-management-7.44.1.tgz#f5e88a35195dc3ed4bcd7952e0e67427757b637d"
+  integrity sha512-N6cRMl2O7bkpIulPe0nQD78uVC8uaWQBm0XeDnmfUFJHVrPsaU0ix2QR2TjLsFKu6OT6nqxeyl0RS+dlboDV5A==
   dependencies:
     "@types/json-patch" "0.0.30"
     axios "^0.21.4"
@@ -4637,7 +4637,12 @@ ee-first@1.1.1:
   resolved "https://registry.yarnpkg.com/ee-first/-/ee-first-1.1.1.tgz#590c61156b0ae2f4f0255732a158b266bc56b21d"
   integrity sha1-WQxhFWsK4vTwJVcyoViyZrxWsh0=
 
-electron-to-chromium@^1.3.564, electron-to-chromium@^1.3.867:
+electron-to-chromium@^1.3.564:
+  version "1.3.871"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.871.tgz#6e87365fd72037a6c898fb46050ad4be3ac9ef62"
+  integrity sha512-qcLvDUPf8DSIMWarHT2ptgcqrYg62n3vPA7vhrOF24d8UNzbUBaHu2CySiENR3nEDzYgaN60071t0F6KLYMQ7Q==
+
+electron-to-chromium@^1.3.867:
   version "1.3.869"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.3.869.tgz#c319171803d796639b1af3ddbf07a5a087037ccb"
   integrity sha512-mcoyZ2jd691yAx0OHqqGw+aPCcRYVDw/bqPy660aBfcQkUcWcfAVsbL4M9WeevflKH4MfpKCtnOngVLM7HzSzA==
@@ -5611,10 +5616,10 @@ functional-red-black-tree@^1.0.1:
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
 
-gatsby-cli@^3.14.1:
-  version "3.14.1"
-  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-3.14.1.tgz#508515760d708b36cd8491f30f062cc451dd2252"
-  integrity sha512-0k8fJU2oE35U1D3sj4qFHMmKj32LJRmXeUSsDtJWdvNZ8+xhBNyIh+YGcqfqbCNicLXiPyfzvt6UwBIbOOTCRQ==
+gatsby-cli@^3.14.2:
+  version "3.14.2"
+  resolved "https://registry.yarnpkg.com/gatsby-cli/-/gatsby-cli-3.14.2.tgz#1d4ebeb199c3a910d80abc13f458888c8cd7f2f8"
+  integrity sha512-p3E6XyzwVPGpHd0AYVkvnPkZoEElWLWjAG10173k5aGtpoM6dIuJuSlgBPrjeev9PQ7y3oCoCO3zBjnGdB1/WQ==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/runtime" "^7.15.4"
@@ -6060,10 +6065,10 @@ gatsby-worker@^0.5.0:
     "@babel/core" "^7.15.5"
     "@babel/runtime" "^7.15.4"
 
-gatsby@^3.13.0:
-  version "3.14.2"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.14.2.tgz#684a49ed9521abe5e72ff36b1fc3a4ed96fee0fb"
-  integrity sha512-1cjyfGkQ9zXtou+RhtYBprv8nYXTPuRIs4IFzBP373vBD1CdwabAC/R8kjqHfdvyNrorzg3sqRjLjActtfU8NA==
+gatsby@^3.14.3:
+  version "3.14.3"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-3.14.3.tgz#62bc020d0997f4b30e419abe644f60483f99e8b5"
+  integrity sha512-B6NmmIvGGVNktky0YGugxMJlZAbKEzGMMBA8ojbaDhfEzfNXxsyHYd0aHKL0fNwPEqMKUsllaACdXrw6CWRk2g==
   dependencies:
     "@babel/code-frame" "^7.14.0"
     "@babel/core" "^7.15.5"
@@ -6132,7 +6137,7 @@ gatsby@^3.13.0:
     find-cache-dir "^3.3.1"
     fs-exists-cached "1.0.0"
     fs-extra "^10.0.0"
-    gatsby-cli "^3.14.1"
+    gatsby-cli "^3.14.2"
     gatsby-core-utils "^2.14.0"
     gatsby-graphiql-explorer "^1.14.0"
     gatsby-legacy-polyfills "^1.14.0"
@@ -6171,7 +6176,6 @@ gatsby@^3.13.0:
     opentracing "^0.14.4"
     p-defer "^3.0.0"
     parseurl "^1.3.3"
-    path-to-regexp "0.1.7"
     physical-cpu-count "^2.0.0"
     platform "^1.3.6"
     postcss "^8.3.5"
