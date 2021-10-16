@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid'
 import Box from '@material-ui/core/Box'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import Button from './Button'
+import Button from './button'
 import ModalComponent from '../animatedModal'
 import ContactForm from '../contactForm'
 
