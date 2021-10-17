@@ -1899,10 +1899,10 @@
     "@react-spring/shared" "~9.3.0"
     "@react-spring/types" "~9.3.0"
 
-"@react-three/drei@^7.15.1":
-  version "7.15.1"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.15.1.tgz#33055069db641c9f284ccc1b77b8e877edacbc16"
-  integrity sha512-PCtu8+V5lTCCstmO3IHB3jvBGtAUtbEddUyqdaDyCVBQVqp0xbmYD/ohcf2IWKjCBwfcF7e8xaf05Jm1On3FWg==
+"@react-three/drei@^7.16.2":
+  version "7.16.2"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.16.2.tgz#5da4f0974dd52d6ba7c5cbc9039c3019a4d1715e"
+  integrity sha512-NQd1vViA7S5UPGySGMbsiP6frU8/mRYNh4G6i+6K0tQ/Q+ea5bc2d+oRvUXzxnYQSoniHxKY6p//S3Fw2gYHIg==
   dependencies:
     "@babel/runtime" "^7.11.2"
     detect-gpu "^3.1.21"
@@ -4402,9 +4402,9 @@ detab@2.0.4:
     repeat-string "^1.5.4"
 
 detect-gpu@^3.1.21:
-  version "3.1.21"
-  resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-3.1.21.tgz#263c6784a4282de3300aa97ac4bf176b41f90aec"
-  integrity sha512-wsR+qJnmY5UKbfJ03Zk/6ZB2XEh6y7ZtCUaCP/089sht6dHDtPSCkl1gNSa8UWCEfPtW/gSGNGeQjIzaTvXhbw==
+  version "3.1.22"
+  resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-3.1.22.tgz#2be2cae2de8dcfb2685d809dff1904de037ed5c6"
+  integrity sha512-gsjRObJih2+bJz4rok9KHOvk2AwF3Y56hhV5SzMAOvW/diWN5+1DzDAOO6hgFTSY6oIMdIDmSKmGiceJz+cmyA==
   dependencies:
     webgl-constants "^1.1.1"
 
