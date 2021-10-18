@@ -20,11 +20,7 @@ const BoxComponent = () => {
       args={[2, 2, 2]}
       position={[5, 0, -8]}
     >
-      <meshStandardMaterial
-        color='darkorange'
-        roughness={0.5}
-        metalness={0.1}
-      />
+      <meshStandardMaterial color='#fd6c22' roughness={0.5} metalness={0.1} />
     </RoundedBox>
   )
 }

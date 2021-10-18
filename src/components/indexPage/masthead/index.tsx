@@ -30,7 +30,7 @@ const Masthead = () => {
   `)
 
   return (
-    <FlexSection buttonText={buttonText} content={body}>
+    <FlexSection content={body}>
       <HeroIllustration />
     </FlexSection>
   )
