@@ -21,8 +21,8 @@
         "@mdx-js/mdx": "^1.6.22",
         "@mdx-js/react": "^1.6.22",
         "@react-spring/web": "^9.2.4",
-        "@react-three/drei": "^7.16.4",
-        "@react-three/fiber": "^7.0.16",
+        "@react-three/drei": "^7.17.1",
+        "@react-three/fiber": "^7.0.17",
         "gatsby": "^3.14.3",
         "gatsby-plugin-image": "^1.13.0",
         "gatsby-plugin-material-ui": "^3.0.1",
@@ -36,16 +36,16 @@
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-helmet": "^6.1.0",
-        "styled-components": "^5.3.1",
+        "styled-components": "^5.3.3",
         "three": "^0.133.1",
-        "zustand": "^3.5.10"
+        "zustand": "^3.5.14"
     },
     "devDependencies": {
         "@types/mdx-js__react": "^1.5.4",
         "@types/react-helmet": "^6.1.2",
         "@types/styled-components": "^5.1.14",
         "@types/three": "^0.133.0",
-        "babel-plugin-styled-components": "^1.13.2",
+        "babel-plugin-styled-components": "^1.13.3",
         "prettier": "^2.3.2"
     },
     "repository": {
