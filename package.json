@@ -21,7 +21,7 @@
         "@mdx-js/mdx": "^1.6.22",
         "@mdx-js/react": "^1.6.22",
         "@react-spring/web": "^9.2.4",
-        "@react-three/drei": "^7.17.1",
+        "@react-three/drei": "^7.19.2",
         "@react-three/fiber": "^7.0.17",
         "gatsby": "^3.14.3",
         "gatsby-plugin-image": "^1.13.0",
@@ -37,8 +37,8 @@
         "react-dom": "^17.0.1",
         "react-helmet": "^6.1.0",
         "styled-components": "^5.3.3",
-        "three": "^0.133.1",
-        "zustand": "^3.5.14"
+        "three": "^0.134.0",
+        "zustand": "^3.6.1"
     },
     "devDependencies": {
         "@types/mdx-js__react": "^1.5.4",

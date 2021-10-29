@@ -1899,10 +1899,10 @@
     "@react-spring/shared" "~9.3.0"
     "@react-spring/types" "~9.3.0"
 
-"@react-three/drei@^7.17.1":
-  version "7.17.1"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.17.1.tgz#42c85bb7f5348a5aa4340f5e608492d6ff3aa555"
-  integrity sha512-LKNze1U5TF6QGhyPo/1BRXK4XRZASLfzUEYahsMxq7b4vdenlLcqPMm50A619gZwHxreVkDF8LjMNeiW9koW/g==
+"@react-three/drei@^7.19.2":
+  version "7.19.2"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-7.19.2.tgz#7df6b3309bba14cd0412edb058ce6ead0ae2d2f6"
+  integrity sha512-ifmz+aJ17Tj3EQ1/8baTqRG9BbvMXKjVJ4IsNEXzb3fzkHeAJ4LwksTV6bcs7VEAG6+1ytBhEoYJowobh5ZlkQ==
   dependencies:
     "@babel/runtime" "^7.11.2"
     detect-gpu "^3.1.21"
@@ -4402,9 +4402,9 @@ detab@2.0.4:
     repeat-string "^1.5.4"
 
 detect-gpu@^3.1.21:
-  version "3.1.22"
-  resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-3.1.22.tgz#2be2cae2de8dcfb2685d809dff1904de037ed5c6"
-  integrity sha512-gsjRObJih2+bJz4rok9KHOvk2AwF3Y56hhV5SzMAOvW/diWN5+1DzDAOO6hgFTSY6oIMdIDmSKmGiceJz+cmyA==
+  version "3.1.23"
+  resolved "https://registry.yarnpkg.com/detect-gpu/-/detect-gpu-3.1.23.tgz#c8c03e16dc922975f47ef6252bc00730acbdadd9"
+  integrity sha512-C8y40PPBZGjsYWXPXyRT79OQtUZVwa4T6u7Dr0die0iqxKB1Jwd+8hq24O+iNsE4tVGBEAtaewSF+A65pluw3g==
   dependencies:
     webgl-constants "^1.1.1"
 
@@ -9650,9 +9650,9 @@ postcss@^8.0.5, postcss@^8.2.15, postcss@^8.2.9, postcss@^8.3.5:
     source-map-js "^0.6.2"
 
 potpack@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/potpack/-/potpack-1.0.1.tgz#d1b1afd89e4c8f7762865ec30bd112ab767e2ebf"
-  integrity sha512-15vItUAbViaYrmaB/Pbw7z6qX2xENbFSTA7Ii4tgbPtasxm5v6ryKhKtL91tpWovDJzTiZqdwzhcFBCwiMVdVw==
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/potpack/-/potpack-1.0.2.tgz#23b99e64eb74f5741ffe7656b5b5c4ddce8dfc14"
+  integrity sha512-choctRBIV9EMT9WGAZHn3V7t0Z2pMQyl0EZE6pFc/6ml3ssw7Dlf/oAOvFwjm1HVsqfQN8GfeFyJ+d8tRzqueQ==
 
 potrace@^2.1.8:
   version "2.1.8"
@@ -11513,10 +11513,10 @@ three-stdlib@^2.5.4:
     potpack "^1.0.1"
     zstddec "^0.0.2"
 
-three@^0.133.1:
-  version "0.133.1"
-  resolved "https://registry.yarnpkg.com/three/-/three-0.133.1.tgz#5606f4817d67a09d9212d4ccbd6826564774f8f4"
-  integrity sha512-WydohO8ll949B0FTD6MGz59Yv2Lwj8hvObg/0Heh2r42S6+tQC1WByfCNRdmG4D7+odfGod+n8JPV1I2xrboWw==
+three@^0.134.0:
+  version "0.134.0"
+  resolved "https://registry.yarnpkg.com/three/-/three-0.134.0.tgz#d7ad4d85d050da0861bf39749b06ddfb5f17157f"
+  integrity sha512-LbBerg7GaSPjYtTOnu41AMp7tV6efUNR3p4Wk5NzkSsNTBuA5mDGOfwwZL1jhhVMLx9V20HolIUo0+U3AXehbg==
 
 through@^2.3.6:
   version "2.3.8"
@@ -12664,10 +12664,15 @@ zstddec@^0.0.2:
   resolved "https://registry.yarnpkg.com/zstddec/-/zstddec-0.0.2.tgz#57e2f28dd1ff56b750e07d158a43f0611ad9eeb4"
   integrity sha512-DCo0oxvcvOTGP/f5FA6tz2Z6wF+FIcEApSTu0zV5sQgn9hoT5lZ9YRAKUraxt9oP7l4e8TnNdi8IZTCX6WCkwA==
 
-zustand@^3.5.1, zustand@^3.5.13, zustand@^3.5.14:
+zustand@^3.5.1:
   version "3.5.14"
   resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.5.14.tgz#591c3e8b75c57b2d13d596d8db00a08a0b3d5cdb"
   integrity sha512-Y5o/024/eBluNGLt1MYp9KTqCzbw/Cztvx8MVjtmMWHQPrgnKfOe0Wqu7j7JSl+KxfJMA0TxNz4RKSqDx0fbHQ==
+
+zustand@^3.5.13, zustand@^3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.1.tgz#d309074dd632ca7b14e20353e5c55274e3d72eda"
+  integrity sha512-2ghTWZhOx3xUK7drIa/1fVbuzyG70XKfCXIATrRBFDPcRRV4V/9uptNOKgyCvPwCDYgLpla4EtFbXNbdLpfPcw==
 
 zwitch@^1.0.0:
   version "1.0.5"
