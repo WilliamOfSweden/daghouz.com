@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-import SEO from '../components/seo'
+import SEO from '../components/common/seo'
 import Layout from '../components/layout/'
 import Masthead from '../components/projectsPage/masthead/'
 import ProjectsSection from '../components/projectsPage/projectsSection/'

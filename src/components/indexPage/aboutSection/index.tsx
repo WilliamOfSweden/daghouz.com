@@ -8,7 +8,7 @@ import { StaticImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { MDXProvider } from '@mdx-js/react'
 
-import theme from '../../../styles/theme'
+import theme from '../../../styles/muiTheme'
 import { MDXheading2small } from '../../layout/mdxProviderComponents/'
 
 const useStyles = makeStyles((theme: Theme) =>

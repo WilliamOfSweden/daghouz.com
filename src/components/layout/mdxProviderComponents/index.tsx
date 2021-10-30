@@ -1,52 +1,34 @@
 import React, { ReactNode } from 'react'
-import Typography from '@material-ui/core/Typography'
 
-import FastForwardIcon from '../../illustrations/icons/fastForwardIcon'
-import PriceTagIcon from '../../illustrations/icons/priceTagIcon'
-import BoxesIcon from '../../illustrations/icons/boxesIcon'
-import GearIcon from '../../illustrations/icons/gearIcon'
+import { StyledH1, StyledH2, StyledH3, StyledP } from '../styledComponents/'
+import {
+  BoxesIcon,
+  GearIcon,
+  FastForwardIcon,
+  PriceTagIcon,
+} from '../../illustrations/icons/'
 
 interface Props {
   children: ReactNode
 }
 
-const MDXheading1 = ({ children }: Props) => (
-  <Typography component='h1' variant='h2' style={{ fontWeight: 900 }}>
-    {children}
-  </Typography>
-)
+const MdxH1 = ({ children }: Props) => <StyledH1>{children}</StyledH1>
 
-const MDXheading2 = ({ children }: Props) => (
-  <Typography align='center' variant='h2'>
-    {children}
-  </Typography>
-)
+const MdxH2 = ({ children }: Props) => <StyledH2>{children}</StyledH2>
 
-const MDXheading3 = ({ children }: Props) => (
-  <Typography variant='h3'>{children}</Typography>
-)
+const MdxH3 = ({ children }: Props) => <StyledH3>{children}</StyledH3>
 
-const MDXparagraph = ({ children }: Props) => (
-  <Typography component='p' paragraph>
-    {children}
-  </Typography>
-)
+const MdxP = ({ children }: Props) => <StyledP>{children}</StyledP>
 
-export const MDXheading2small = ({ children }: Props) => (
-  <Typography component='h2' variant='h3'>
-    {children}
-  </Typography>
-)
-
-const MDXProviderComponentsObject = {
-  h1: MDXheading1,
-  h2: MDXheading2,
-  h3: MDXheading3,
-  p: MDXparagraph,
-  FastForwardIcon,
-  PriceTagIcon,
+const MdxProviderComponentsObject = {
+  h1: MdxH1,
+  h2: MdxH2,
+  h3: MdxH3,
+  p: MdxP,
   BoxesIcon,
+  FastForwardIcon,
   GearIcon,
+  PriceTagIcon,
 }
 
-export default MDXProviderComponentsObject
+export default MdxProviderComponentsObject

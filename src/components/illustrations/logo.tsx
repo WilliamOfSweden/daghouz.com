@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { PALETTE } from '../../styles/theme'
+import { PALETTE } from '../../styles/muiTheme'
 
 const StyledSVG = styled.svg`
   height: 2.33rem;

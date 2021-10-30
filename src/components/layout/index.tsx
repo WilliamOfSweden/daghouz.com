@@ -1,9 +1,8 @@
-import React, { ReactNode } from 'react'
-import { ThemeProvider } from '@material-ui/styles'
-import theme from '../../styles/theme'
-import CssBaseline from '@material-ui/core/CssBaseline'
+import React, { Fragment, ReactNode } from 'react'
+import GlobalStyle from '../../styles/globalStyles'
 import { MDXProvider } from '@mdx-js/react'
-import Header from './header'
+
+import Header from './header/'
 import MDXProviderComponentsObject from './mdxProviderComponents/'
 
 interface Props {
@@ -12,13 +11,13 @@ interface Props {
 
 const Layout = ({ children }: Props) => {
   return (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
+    <Fragment>
+      <GlobalStyle />
       <Header />
       <MDXProvider components={MDXProviderComponentsObject}>
         <main>{children}</main>
       </MDXProvider>
-    </ThemeProvider>
+    </Fragment>
   )
 }
 
