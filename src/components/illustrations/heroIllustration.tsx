@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const StyledSVG = styled.svg`
   width: 100%;
-
   .a18c74e0-7517-4a82-8c88-7cc5558d6cdf {
     fill: url(#b742450f-0ed5-4f90-bd48-9d7f7dffda47);
   }

@@ -1,45 +1,12 @@
 import React from 'react'
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles'
-import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
-import Grid from '@material-ui/core/Grid'
 
-import TextWrapper from './textWrapper'
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    projectWrapper: {
-      marginBottom: theme.spacing(10),
-      '&:nth-child(odd)': {
-        flexDirection: `row-reverse`,
-      },
-      [theme.breakpoints.up('md')]: {
-        marginBottom: theme.spacing(20),
-      },
-    },
-    img: {
-      '& > picture > img': {
-        borderRadius: `10px`,
-      },
-    },
-  })
-)
+import { ProjectData } from '../../../../typescript/'
+import ProjectInfo from './projectInfo/'
+import { StyledProjectFlexbox } from '../../../layout/styledComponents/'
+import ProjectImage from './projectImage'
 
 interface DataProps {
-  node: {
-    clientName: string
-    imageAlt: string
-    description: {
-      markdownNode: {
-        childMdx: {
-          body: string
-        }
-      }
-    }
-    image: {
-      gatsbyImageData: IGatsbyImageData
-    }
-    projectLink: string
-  }
+  node: ProjectData
 }
 
 const ProjectItem = ({
@@ -50,41 +17,19 @@ const ProjectItem = ({
         childMdx: { body },
       },
     },
-    image: { gatsbyImageData },
+    image,
     imageAlt,
     projectLink,
   },
-}: DataProps) => {
-  const classes = useStyles()
-
-  return (
-    <Grid
-      key={clientName}
-      className={classes.projectWrapper}
-      container
-      spacing={8}
-    >
-      <Grid item xs={12} md={6}>
-        <a
-          aria-label='Link to project website.'
-          href={`https://${projectLink}`}
-          rel='noreferrer noopener'
-          target='_blank'
-        >
-          <GatsbyImage
-            className={classes.img}
-            alt={imageAlt}
-            image={gatsbyImageData}
-          />
-        </a>
-      </Grid>
-      <TextWrapper
-        body={body}
-        clientName={clientName}
-        projectLink={projectLink}
-      />
-    </Grid>
-  )
-}
+}: DataProps) => (
+  <StyledProjectFlexbox>
+    <ProjectImage image={image} imageAlt={imageAlt} projectLink={projectLink} />
+    <ProjectInfo
+      body={body}
+      clientName={clientName}
+      projectLink={projectLink}
+    />
+  </StyledProjectFlexbox>
+)
 
 export default ProjectItem

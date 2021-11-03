@@ -35,6 +35,14 @@ export default createGlobalStyle`
           text-decoration: none;
         }
 
+        li {
+          list-style: none;
+        }
+
+        section {          
+          margin-bottom: ${THEME.spacing(15)};
+        }
+
         .container {
           width: min(${THEME.breakpoints.lg}, 100% - ${THEME.spacing(4)});
           margin-inline: auto;
@@ -49,7 +57,15 @@ export default createGlobalStyle`
           display: none;
 
           @media (min-width: ${THEME.breakpoints.sm}) {
-            display: inherit
+            display: inherit;
+          }
+        }
+
+        .mobile-only {
+          display: inherit;
+
+          @media (min-width: ${THEME.breakpoints.sm}) {
+            display: none;
           }
         }
     }

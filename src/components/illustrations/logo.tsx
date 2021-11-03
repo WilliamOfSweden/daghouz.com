@@ -1,15 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { PALETTE } from '../../styles/muiTheme'
+import THEME from '../../styles/theme'
 
 const StyledSVG = styled.svg`
   height: 2.33rem;
   .f2688ecd-c77e-4f5f-8407-cddd2399bd54 {
-    fill: ${PALETTE.primary};
+    fill: ${THEME.palette.primary};
   }
   .e786e155-940c-4094-8745-7f4e8190b902 {
-    fill: ${PALETTE.secondary};
+    fill: ${THEME.palette.bg};
   }
 `
 

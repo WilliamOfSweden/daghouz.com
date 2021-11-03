@@ -3,7 +3,7 @@ import GlobalStyle from '../../styles/globalStyles'
 import { MDXProvider } from '@mdx-js/react'
 
 import Header from './header/'
-import MDXProviderComponentsObject from './mdxProviderComponents/'
+import MdxComponents from './mdxComponents/'
 
 interface Props {
   children: ReactNode
@@ -14,7 +14,7 @@ const Layout = ({ children }: Props) => {
     <Fragment>
       <GlobalStyle />
       <Header />
-      <MDXProvider components={MDXProviderComponentsObject}>
+      <MDXProvider components={MdxComponents}>
         <main>{children}</main>
       </MDXProvider>
     </Fragment>

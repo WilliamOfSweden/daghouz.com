@@ -1,10 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { PALETTE } from '../../../../styles/muiTheme'
+import THEME from '../../../../styles/theme'
 
 const StyledSVG = styled.svg`
-  fill: ${PALETTE.primary};
+  fill: ${THEME.palette.primary};
   height: 2.33rem;
 `
 

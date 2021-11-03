@@ -1,6 +1,12 @@
 import React, { ReactNode } from 'react'
 
-import { StyledH1, StyledH2, StyledH3, StyledP } from '../styledComponents/'
+import {
+  StyledListGrid,
+  StyledH1,
+  StyledH2,
+  StyledH3,
+  StyledP,
+} from '../styledComponents/'
 import {
   BoxesIcon,
   GearIcon,
@@ -12,6 +18,14 @@ interface Props {
   children: ReactNode
 }
 
+export const MdxGrid = ({ children }: Props) => (
+  <StyledListGrid>{children}</StyledListGrid>
+)
+
+export const MdxH2Small = ({ children }: Props) => (
+  <StyledH2 small>{children}</StyledH2>
+)
+
 const MdxH1 = ({ children }: Props) => <StyledH1>{children}</StyledH1>
 
 const MdxH2 = ({ children }: Props) => <StyledH2>{children}</StyledH2>
@@ -20,7 +34,7 @@ const MdxH3 = ({ children }: Props) => <StyledH3>{children}</StyledH3>
 
 const MdxP = ({ children }: Props) => <StyledP>{children}</StyledP>
 
-const MdxProviderComponentsObject = {
+const MdxComponents = {
   h1: MdxH1,
   h2: MdxH2,
   h3: MdxH3,
@@ -31,4 +45,4 @@ const MdxProviderComponentsObject = {
   PriceTagIcon,
 }
 
-export default MdxProviderComponentsObject
+export default MdxComponents

@@ -8,6 +8,7 @@ const SocialMediaLinks = () => (
       <a
         aria-label={`Link to ${ariaName} account.`}
         href={link}
+        key={link}
         rel='noreferrer noopener'
         target='_blank'
       >

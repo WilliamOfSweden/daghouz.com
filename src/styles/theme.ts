@@ -17,6 +17,9 @@ const THEME = {
     textAlt: '#dddddd',
     ternary: '#00bfff',
   },
+  shapes(num: number) {
+    return `${num * 4}px`
+  },
   spacing(num: number) {
     return `${num * 8}px`
   },
