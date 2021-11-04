@@ -17,7 +17,7 @@ const ProjectImage = ({
 }: Props) => (
   <a
     aria-label='Link to project website.'
-    href={`https://${projectLink}`}
+    href={projectLink}
     rel='noreferrer noopener'
     target='_blank'
   >
