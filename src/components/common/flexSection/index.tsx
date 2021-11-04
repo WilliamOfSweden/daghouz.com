@@ -19,8 +19,11 @@ const FlexSection = ({ children, sectionContent, notFound }: Props) => (
     <div>
       <StyledH1>{sectionContent.title}</StyledH1>
       <MDXRenderer>{sectionContent.content.childMdx.body}</MDXRenderer>
-      <StyledGatsbyLink className='desktop-only' to='/contact'>
-        Contact Me
+      <StyledGatsbyLink
+        className='desktop-only'
+        to={!notFound ? '/contact' : '/'}
+      >
+        {!notFound ? 'Contact Me' : 'Home'}
       </StyledGatsbyLink>
     </div>
     <div>{children}</div>

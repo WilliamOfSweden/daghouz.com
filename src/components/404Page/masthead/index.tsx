@@ -1,15 +1,15 @@
 import React from 'react'
 
-import { SectionData } from '../../../typescript/'
+import { DefaultSectionData } from '../../../typescript/'
 import FlexSection from '../../common/flexSection/'
 import Illustration404 from '../../illustrations/illustration404'
 
 interface Props {
-  content: SectionData
+  mastheadData: DefaultSectionData
 }
 
-const Masthead = ({ content }: Props) => (
-  <FlexSection notFound content={content}>
+const Masthead = ({ mastheadData }: Props) => (
+  <FlexSection notFound sectionContent={mastheadData}>
     <Illustration404 />
   </FlexSection>
 )
