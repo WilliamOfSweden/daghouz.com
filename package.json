@@ -36,7 +36,7 @@
         "react-helmet": "^6.1.0",
         "styled-components": "^5.3.3",
         "three": "^0.134.0",
-        "zustand": "^3.6.3"
+        "zustand": "^3.6.4"
     },
     "devDependencies": {
         "@types/mdx-js__react": "^1.5.5",
