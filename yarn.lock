@@ -13119,11 +13119,6 @@ zustand@^3.5.13:
   resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.3.tgz#3f500d187daf4dea0ae522b372caf30e72741a9b"
   integrity sha512-TJ6QbRxRDiMfiBqEqzgrj1wvtcEiu3sQt5HKFA8IhqPJZNjW+nlJXqVELmaj2vTcMAT4VQ90x8yC+MP1TRWqig==
 
-zustand@^3.6.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/zustand/-/zustand-3.6.4.tgz#2aed404072e3d4538fbc380bcf4eee88b174051d"
-  integrity sha512-liH2ZaEOSiEaVEl7N0CVzoKYZCQPpibfsIgB2ksrjvfu17WME8Eh7XV/MCi5OQM5AnbuYbLowplR03UP5yrNYw==
-
 zwitch@^1.0.0:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/zwitch/-/zwitch-1.0.5.tgz#d11d7381ffed16b742f6af7b3f223d5cd9fe9920"

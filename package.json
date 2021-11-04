@@ -35,8 +35,7 @@
         "react-dom": "^17.0.1",
         "react-helmet": "^6.1.0",
         "styled-components": "^5.3.3",
-        "three": "^0.134.0",
-        "zustand": "^3.6.4"
+        "three": "^0.134.0"
     },
     "devDependencies": {
         "@types/mdx-js__react": "^1.5.5",
