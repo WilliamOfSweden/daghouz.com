@@ -1,17 +1,15 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { MDXProvider } from '@mdx-js/react'
 
-import { SectionData } from '../../../typescript/'
-import { StyledAboutSection } from '../../layout/styledComponents/'
-import { MdxH2Small } from '../../layout/mdxComponents/'
+import { DefaultSectionData } from '../../../typescript/'
+import { StyledAboutSection, StyledH2 } from '../../layout/styledComponents/'
 
 interface Props {
-  content: SectionData
+  aboutSectionData: DefaultSectionData
 }
 
-const AboutSection = ({ content }: Props) => (
+const AboutSection = ({ aboutSectionData }: Props) => (
   <StyledAboutSection className='container'>
     <div>
       <StaticImage
@@ -24,9 +22,8 @@ const AboutSection = ({ content }: Props) => (
       />
     </div>
     <div>
-      <MDXProvider components={{ h2: MdxH2Small }}>
-        <MDXRenderer>{content.markdownNode.childMdx.body}</MDXRenderer>
-      </MDXProvider>
+      <StyledH2 small>{aboutSectionData.title}</StyledH2>
+      <MDXRenderer>{aboutSectionData.content.childMdx.body}</MDXRenderer>
     </div>
   </StyledAboutSection>
 )

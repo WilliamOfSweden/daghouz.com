@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { graphql, PageProps } from 'gatsby'
 
-import { ProjectData, SectionData } from '../typescript/'
+import { ProjectData, DefaultSectionData } from '../typescript/'
 import SEO from '../components/common/seo'
 import Layout from '../components/layout/'
 import Masthead from '../components/projectsPage/masthead/'
@@ -9,10 +9,8 @@ import ProjectsSection from '../components/projectsPage/projectsSection/'
 
 interface DataProps extends PageProps {
   data: {
-    graphCmsPageSection: {
-      content: SectionData
-    }
-    allGraphCmsProject: {
+    contentfulProjectsPageMasthead: DefaultSectionData
+    allContentfulProject: {
       edges: {
         node: ProjectData
       }[]
@@ -22,14 +20,14 @@ interface DataProps extends PageProps {
 
 const ProjectsPage = ({
   data: {
-    graphCmsPageSection: { content },
-    allGraphCmsProject: { edges: projects },
+    contentfulProjectsPageMasthead: mastheadData,
+    allContentfulProject: { edges: projects },
   },
 }: DataProps) => (
   <Fragment>
     <SEO title='Projects' />
     <Layout>
-      <Masthead content={content} />
+      <Masthead mastheadData={mastheadData} />
       <ProjectsSection projects={projects} />
     </Layout>
   </Fragment>
@@ -37,33 +35,31 @@ const ProjectsPage = ({
 
 export const query = graphql`
   query ProjectsPageQuery {
-    graphCmsPageSection(title: { eq: "Projects Page - Masthead" }) {
-      content {
-        markdownNode {
-          childMdx {
-            body
+    allContentfulProject(filter: { node_locale: { eq: "en-US" } }) {
+      edges {
+        node {
+          id
+          image {
+            gatsbyImageData
+            description
+          }
+          link
+          title
+          content {
+            childMdx {
+              body
+            }
           }
         }
       }
     }
-    allGraphCmsProject {
-      edges {
-        node {
-          clientName
-          imageAlt
-          description {
-            markdownNode {
-              childMdx {
-                body
-              }
-            }
-          }
-          image {
-            gatsbyImageData
-          }
-          projectLink
+    contentfulProjectsPageMasthead {
+      content {
+        childMdx {
+          body
         }
       }
+      title
     }
   }
 `

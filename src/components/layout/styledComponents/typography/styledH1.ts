@@ -5,6 +5,7 @@ import THEME from '../../../../styles/theme'
 const StyledH1 = styled.h1`
   font-size: calc(1.6rem + 2vw);
   font-weight: 900;
+  line-height: 1;
   margin-bottom: ${THEME.spacing(4)};
 `
 

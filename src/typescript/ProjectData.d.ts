@@ -1,17 +1,16 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
 export default interface ProjectData {
-  clientName: string
-  description: {
-    markdownNode: {
-      childMdx: {
-        body: string
-      }
+  content: {
+    childMdx: {
+      body: string
     }
   }
+  id: string
   image: {
     gatsbyImageData: IGatsbyImageData
+    description: string
   }
-  imageAlt: string
-  projectLink: string
+  link: string
+  title: string
 }

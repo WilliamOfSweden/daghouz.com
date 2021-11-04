@@ -1,15 +1,15 @@
 import React from 'react'
 
-import { SectionData } from '../../../typescript/'
+import { DefaultSectionData } from '../../../typescript/'
 import FlexSection from '../../common/flexSection/'
 import Canvas from './canvas/'
 
 interface Props {
-  content: SectionData
+  mastheadData: DefaultSectionData
 }
 
-const Masthead = ({ content }: Props) => (
-  <FlexSection content={content}>
+const Masthead = ({ mastheadData }: Props) => (
+  <FlexSection sectionContent={mastheadData}>
     <Canvas />
   </FlexSection>
 )

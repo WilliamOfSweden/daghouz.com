@@ -12,7 +12,7 @@ interface Props {
 const ProjectsSection = ({ projects }: Props) => (
   <section className='container'>
     {projects.map(project => (
-      <ProjectItem key={project.node.clientName} node={project.node} />
+      <ProjectItem key={project.node.id} node={project.node} />
     ))}
   </section>
 )

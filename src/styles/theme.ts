@@ -13,6 +13,7 @@ const THEME = {
   palette: {
     bg: '#00003f',
     primary: '#8755eb',
+    secondary: '#00bfff',
     text: `#ffffff`,
     textAlt: '#dddddd',
     ternary: '#00bfff',

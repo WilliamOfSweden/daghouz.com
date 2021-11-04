@@ -1,22 +1,24 @@
 import React, { ReactNode } from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import { SectionData } from '../../../typescript'
+import { DefaultSectionData } from '../../../typescript'
 import {
   StyledGatsbyLink,
   StyledFlexSection,
+  StyledH1,
 } from '../../layout/styledComponents/'
 
 interface Props {
   children: ReactNode
-  content: SectionData
+  sectionContent: DefaultSectionData
   notFound?: boolean
 }
 
-const FlexSection = ({ children, content, notFound }: Props) => (
+const FlexSection = ({ children, sectionContent, notFound }: Props) => (
   <StyledFlexSection notFound={notFound} className='container'>
     <div>
-      <MDXRenderer>{content.markdownNode.childMdx.body}</MDXRenderer>
+      <StyledH1>{sectionContent.title}</StyledH1>
+      <MDXRenderer>{sectionContent.content.childMdx.body}</MDXRenderer>
       <StyledGatsbyLink className='desktop-only' to='/contact'>
         Contact Me
       </StyledGatsbyLink>

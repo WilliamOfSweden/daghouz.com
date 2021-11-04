@@ -11,24 +11,17 @@ interface DataProps {
 
 const ProjectItem = ({
   node: {
-    clientName,
-    description: {
-      markdownNode: {
-        childMdx: { body },
-      },
+    content: {
+      childMdx: { body },
     },
     image,
-    imageAlt,
-    projectLink,
+    link,
+    title,
   },
 }: DataProps) => (
   <StyledProjectFlexbox>
-    <ProjectImage image={image} imageAlt={imageAlt} projectLink={projectLink} />
-    <ProjectInfo
-      body={body}
-      clientName={clientName}
-      projectLink={projectLink}
-    />
+    <ProjectImage image={image} projectLink={link} />
+    <ProjectInfo body={body} clientName={title} projectLink={link} />
   </StyledProjectFlexbox>
 )
 

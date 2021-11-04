@@ -5,15 +5,14 @@ import { StyledGatsbyImage } from '../../../layout/styledComponents'
 
 interface Props {
   image: {
+    description: string
     gatsbyImageData: IGatsbyImageData
   }
-  imageAlt: string
   projectLink: string
 }
 
 const ProjectImage = ({
-  image: { gatsbyImageData },
-  imageAlt,
+  image: { description, gatsbyImageData },
   projectLink,
 }: Props) => (
   <a
@@ -22,7 +21,7 @@ const ProjectImage = ({
     rel='noreferrer noopener'
     target='_blank'
   >
-    <StyledGatsbyImage alt={imageAlt} image={gatsbyImageData} />
+    <StyledGatsbyImage alt={description} image={gatsbyImageData} />
   </a>
 )
 

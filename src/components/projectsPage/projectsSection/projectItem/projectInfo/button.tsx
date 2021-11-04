@@ -10,7 +10,7 @@ interface Props {
 const Button = ({ projectLink }: Props) => (
   <StyledLinkBtn
     aria-label='Link to project website.'
-    href={`https://${projectLink}`}
+    href={projectLink}
     rel='noreferrer noopener'
     target='_blank'
   >

@@ -28,10 +28,10 @@ module.exports = {
   plugins: [
     `gatsby-plugin-styled-components`,
     {
-      resolve: 'gatsby-source-graphcms',
+      resolve: 'gatsby-source-contentful',
       options: {
-        endpoint: process.env.GCMS_ENDPOINT,
-        buildMarkdownNodes: true,
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        accessToken: process.env.CONTENTFUL_API_TOKEN,
       },
     },
     {
