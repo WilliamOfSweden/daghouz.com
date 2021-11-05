@@ -9,7 +9,7 @@ const StyledSVG = styled.svg`
     fill: ${THEME.palette.primary};
   }
   .e786e155-940c-4094-8745-7f4e8190b902 {
-    fill: ${THEME.palette.text};
+    fill: ${THEME.palette.bg};
   }
 `
 

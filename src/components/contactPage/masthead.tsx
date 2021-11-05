@@ -15,7 +15,7 @@ const StyledDiv = styled.div`
 `
 
 const Masthead = () => (
-  <section className='container' style={{ display: 'flex', gap: '2rem' }}>
+  <section className='container' style={{ display: 'flex', gap: '3rem' }}>
     <ContactForm />
     <StyledDiv>
       <StaticImage

@@ -1,7 +1,7 @@
 import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
 
 import { DefaultSectionData } from '../../../typescript/'
-import HeroIllustration from '../../illustrations/heroIllustration'
 import FlexSection from '../../common/flexSection/'
 
 interface Props {
@@ -10,7 +10,14 @@ interface Props {
 
 const Masthead = ({ mastheadData }: Props) => (
   <FlexSection sectionContent={mastheadData}>
-    <HeroIllustration />
+    <StaticImage
+      src='../../../images/rocket.png'
+      alt='Isometric web development items and rocket.'
+      loading='eager'
+      formats={['auto', 'webp', 'avif']}
+      placeholder='none'
+      layout='fullWidth'
+    />
   </FlexSection>
 )
 

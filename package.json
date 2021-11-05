@@ -19,9 +19,6 @@
         "@fontsource/roboto": "^4.5.1",
         "@mdx-js/mdx": "^1.6.22",
         "@mdx-js/react": "^1.6.22",
-        "@react-spring/web": "^9.2.4",
-        "@react-three/drei": "^7.19.6",
-        "@react-three/fiber": "^7.0.17",
         "gatsby": "^4.1.0",
         "gatsby-plugin-image": "^2.1.0",
         "gatsby-plugin-mdx": "^3.1.0",
@@ -34,8 +31,7 @@
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-helmet": "^6.1.0",
-        "styled-components": "^5.3.3",
-        "three": "^0.134.0"
+        "styled-components": "^5.3.3"
     },
     "devDependencies": {
         "@types/mdx-js__react": "^1.5.5",

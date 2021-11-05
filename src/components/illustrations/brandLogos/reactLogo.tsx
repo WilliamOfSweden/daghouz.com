@@ -3,20 +3,17 @@ import styled from 'styled-components'
 
 const StyledSVG = styled.svg`
   width: 100%;
-
   .a3438f3d-b91b-4234-b40d-42db64e1ff40 {
     fill: #00d8ff;
   }
-
   .f2d7ac71-039e-42e7-9bbf-937ba51293be {
     fill: none;
     stroke: #00d8ff;
     stroke-miterlimit: 10;
     stroke-width: 1.663px;
   }
-
   .bb639624-7841-46f8-a927-ef5d2f02414f {
-    fill: #fff;
+    fill: #bbb;
     fill-rule: evenodd;
   }
 `

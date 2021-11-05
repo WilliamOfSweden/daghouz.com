@@ -11,10 +11,10 @@ const THEME = {
     headings: 'Mulish',
   },
   palette: {
-    bg: '#00003f',
-    primary: '#8755eb',
+    bg: '#fafafa',
+    primary: '#66a6ff',
     secondary: '#00bfff',
-    text: `#ffffff`,
+    text: `#707070`,
     textAlt: '#dddddd',
     ternary: '#00bfff',
   },

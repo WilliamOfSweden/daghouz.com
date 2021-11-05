@@ -7,8 +7,9 @@ const StyledForm = styled.form`
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: calc(100vh - ${THEME.spacing(10)});
+  /* height: calc(100vh - ${THEME.spacing(10)}); */
   justify-content: center;
+  width: 50%;
 
   div {
     display: flex;
@@ -18,7 +19,7 @@ const StyledForm = styled.form`
 
     input,
     textarea {
-      background-color: ${THEME.palette.text}22;
+      background-color: #f2f4f8;
       border: none;
       border-radius: ${THEME.shapes(1)};
       color: ${THEME.palette.text};
@@ -40,7 +41,7 @@ const StyledForm = styled.form`
     background: ${THEME.palette.primary};
     border: none;
     border-radius: ${THEME.shapes(1)};
-    color: ${THEME.palette.text};
+    color: ${THEME.palette.bg};
     cursor: pointer;
     font-family: ${THEME.fonts.body};
     font-size: 1rem;
@@ -51,6 +52,7 @@ const StyledForm = styled.form`
     text-align: center;
     text-transform: uppercase;
     transition: background-color 0.33s ease;
+    width: 100%;
 
     &:hover {
       background: ${THEME.palette.primary}cc;

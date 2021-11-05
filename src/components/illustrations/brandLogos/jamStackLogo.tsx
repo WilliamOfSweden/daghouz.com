@@ -4,9 +4,12 @@ import styled from 'styled-components'
 const StyledSVG = styled.svg`
   width: 100%;
 
-  .ac8e5ef8-197e-4ce9-92f7-81e1e1b8804d,
-  .ee1d7f3f-14ef-4be3-800b-79fde263a2ac {
+  .ac8e5ef8-197e-4ce9-92f7-81e1e1b8804d {
     fill: #fff;
+  }
+
+  .ee1d7f3f-14ef-4be3-800b-79fde263a2ac {
+    fill: #bbb;
   }
 
   .bd63fa33-0b12-4d87-bb78-2e8fb4b3828e {

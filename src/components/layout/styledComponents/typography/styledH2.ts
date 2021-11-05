@@ -10,7 +10,7 @@ const StyledH2 = styled.h2<Props>`
   ${({ small }) =>
     small
       ? `
-      font-size: calc(1.6rem + 1vw);
+      font-size: 1.5rem;
       font-weight: 700;
       margin-bottom: ${THEME.spacing(2)};
       text-align: left;

@@ -6,11 +6,11 @@ const StyledSVG = styled.svg`
   margin-bottom: 1rem;
 
   .b1baa628-d8c1-4f7a-9e33-297cd6da0dfa {
-    fill: #8755eb;
+    fill: #3178c6;
   }
 
   .a18d7961-871f-4cd0-950a-79e33b7f210e {
-    fill: #00bfff;
+    fill: #81e5fe;
     opacity: 0.85;
   }
 `

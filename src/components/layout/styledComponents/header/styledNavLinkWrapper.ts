@@ -8,20 +8,16 @@ const StyledNavLinkWrapper = styled.div`
   width: 100%;
 
   a {
-    color: ${THEME.palette.textAlt};
+    color: ${THEME.palette.text};
     font-family: Mulish;
     font-size: 0.8rem;
     letter-spacing: 1px;
     margin-left: 3rem;
     text-transform: uppercase;
-
-    &:hover {
-      color: ${THEME.palette.text};
-    }
   }
 
   .active-link {
-    color: ${THEME.palette.text};
+    border-bottom: ${THEME.palette.primary} solid 2px;
   }
 `
 

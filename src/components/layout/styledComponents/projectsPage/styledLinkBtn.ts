@@ -7,7 +7,7 @@ const StyledLinkBtn = styled.a`
   background: ${THEME.palette.primary};
   border: none;
   border-radius: ${THEME.shapes(1)};
-  color: ${THEME.palette.text};
+  color: ${THEME.palette.bg};
   cursor: pointer;
   display: flex;
   font-family: ${THEME.fonts.body};

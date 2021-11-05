@@ -7,7 +7,7 @@ const StyledGatsbyLink = styled(Link)`
   background: ${THEME.palette.primary};
   border: none;
   border-radius: ${THEME.shapes(1)};
-  color: ${THEME.palette.text};
+  color: ${THEME.palette.bg};
   cursor: pointer;
   font-family: ${THEME.fonts.body};
   font-size: 1rem;

@@ -9,7 +9,7 @@ const StyledSVG = styled.svg`
   }
 
   .fbfe8bc9-f965-4b94-abd8-e9901ca72023 {
-    fill: #fff;
+    fill: #bbb;
   }
 `
 

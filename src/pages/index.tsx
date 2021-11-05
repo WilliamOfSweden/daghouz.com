@@ -28,9 +28,9 @@ const IndexPage = ({
     <SEO />
     <Layout>
       <Masthead mastheadData={mastheadData} />
-      <AboutSection aboutSectionData={aboutSectionData} />
       <FeaturesSection featuresSectionData={featuresSectionData} />
-      <StackSection />
+      {/* <StackSection /> */}
+      <AboutSection aboutSectionData={aboutSectionData} />
     </Layout>
   </Fragment>
 )
