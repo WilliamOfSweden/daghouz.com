@@ -12,7 +12,7 @@ const THEME = {
   },
   palette: {
     bg: '#fafafa',
-    primary: '#3178c6',
+    primary: '#3162C3',
     secondary: '#00bfff',
     text: `#707070`,
     textAlt: '#dddddd',

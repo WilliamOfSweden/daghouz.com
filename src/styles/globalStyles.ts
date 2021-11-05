@@ -32,7 +32,7 @@ export default createGlobalStyle`
         }
 
         a {
-          color: ${THEME.palette.secondary};
+          color: ${THEME.palette.primary};
           text-decoration: none;
         }
 

@@ -18,7 +18,7 @@ const StyledForm = styled.form`
 
     input,
     textarea {
-      background-color: #f2f4f8;
+      background-color: #e8eaef;
       border: none;
       border-radius: ${THEME.shapes(1)};
       color: #000;

@@ -4,9 +4,9 @@ import THEME from '../../../../styles/theme'
 
 const StyledAboutSection = styled.section`
   & > div {
-    color: ${THEME.palette.text};
     border-radius: ${THEME.shapes(5)};
     background: ${THEME.palette.primary}22;
+    color: #333;
     padding: ${THEME.spacing(2)};
 
     p {
