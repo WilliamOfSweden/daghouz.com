@@ -7,7 +7,6 @@ const StyledForm = styled.form`
   flex: 1;
   display: flex;
   flex-direction: column;
-  /* height: calc(100vh - ${THEME.spacing(10)}); */
   justify-content: center;
   width: 50%;
 
@@ -22,7 +21,7 @@ const StyledForm = styled.form`
       background-color: #f2f4f8;
       border: none;
       border-radius: ${THEME.shapes(1)};
-      color: ${THEME.palette.text};
+      color: #000;
       height: 40px;
       padding: ${THEME.spacing(1)};
 
