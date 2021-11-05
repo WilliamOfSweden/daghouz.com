@@ -26,7 +26,7 @@
 }
 
 .title {
-  font-size: calc(2rem);
+  font-size: 2rem;
   font-weight: 800;
   margin-bottom: var(--space-md);
 }

@@ -1,10 +1,16 @@
 @import '../../../styles/vars.css';
 
 .section > h2 {
-  font-size: calc(1.6rem + 2vw);
+  font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: var(--space-lg);
   text-align: center;
+}
+
+@media screen and (max-width: 319px) {
+  .section > h2 {
+    font-size: 2rem;
+  }
 }
 
 .section > ul {
