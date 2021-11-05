@@ -1,18 +1,17 @@
 import React, { FC } from 'react'
-import styled from 'styled-components'
 
-const StyledSVG = styled.svg`
-  width: 100%;
+// const StyledSVG = styled.svg`
+//   width: 100%;
 
-  .bcfd8a1e-0ee9-46a8-9271-9928a44bc8f0 {
-    fill-rule: evenodd;
-    fill: #bbb;
-  }
-`
+//   .bcfd8a1e-0ee9-46a8-9271-9928a44bc8f0 {
+//     fill-rule: evenodd;
+//     fill: #bbb;
+//   }
+// `
 
 const NextjsLogo: FC = () => {
   return (
-    <StyledSVG
+    <svg
       id='ab5a1316-b022-42ab-aded-8b510112f6b5'
       data-name='b19c2aca-94e8-4541-bfb2-cb98eda48433'
       xmlns='http://www.w3.org/2000/svg'
@@ -38,7 +37,7 @@ const NextjsLogo: FC = () => {
           transform='translate(-0.00017 0)'
         />
       </g>
-    </StyledSVG>
+    </svg>
   )
 }
 

@@ -1,7 +1,7 @@
 import React from 'react'
-import { IGatsbyImageData } from 'gatsby-plugin-image'
+import { GatsbyImage, IGatsbyImageData } from 'gatsby-plugin-image'
 
-import { StyledGatsbyImage } from '../../../layout/styledComponents'
+import * as projectItemStyles from './projectItem.module.css'
 
 interface Props {
   image: {
@@ -25,7 +25,11 @@ const ProjectImage = ({
     }}
     target='_blank'
   >
-    <StyledGatsbyImage alt={description} image={gatsbyImageData} />
+    <GatsbyImage
+      alt={description}
+      className={projectItemStyles.img}
+      image={gatsbyImageData}
+    />
   </a>
 )
 

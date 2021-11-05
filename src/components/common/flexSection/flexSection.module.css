@@ -1,0 +1,68 @@
+@import '../../../styles/vars.css';
+
+.flexSection {
+  padding-top: 32px;
+}
+
+.mainHeading {
+  font-size: calc(1.6rem + 2vw);
+  font-weight: 900;
+  line-height: 1;
+  margin-bottom: var(--space-xl);
+}
+
+.imgWrapper {
+  width: 100%;
+}
+
+.link {
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--shape-radius-sm);
+  color: var(--color-bg);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.33s ease;
+}
+
+.link:hover {
+  background: var(--color-primary-light);
+}
+
+@media screen and (min-width: 600px) {
+  .flexSection {
+    display: flex;
+    padding-top: 0;
+  }
+
+  .imgWrapper {
+    flex: 5;
+  }
+
+  .textWrapper {
+    flex: 7;
+    max-width: 78ch;
+    margin: auto 0;
+  }
+
+  .link {
+    width: 270px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .textWrapper {
+    flex: 6;
+  }
+
+  .imgWrapper {
+    flex: 6;
+  }
+}

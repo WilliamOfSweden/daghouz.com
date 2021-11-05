@@ -1,16 +1,14 @@
 import React from 'react'
 
-import { StyledHeader, StyledNavbar } from '../styledComponents/'
-import IconLinks from './iconsLinks/'
-import NavLinks from './navLinks'
+import * as headerStyles from './header.module.css'
+import PageNav from './pageNav/'
+import SocialNav from './socialNav/'
 
 const Header = () => (
-  <StyledHeader className='container'>
-    <StyledNavbar>
-      <IconLinks />
-      <NavLinks />
-    </StyledNavbar>
-  </StyledHeader>
+  <header className={`${headerStyles.mainHeader} container`}>
+    <SocialNav />
+    <PageNav />
+  </header>
 )
 
 export default Header

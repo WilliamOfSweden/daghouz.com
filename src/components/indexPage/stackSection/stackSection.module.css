@@ -1,0 +1,25 @@
+@import '../../../styles/vars.css';
+
+.section > h2 {
+  font-size: calc(1.6rem + 2vw);
+  font-weight: 800;
+  margin-bottom: var(--space-lg);
+  text-align: center;
+}
+
+.section > ul {
+  display: grid;
+  grid-gap: var(--space-lg);
+}
+
+@media (min-width: 600px) {
+  .section > ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .section > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

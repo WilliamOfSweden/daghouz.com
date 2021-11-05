@@ -1,0 +1,13 @@
+@import '../../../../styles/vars.css';
+
+.logo {
+  width: 100%;
+}
+
+.shape {
+  fill: #e434aa;
+}
+
+.text {
+  fill: var(--color-logo-text);
+}

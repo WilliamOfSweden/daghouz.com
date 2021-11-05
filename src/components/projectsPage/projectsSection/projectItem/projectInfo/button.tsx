@@ -1,22 +1,23 @@
 import React from 'react'
 import OpenExternalIcon from '../../../../illustrations/icons/openExternalIcon'
 
-import { StyledLinkBtn } from '../../../../layout/styledComponents'
+import * as projectItemStyles from '../projectItem.module.css'
 
 interface Props {
   projectLink: string
 }
 
 const Button = ({ projectLink }: Props) => (
-  <StyledLinkBtn
+  <a
     aria-label='Link to project website.'
+    className={projectItemStyles.btn}
     href={projectLink}
     rel='noreferrer noopener'
     target='_blank'
   >
     Visit
     <OpenExternalIcon />
-  </StyledLinkBtn>
+  </a>
 )
 
 export default Button

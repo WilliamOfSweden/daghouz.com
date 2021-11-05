@@ -1,0 +1,23 @@
+@import '../../../../styles/vars.css';
+
+.letters {
+  fill: #fff;
+}
+
+.logo {
+  width: 100%;
+}
+
+.circle {
+  fill: #00d8ff;
+}
+
+.shape {
+  fill: #3178c6;
+  fill-rule: evenodd;
+}
+
+.text {
+  fill: var(--color-logo-text);
+  fill-rule: evenodd;
+}

@@ -1,0 +1,10 @@
+.imgWrapper {
+  display: none;
+}
+
+@media (min-width: 900px) {
+  .imgWrapper {
+    display: block;
+    flex: 1;
+  }
+}

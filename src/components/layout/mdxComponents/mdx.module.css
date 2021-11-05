@@ -1,0 +1,16 @@
+@import '../../../styles/vars.css';
+
+.paragraph {
+  margin-bottom: var(--spacie-xl);
+}
+
+.grid {
+  display: grid;
+  grid-gap: var(--space-lg);
+}
+
+@media (min-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

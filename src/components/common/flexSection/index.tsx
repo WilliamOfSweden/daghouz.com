@@ -2,11 +2,8 @@ import React, { ReactNode } from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { DefaultSectionData } from '../../../typescript'
-import {
-  StyledGatsbyLink,
-  StyledFlexSection,
-  StyledH1,
-} from '../../layout/styledComponents/'
+import * as flexSectionStyles from './flexSection.module.css'
+import { Link } from 'gatsby'
 
 interface Props {
   children: ReactNode
@@ -15,22 +12,25 @@ interface Props {
 }
 
 const FlexSection = ({ children, sectionContent, notFound }: Props) => (
-  <StyledFlexSection notFound={notFound} className='container'>
-    <div>
-      <StyledH1>{sectionContent.title}</StyledH1>
+  <section className={`${flexSectionStyles.flexSection} container`}>
+    <div className={flexSectionStyles.textWrapper}>
+      <h1 className={flexSectionStyles.mainHeading}>{sectionContent.title}</h1>
       <MDXRenderer>{sectionContent.content.childMdx.body}</MDXRenderer>
-      <StyledGatsbyLink
-        className='desktop-only'
+      <Link
+        className={`${flexSectionStyles.link} desktop-only`}
         to={!notFound ? '/contact' : '/'}
       >
         {!notFound ? 'Contact Me' : 'Home'}
-      </StyledGatsbyLink>
+      </Link>
     </div>
-    <div>{children}</div>
-    <StyledGatsbyLink className='mobile-only' to={!notFound ? '/contact' : '/'}>
+    <div className={flexSectionStyles.imgWrapper}>{children}</div>
+    <Link
+      className={`${flexSectionStyles.link} mobile-only`}
+      to={!notFound ? '/contact' : '/'}
+    >
       {!notFound ? 'Contact Me' : 'Home'}
-    </StyledGatsbyLink>
-  </StyledFlexSection>
+    </Link>
+  </section>
 )
 
 export default FlexSection

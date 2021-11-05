@@ -29,7 +29,7 @@ const IndexPage = ({
     <Layout>
       <Masthead mastheadData={mastheadData} />
       <FeaturesSection featuresSectionData={featuresSectionData} />
-      {/* <StackSection /> */}
+      <StackSection />
       <AboutSection aboutSectionData={aboutSectionData} />
     </Layout>
   </Fragment>

@@ -1,13 +1,13 @@
 import React from 'react'
 
-import { StyledH2 } from '../../../../layout/styledComponents/'
+import * as projectItemStyles from '../projectItem.module.css'
 
 interface Props {
   clientName: string
 }
 
 const Heading = ({ clientName }: Props) => (
-  <StyledH2 small>{clientName}</StyledH2>
+  <h2 className={projectItemStyles.title}>{clientName}</h2>
 )
 
 export default Heading

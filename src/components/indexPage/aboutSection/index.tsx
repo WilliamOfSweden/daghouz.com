@@ -2,7 +2,7 @@ import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { DefaultSectionData } from '../../../typescript/'
-import { StyledAboutSection, StyledH2 } from '../../layout/styledComponents/'
+import * as aboutSectionStyles from './aboutSection.module.css'
 import { StaticImage } from 'gatsby-plugin-image'
 
 interface Props {
@@ -10,7 +10,7 @@ interface Props {
 }
 
 const AboutSection = ({ aboutSectionData }: Props) => (
-  <StyledAboutSection className='container'>
+  <section className={`${aboutSectionStyles.section} container`}>
     <div>
       <div>
         <StaticImage
@@ -23,11 +23,11 @@ const AboutSection = ({ aboutSectionData }: Props) => (
         />
       </div>
       <div>
-        <StyledH2 small>About Me</StyledH2>
+        <h2>About Me</h2>
         <MDXRenderer>{aboutSectionData.content.childMdx.body}</MDXRenderer>
       </div>
     </div>
-  </StyledAboutSection>
+  </section>
 )
 
 export default AboutSection

@@ -1,8 +1,8 @@
 import React from 'react'
 
 import { ProjectData } from '../../../../typescript/'
+import * as projectItemStyles from './projectItem.module.css'
 import ProjectInfo from './projectInfo/'
-import { StyledProjectFlexbox } from '../../../layout/styledComponents/'
 import ProjectImage from './projectImage'
 
 interface DataProps {
@@ -19,10 +19,10 @@ const ProjectItem = ({
     title,
   },
 }: DataProps) => (
-  <StyledProjectFlexbox>
+  <div className={projectItemStyles.wrapper}>
     <ProjectImage image={image} projectLink={link} />
     <ProjectInfo body={body} clientName={title} projectLink={link} />
-  </StyledProjectFlexbox>
+  </div>
 )
 
 export default ProjectItem

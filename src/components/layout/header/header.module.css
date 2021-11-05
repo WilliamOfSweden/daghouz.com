@@ -1,0 +1,9 @@
+@import '../../../styles/vars.css';
+
+.mainHeader {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: var(--space-md);
+  padding-top: var(--space-md);
+}

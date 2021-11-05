@@ -1,0 +1,18 @@
+@import '../../../../styles/vars.css';
+
+.letter {
+  fill: #fff;
+  stroke: #f0047f;
+}
+
+.logo {
+  width: 100%;
+}
+
+.shape {
+  fill: url(#b8530097-e1a6-4aef-a089-7424b18fa603);
+}
+
+.text {
+  fill: var(--color-logo-text);
+}
