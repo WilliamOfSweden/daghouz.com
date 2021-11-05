@@ -1,6 +1,5 @@
 import StyledAboutSection from './indexPage/styledAboutSection'
 import StyledGatsbyLink from './styledGatsbyLink'
-import StyledCanvas from './projectsPage/styledCanvas'
 import StyledFlexSection from './styledFlexSection'
 import StyledGatsbyImage from './projectsPage/styledGatsbyImage'
 import StyledLinkBtn from './projectsPage/styledLinkBtn'
@@ -19,7 +18,6 @@ import StyledSocialMediaLink from './header/styledSocialMediaLink'
 export {
   StyledAboutSection,
   StyledGatsbyLink,
-  StyledCanvas,
   StyledFlexSection,
   StyledGatsbyImage,
   StyledLinkBtn,
