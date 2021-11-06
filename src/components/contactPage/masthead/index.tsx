@@ -13,7 +13,7 @@ const Masthead = () => (
         alt='Building'
         loading='eager'
         formats={['auto', 'webp', 'avif']}
-        placeholder='none'
+        placeholder='tracedSVG'
         layout='fullWidth'
       />
     </div>

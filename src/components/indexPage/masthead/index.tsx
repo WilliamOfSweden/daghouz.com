@@ -15,7 +15,7 @@ const Masthead = ({ mastheadData }: Props) => (
       alt='Isometric web development items and rocket.'
       loading='eager'
       formats={['auto', 'webp', 'avif']}
-      placeholder='none'
+      placeholder='tracedSVG'
       layout='fullWidth'
     />
   </FlexSection>

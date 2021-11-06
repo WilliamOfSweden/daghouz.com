@@ -16,9 +16,9 @@ const AboutSection = ({ aboutSectionData }: Props) => (
         <StaticImage
           src='../../../images/about.png'
           alt='Building'
-          loading='eager'
+          loading='lazy'
           formats={['auto', 'webp', 'avif']}
-          placeholder='none'
+          placeholder='tracedSVG'
           layout='fullWidth'
         />
       </div>
