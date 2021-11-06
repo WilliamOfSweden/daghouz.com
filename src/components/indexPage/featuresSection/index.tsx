@@ -11,11 +11,22 @@ interface Props {
 }
 
 const FeaturesSection = ({ featuresSectionData }: Props) => (
-  <section className='container'>
-    <h2 className={featuresSectionStyles.title}>{featuresSectionData.title}</h2>
-    <MDXProvider components={{ ul: MdxGrid }}>
-      <MDXRenderer>{featuresSectionData.content.childMdx.body}</MDXRenderer>
-    </MDXProvider>
+  <section
+    style={{
+      background: '#f1f4f8',
+      marginBottom: 0,
+      paddingBottom: '60px',
+      paddingTop: '60px',
+    }}
+  >
+    <div className='container'>
+      <h2 className={featuresSectionStyles.title}>
+        {featuresSectionData.title}
+      </h2>
+      <MDXProvider components={{ ul: MdxGrid }}>
+        <MDXRenderer>{featuresSectionData.content.childMdx.body}</MDXRenderer>
+      </MDXProvider>
+    </div>
   </section>
 )
 

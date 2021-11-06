@@ -5,8 +5,10 @@ import { DefaultSectionData } from '../typescript/'
 import SEO from '../components/common/seo'
 import Layout from '../components/layout/'
 import Masthead from '../components/indexPage/masthead/'
-import AboutSection from '../components/indexPage/aboutSection/'
+import ServicesSection from '../components/indexPage/servicesSection/'
+import ECommerceSection from '../components/indexPage/eCommerceSection'
 import FeaturesSection from '../components/indexPage/featuresSection/'
+import AboutSection from '../components/indexPage/aboutSection/'
 import StackSection from '../components/indexPage/stackSection/'
 
 interface DataProps extends PageProps {
@@ -28,6 +30,8 @@ const IndexPage = ({
     <SEO />
     <Layout>
       <Masthead mastheadData={mastheadData} />
+      <ServicesSection />
+      <ECommerceSection />
       <FeaturesSection featuresSectionData={featuresSectionData} />
       <StackSection />
       <AboutSection aboutSectionData={aboutSectionData} />

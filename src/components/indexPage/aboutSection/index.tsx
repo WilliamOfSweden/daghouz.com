@@ -10,21 +10,30 @@ interface Props {
 }
 
 const AboutSection = ({ aboutSectionData }: Props) => (
-  <section className={`${aboutSectionStyles.section} container`}>
-    <div>
+  <section
+    style={{
+      background: '#f1f4f8',
+      paddingTop: '60px',
+      marginBottom: 0,
+      paddingBottom: '60px',
+    }}
+  >
+    <div className={`${aboutSectionStyles.section} container`}>
       <div>
-        <StaticImage
-          src='../../../images/about.png'
-          alt='Building'
-          loading='lazy'
-          formats={['auto', 'webp', 'avif']}
-          placeholder='tracedSVG'
-          layout='fullWidth'
-        />
-      </div>
-      <div>
-        <h2>About Me</h2>
-        <MDXRenderer>{aboutSectionData.content.childMdx.body}</MDXRenderer>
+        <div>
+          <StaticImage
+            src='../../../images/about.png'
+            alt='Building'
+            loading='lazy'
+            formats={['auto', 'webp', 'avif']}
+            placeholder='tracedSVG'
+            layout='fullWidth'
+          />
+        </div>
+        <div>
+          <h2>About Me</h2>
+          <MDXRenderer>{aboutSectionData.content.childMdx.body}</MDXRenderer>
+        </div>
       </div>
     </div>
   </section>

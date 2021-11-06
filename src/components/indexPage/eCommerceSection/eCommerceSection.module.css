@@ -1,7 +1,14 @@
 @import '../../../styles/vars.css';
 
-.flexSection {
-  padding-top: 32px;
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 60px;
+}
+
+.section > div > h2 {
+  margin-bottom: var(--space-lg);
 }
 
 .imgWrapper {
@@ -14,6 +21,7 @@
   border-radius: var(--shape-radius-sm);
   color: var(--color-bg);
   cursor: pointer;
+  display: block;
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
@@ -29,11 +37,10 @@
   background: var(--color-primary-light);
 }
 
-@media screen and (min-width: 600px) {
-  .flexSection {
-    display: flex;
+@media screen and (min-width: 700px) {
+  .section {
     flex-direction: row;
-    padding-top: 0;
+    gap: 100px;
   }
 
   .imgWrapper {
