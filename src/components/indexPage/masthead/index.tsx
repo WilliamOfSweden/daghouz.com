@@ -11,7 +11,7 @@ interface Props {
 const Masthead = ({ mastheadData }: Props) => (
   <FlexSection sectionContent={mastheadData}>
     <StaticImage
-      src='../../../images/rocket.jpg'
+      src='../../../images/rocket.svg'
       alt='Isometric web development items and rocket.'
       loading='eager'
       formats={['auto', 'webp', 'avif']}
