@@ -14,7 +14,7 @@ interface Props {
 const FlexSection = ({ children, sectionContent, notFound }: Props) => (
   <section className={`${flexSectionStyles.flexSection} container`}>
     <div className={flexSectionStyles.textWrapper}>
-      <h1 style={{ color: '#3162c2' }}>{sectionContent.title}</h1>
+      <h1>{sectionContent.title}</h1>
       <MDXRenderer>{sectionContent.content.childMdx.body}</MDXRenderer>
       <Link
         className={`${flexSectionStyles.link} desktop-only`}
