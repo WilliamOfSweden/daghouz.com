@@ -9,7 +9,7 @@ const Masthead = () => (
     <ContactForm />
     <div className={mastheadStyles.imgWrapper}>
       <StaticImage
-        src='../../../images/contact.jpg'
+        src='../../../images/contact.svg'
         alt='Building'
         loading='eager'
         formats={['auto', 'webp', 'avif']}
