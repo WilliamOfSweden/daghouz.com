@@ -14,6 +14,7 @@ const FeaturesSection = ({ featuresSectionData }: Props) => (
   <section
     style={{
       background: '#f1f4f8',
+      color: '#3a3a40',
       marginBottom: 0,
       paddingBottom: '60px',
       paddingTop: '60px',
