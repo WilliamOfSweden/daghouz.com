@@ -4,7 +4,7 @@ const OpenExternalIcon = () => {
   return (
     <svg
       fill='#ffffff'
-      style={{ height: '24px', marginLeft: '16px' }}
+      style={{ height: '24px', marginLeft: '12px' }}
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 24 24'
     >

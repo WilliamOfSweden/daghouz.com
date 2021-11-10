@@ -9,12 +9,15 @@ import ServicesSection from '../components/indexPage/servicesSection/'
 import ECommerceSection from '../components/indexPage/eCommerceSection'
 import FeaturesSection from '../components/indexPage/featuresSection/'
 import AboutSection from '../components/indexPage/aboutSection/'
-import StackSection from '../components/indexPage/stackSection/'
+
+interface MastheadData extends DefaultSectionData {
+  coloredTitle: string
+}
 
 interface DataProps extends PageProps {
   data: {
     contentfulIndexPageAboutSection: DefaultSectionData
-    contentfulIndexPageMasthead: DefaultSectionData
+    contentfulIndexPageMasthead: MastheadData
     contentfulIndexPageFeaturesSection: DefaultSectionData
   }
 }
@@ -33,7 +36,6 @@ const IndexPage = ({
       <ServicesSection />
       <ECommerceSection />
       <FeaturesSection featuresSectionData={featuresSectionData} />
-      <StackSection />
       <AboutSection aboutSectionData={aboutSectionData} />
     </Layout>
   </Fragment>
@@ -50,6 +52,7 @@ export const query = graphql`
       }
     }
     contentfulIndexPageMasthead {
+      coloredTitle
       title
       content {
         childMdx {

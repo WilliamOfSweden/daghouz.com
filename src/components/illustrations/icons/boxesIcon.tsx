@@ -5,7 +5,7 @@ const BoxesIcon = () => {
     <svg
       data-name='Layer 1'
       id='f65dbcc3-4da8-4c98-b63e-4bb228dfa78d'
-      style={{ height: '2.7rem', marginBottom: '1rem' }}
+      style={{ height: '2.7rem', marginBottom: '12px' }}
       viewBox='0 0 206.604 200'
       xmlns='http://www.w3.org/2000/svg'
     >

@@ -16,12 +16,17 @@ export const MdxGrid = ({ children }: Props) => (
   <ul className={mdxStyles.grid}>{children}</ul>
 )
 
+const MdxH3 = ({ children }: Props) => (
+  <h3 className={mdxStyles.h3}>{children}</h3>
+)
+
 const MdxP = ({ children }: Props) => (
   <p className={mdxStyles.paragraph}>{children}</p>
 )
 
 const MdxComponents = {
   p: MdxP,
+  h3: MdxH3,
   BoxesIcon,
   FastForwardIcon,
   GearIcon,

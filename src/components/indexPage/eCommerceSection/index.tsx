@@ -20,7 +20,7 @@ const ECommerceSection = () => (
       <h2>E-commerce</h2>
       <p>
         Allow your business to reach new heights and drive revenue by providing
-        your customer with compelling and fast e-commerce experiences with
+        your customers with compelling and fast e-commerce experiences with
         near-instant page loads.
       </p>
       <Link className={eCommerceSectionStyles.link} to='/contact'>

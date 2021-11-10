@@ -2,10 +2,14 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import { DefaultSectionData } from '../../../typescript/'
-import FlexSection from '../../common/flexSection/'
+import FlexSection from './flexSection/'
+
+interface MastheadData extends DefaultSectionData {
+  coloredTitle: string
+}
 
 interface Props {
-  mastheadData: DefaultSectionData
+  mastheadData: MastheadData
 }
 
 const Masthead = ({ mastheadData }: Props) => (
