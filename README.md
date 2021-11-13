@@ -5,4 +5,4 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3bbc070d-35c3-40e4-b7b1-f1ec825bdf9c/deploy-status)](https://app.netlify.com/sites/daghouz/deploys)
 
-Website built with **Gatsby**, **TypeScript** &amp; **CSS Modules**, consuming content from **Contentful**.
+Personal website & portfolio, built on the **𝐉𝐚𝐦𝐬𝐭𝐚𝐜𝐤** architecture with **𝐆𝐚𝐭𝐬𝐛𝐲**, **𝐓𝐲𝐩𝐞𝐒𝐜𝐫𝐢𝐩𝐭**, **𝐂𝐒𝐒 𝐦𝐨𝐝𝐮𝐥𝐞𝐬** and **𝐂𝐨𝐧𝐭𝐞𝐧𝐭𝐟𝐮𝐥**.
