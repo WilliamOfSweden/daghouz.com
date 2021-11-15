@@ -25,8 +25,11 @@ const FlexSection = ({ children, sectionContent, notFound }: Props) => (
         {sectionContent.title}
       </h1>
       <MDXRenderer>{sectionContent.content.childMdx.body}</MDXRenderer>
-      <Link className={`${flexSectionStyles.link} desktop-only`} to='/'>
-        Contact Me
+      <Link
+        className={`${flexSectionStyles.link} desktop-only`}
+        to={!notFound ? '/contact' : '/'}
+      >
+        {!notFound ? 'Contact Me' : 'Home'}{' '}
       </Link>
     </div>
     <div className={flexSectionStyles.imgWrapper}>{children}</div>
