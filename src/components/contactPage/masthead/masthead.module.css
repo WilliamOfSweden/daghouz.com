@@ -1,9 +1,14 @@
-.imgWrapper {
+.masthead {
+  display: flex;
+  gap: 3rem;
+}
+
+.masthead__imgWrapper {
   display: none;
 }
 
 @media (min-width: 900px) {
-  .imgWrapper {
+  .masthead__imgWrapper {
     display: block;
     flex: 1;
   }
