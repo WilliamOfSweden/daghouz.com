@@ -1,17 +1,23 @@
 @import '../../../styles/vars.css';
 
-.section > div {
+.aboutSection {
+  padding-top: 60px;
+  margin-bottom: 0;
+  padding-bottom: 60px;
+}
+
+.aboutSection > div {
   border-radius: var(--shape-radius-md);
   background: var(--color-primary-extra-light);
   color: #333;
   padding: var(--space-md);
 }
 
-.section > div > div > p {
+.aboutSection > div > div > div > p {
   margin-bottom: 0;
 }
 
-.section > div > div > h2 {
+.aboutSection > div > div > div > h2 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: var(--space-md);
@@ -19,17 +25,17 @@
 }
 
 @media (min-width: 600px) {
-  .section > div {
+  .aboutSection > div > div {
     display: flex;
     flex-direction: row-reverse;
     gap: var(--space-md);
   }
 
-  .section > div > div:first-child {
+  .aboutSection > div > div > div:first-child {
     flex: 5;
   }
 
-  .section > div > div:nth-child(2) {
+  .aboutSection > div > div > div:nth-child(2) {
     display: flex;
     flex: 7;
     flex-direction: column;
@@ -38,11 +44,11 @@
 }
 
 @media (min-width: 900px) {
-  .section > div > div:first-child {
+  .aboutSection > div > div > div:first-child {
     flex: 6;
   }
 
-  .section > div > div:nth-child(2) {
+  .aboutSection > div > div > div:nth-child(2) {
     flex: 6;
   }
 }

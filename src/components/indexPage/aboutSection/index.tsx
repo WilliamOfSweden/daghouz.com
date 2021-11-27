@@ -10,15 +10,8 @@ interface Props {
 }
 
 const AboutSection = ({ aboutSectionData }: Props) => (
-  <section
-    style={{
-      background: '#f1f4f8',
-      paddingTop: '60px',
-      marginBottom: 0,
-      paddingBottom: '60px',
-    }}
-  >
-    <div className={`${aboutSectionStyles.section} container`}>
+  <section className={aboutSectionStyles.aboutSection}>
+    <div className='container'>
       <div>
         <div>
           <StaticImage
