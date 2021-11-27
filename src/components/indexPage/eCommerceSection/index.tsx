@@ -5,7 +5,7 @@ import { Link } from 'gatsby'
 import * as eCommerceSectionStyles from './eCommerceSection.module.css'
 
 const ECommerceSection = () => (
-  <section className={`${eCommerceSectionStyles.section} container`}>
+  <section className={`${eCommerceSectionStyles.eCommerceSection} container`}>
     <div className={eCommerceSectionStyles.imgWrapper}>
       <StaticImage
         src='../../../images/e-commerce.svg'

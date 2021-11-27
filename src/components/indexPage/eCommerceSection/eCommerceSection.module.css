@@ -1,13 +1,13 @@
 @import '../../../styles/vars.css';
 
-.section {
+.eCommerceSection {
   display: flex;
   flex-direction: column;
   gap: 50px;
   margin-bottom: 60px;
 }
 
-.section > div > h2 {
+.eCommerceSection > div > h2 {
   margin-bottom: var(--space-lg);
 }
 
@@ -38,7 +38,7 @@
 }
 
 @media screen and (min-width: 700px) {
-  .section {
+  .eCommerceSection {
     flex-direction: row;
     gap: 100px;
   }
