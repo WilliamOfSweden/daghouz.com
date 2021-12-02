@@ -26,8 +26,8 @@ const PageNav = () => {
     <nav className={pageNavStyles.pageNav}>
       {navLinks.map(({ link, name }) => (
         <Link
-          activeClassName={pageNavStyles.activeLink}
-          className={pageNavStyles.link}
+          activeClassName={pageNavStyles.pageNav__activeLink}
+          className={pageNavStyles.pageNav__link}
           key={link}
           to={link}
         >

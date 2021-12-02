@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.link {
+.pageNav__link {
   color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 0.8rem;
@@ -16,6 +16,6 @@
   text-transform: uppercase;
 }
 
-.activeLink {
+.pageNav__activeLink {
   border-bottom: var(--color-primary) solid 2px;
 }
