@@ -1,7 +1,7 @@
 import React from 'react'
 
 import ProjectItem from './projectItem/'
-import { ProjectData } from '../../../typescript/'
+import { ProjectData } from '../../../typings/'
 
 interface Props {
   projects: {

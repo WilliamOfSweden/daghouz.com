@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react'
 import { graphql, PageProps } from 'gatsby'
 
-import { ProjectData, DefaultSectionData } from '../typescript/'
+import { ProjectData, DefaultSectionData } from '../typings/'
 import SEO from '../components/common/seo'
 import Layout from '../components/layout/'
 import Masthead from '../components/projectsPage/masthead/'

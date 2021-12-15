@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import { DefaultSectionData } from '../../../typescript/'
+import { DefaultSectionData } from '../../../typings/'
 import FlexSection from './flexSection/'
 
 interface MastheadData extends DefaultSectionData {

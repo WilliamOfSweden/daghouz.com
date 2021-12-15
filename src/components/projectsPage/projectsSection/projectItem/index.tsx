@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { ProjectData } from '../../../../typescript/'
+import { ProjectData } from '../../../../typings/'
 import * as projectItemStyles from './projectItem.module.css'
 import ProjectInfo from './projectInfo/'
 import ProjectImage from './projectImage'

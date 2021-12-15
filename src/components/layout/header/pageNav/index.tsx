@@ -1,7 +1,7 @@
 import React from 'react'
 import { useStaticQuery, graphql, Link } from 'gatsby'
 
-import { LinksData } from '../../../../typescript/'
+import { LinksData } from '../../../../typings/'
 import * as pageNavStyles from './pageNav.module.css'
 
 const PageNav = () => {

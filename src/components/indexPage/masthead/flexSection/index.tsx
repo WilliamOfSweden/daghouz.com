@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import { DefaultSectionData } from '../../../../typescript'
+import { DefaultSectionData } from '../../../../typings/'
 import * as flexSectionStyles from './flexSection.module.css'
 import { Link } from 'gatsby'
 
