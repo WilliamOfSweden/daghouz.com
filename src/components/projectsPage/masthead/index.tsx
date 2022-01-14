@@ -2,7 +2,7 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import { DefaultSectionData } from '../../../@types/'
-import FlexSection from '../../common/flexSection'
+import FlexSection from '../../shared/flexSection/'
 
 interface Props {
   mastheadData: DefaultSectionData

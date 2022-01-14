@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { graphql, PageProps } from 'gatsby'
 
 import { ProjectData, DefaultSectionData } from '../@types/'
-import SEO from '../components/common/seo'
+import SEO from '../components/shared/seo'
 import Layout from '../components/layout/'
 import Masthead from '../components/projectsPage/masthead/'
 import ProjectsSection from '../components/projectsPage/projectsSection/'

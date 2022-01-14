@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { DefaultSectionData } from '../../../@types/'
-import FlexSection from '../../common/flexSection/'
+import FlexSection from '../../shared/flexSection/'
 import Illustration404 from '../../illustrations/illustration404'
 
 interface Props {
