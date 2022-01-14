@@ -8,15 +8,13 @@ interface Props {
   children: ReactNode
 }
 
-const Layout = ({ children }: Props) => {
-  return (
-    <Fragment>
-      <Header />
-      <MDXProvider components={MdxComponents}>
-        <main>{children}</main>
-      </MDXProvider>
-    </Fragment>
-  )
-}
+const Layout = ({ children }: Props) => (
+  <Fragment>
+    <Header />
+    <MDXProvider components={MdxComponents}>
+      <main>{children}</main>
+    </MDXProvider>
+  </Fragment>
+)
 
 export default Layout
