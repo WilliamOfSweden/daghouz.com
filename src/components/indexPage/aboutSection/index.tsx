@@ -1,7 +1,7 @@
 import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import { DefaultSectionData } from '../../../typings/'
+import { DefaultSectionData } from '../../../@types/'
 import * as aboutSectionStyles from './aboutSection.module.css'
 import { StaticImage } from 'gatsby-plugin-image'
 

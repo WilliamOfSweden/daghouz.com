@@ -2,7 +2,7 @@ import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import { DefaultSectionData } from '../../../typings/'
+import { DefaultSectionData } from '../../../@types/'
 import * as featuresSectionStyles from './featuresSection.module.css'
 import { MdxGrid } from '../../layout/mdxComponents/'
 

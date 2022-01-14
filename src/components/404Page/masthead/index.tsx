@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { DefaultSectionData } from '../../../typings/'
+import { DefaultSectionData } from '../../../@types/'
 import FlexSection from '../../common/flexSection/'
 import Illustration404 from '../../illustrations/illustration404'
 
