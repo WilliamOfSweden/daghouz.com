@@ -1,8 +1,8 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import ContactForm from '../contactForm'
 import * as mastheadStyles from './masthead.module.css'
+import ContactForm from '../contactForm'
 
 const Masthead = () => (
   <section className={`container ${mastheadStyles.masthead}`}>

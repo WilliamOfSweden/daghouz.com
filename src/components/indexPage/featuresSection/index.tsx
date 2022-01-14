@@ -11,8 +11,7 @@ interface Props {
 }
 
 const FeaturesSection = ({ featuresSectionData }: Props) => (
-  <section  className={featuresSectionStyles.featuresSection}>
-  >
+  <section className={featuresSectionStyles.featuresSection}>
     <div className='container'>
       <h2 className={featuresSectionStyles.title}>
         {featuresSectionData.title}
