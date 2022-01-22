@@ -1,0 +1,40 @@
+@import '../../../../styles/vars.css';
+
+.canvas {
+  height: 100%;
+  padding-top: 91.7628%;
+  position: relative !important;
+}
+
+.canvas > canvas {
+  bottom: 0;
+  height: 100%;
+  left: 0;
+  position: absolute !important;
+  right: 0;
+  top: 0;
+}
+
+.canvasWrapper {
+  width: 100%;
+}
+
+@media (min-width: 600px) {
+  .canvasWrapper {
+    flex: 5;
+  }
+
+  .fallback {
+    flex: 5;
+  }
+}
+
+@media (min-width: 900px) {
+  .canvasWrapper {
+    flex: 6;
+  }
+
+  .fallback {
+    flex: 6;
+  }
+}
