@@ -1,17 +1,24 @@
 @import '../../../../styles/vars.css';
 
 .canvas {
-  background: var(--color-bg);
-  height: 100%;
-  padding-top: 97.375%;
-  position: relative !important;
+  display: none;
 }
 
-.canvas > canvas {
-  position: absolute !important;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+@media (min-width: 768px) {
+  .canvas {
+    background: var(--color-bg);
+    display: block;
+    height: 100%;
+    padding-top: 97.375%;
+    position: relative !important;
+  }
+
+  .canvas > canvas {
+    position: absolute !important;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }

@@ -8,14 +8,6 @@
   width: 100%;
 }
 
-.flexSection > div:nth-child(2) > div:first-child {
-  display: none;
-}
-
-.flexSection > div:nth-child(2) > div:nth-child(2) {
-  display: block;
-}
-
 @media (min-width: 768px) {
   .flexSection {
     display: flex;
@@ -32,11 +24,11 @@
   }
 
   .flexSection > div:nth-child(2) > div:first-child {
-    display: block;
+    display: none;
   }
 
-  .flexSection > div:nth-child(2) > div:nth-child(2) {
-    display: none;
+  .link {
+    width: 270px;
   }
 }
 
@@ -73,10 +65,4 @@
 
 .colored {
   color: var(--color-primary);
-}
-
-@media screen and (min-width: 600px) {
-  .link {
-    width: 270px;
-  }
 }

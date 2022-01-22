@@ -30,7 +30,6 @@ const Masthead = ({ mastheadData }: Props) => (
       </Link>
     </div>
     <div>
-      <Canvas />
       <StaticImage
         alt='Isometric web development items and rocket.'
         loading='eager'
@@ -39,6 +38,7 @@ const Masthead = ({ mastheadData }: Props) => (
         placeholder='tracedSVG'
         src='../../../images/rocket.svg'
       />
+      <Canvas />
     </div>
     <Link className={`${mastheadStyles.link} mobile-only`} to='/contact'>
       Contact Me
