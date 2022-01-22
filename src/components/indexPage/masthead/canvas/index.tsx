@@ -23,7 +23,7 @@ const Canvas = () => {
         ((typeof window !== 'undefined' &&
           (navigator.connection as Net).saveData) ||
         !matchMedia('(min-width: 768px)').matches ? null : (
-          <Suspense fallback={<div className={canvasStyles.canvas} />}>
+          <Suspense fallback={null}>
             <R3fCanvas />
           </Suspense>
         ))}
