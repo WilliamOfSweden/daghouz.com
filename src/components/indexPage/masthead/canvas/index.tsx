@@ -10,21 +10,14 @@ const Canvas = () => {
     setIsMounted(true)
   }, [])
 
-  interface Net extends NetworkInformation {
-    saveData: boolean
-  }
-
   return (
     <Fragment>
       {!isMounted && <CanvasFallback />}
-      {!isMounted ||
-        ((typeof window !== 'undefined' &&
-          (navigator.connection as Net).saveData) ||
-        !matchMedia('(min-width: 768px)').matches ? null : (
-          <Suspense fallback={<CanvasFallback />}>
-            <R3FCanvas />
-          </Suspense>
-        ))}
+      {!isMounted || !matchMedia('(min-width: 768px)').matches ? null : (
+        <Suspense fallback={<CanvasFallback />}>
+          <R3FCanvas />
+        </Suspense>
+      )}
     </Fragment>
   )
 }
