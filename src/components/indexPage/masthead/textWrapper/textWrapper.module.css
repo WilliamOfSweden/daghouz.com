@@ -1,0 +1,13 @@
+@media screen and (min-width: 600px) {
+  .textWrapper {
+    flex: 7;
+    max-width: 78ch;
+    margin: auto 0;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .textWrapper {
+    flex: 6;
+  }
+}

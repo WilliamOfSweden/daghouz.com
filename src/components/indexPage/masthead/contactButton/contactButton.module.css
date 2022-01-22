@@ -1,13 +1,5 @@
 @import '../../../../styles/vars.css';
 
-.flexSection {
-  padding-top: 32px;
-}
-
-.imgWrapper {
-  width: 100%;
-}
-
 .link {
   background: var(--color-primary);
   border: none;
@@ -29,38 +21,8 @@
   background: var(--color-primary-light);
 }
 
-.colored {
-  color: var(--color-primary);
-}
-
 @media screen and (min-width: 600px) {
-  .flexSection {
-    display: flex;
-    flex-direction: row;
-    padding-top: 0;
-  }
-
-  .imgWrapper {
-    flex: 5;
-  }
-
-  .textWrapper {
-    flex: 7;
-    max-width: 78ch;
-    margin: auto 0;
-  }
-
   .link {
     width: 270px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .textWrapper {
-    flex: 6;
-  }
-
-  .imgWrapper {
-    flex: 6;
   }
 }

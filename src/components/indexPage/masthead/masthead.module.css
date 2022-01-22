@@ -1,0 +1,11 @@
+.masthead {
+  padding-top: 32px;
+}
+
+@media screen and (min-width: 600px) {
+  .masthead {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0;
+  }
+}

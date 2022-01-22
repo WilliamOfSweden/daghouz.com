@@ -1,8 +1,10 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
 
 import { DefaultSectionData } from '../../../@types/'
-import FlexSection from './flexSection/'
+import * as mastheadStyles from './masthead.module.css'
+import TextWrapper from './textWrapper/'
+import MobileImage from './mobileImage/'
+import ContactButton from './contactButton/'
 
 interface MastheadData extends DefaultSectionData {
   coloredTitle: string
@@ -13,16 +15,11 @@ interface Props {
 }
 
 const Masthead = ({ mastheadData }: Props) => (
-  <FlexSection sectionContent={mastheadData}>
-    <StaticImage
-      src='../../../images/rocket.svg'
-      alt='Isometric web development items and rocket.'
-      loading='eager'
-      formats={['auto', 'webp', 'avif']}
-      placeholder='tracedSVG'
-      layout='fullWidth'
-    />
-  </FlexSection>
+  <section className={`${mastheadStyles.masthead} container`}>
+    <TextWrapper sectionContent={mastheadData} />
+    <MobileImage />
+    <ContactButton limitedVisibility='mobile-only' />
+  </section>
 )
 
 export default Masthead
