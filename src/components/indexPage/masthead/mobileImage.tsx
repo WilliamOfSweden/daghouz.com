@@ -12,7 +12,7 @@ const MobileImage = () => {
 
   return (
     <StaticImage
-      src='../../../../images/rocket.svg'
+      src='../../../images/rocket.svg'
       alt='Isometric web development items and rocket.'
       loading='eager'
       formats={['auto', 'webp', 'avif']}
