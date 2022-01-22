@@ -16,9 +16,7 @@ export const MdxGrid = ({ children }: Props) => (
   <ul className={mdxStyles.grid}>{children}</ul>
 )
 
-const MdxH3 = ({ children }: Props) => (
-  <h3 className={mdxStyles.h3}>{children}</h3>
-)
+const MdxH3 = ({ children }: Props) => <h3>{children}</h3>
 
 const MdxP = ({ children }: Props) => (
   <p className={mdxStyles.paragraph}>{children}</p>
