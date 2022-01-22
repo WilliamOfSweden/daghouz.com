@@ -1,0 +1,82 @@
+@import '../../../styles/vars.css';
+
+.flexSection {
+  padding-top: 32px;
+}
+
+.flexSection > div:nth-child(2) {
+  width: 100%;
+}
+
+.flexSection > div:nth-child(2) > div:first-child {
+  display: none;
+}
+
+.flexSection > div:nth-child(2) > div:nth-child(2) {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .flexSection {
+    display: flex;
+  }
+
+  .flexSection > div:first-child {
+    flex: 7;
+    max-width: 78ch;
+    margin: auto 0;
+  }
+
+  .flexSection > div:nth-child(2) {
+    flex: 5;
+  }
+
+  .flexSection > div:nth-child(2) > div:first-child {
+    display: block;
+  }
+
+  .flexSection > div:nth-child(2) > div:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (min-width: 900px) {
+  .flexSection > div:first-child {
+    flex: 6;
+  }
+
+  .flexSection > div:nth-child(2) {
+    flex: 6;
+  }
+}
+
+.link {
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--shape-radius-sm);
+  color: var(--color-bg);
+  cursor: pointer;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: var(--space-lg);
+  padding: var(--space-md);
+  text-align: center;
+  text-transform: uppercase;
+  transition: background-color 0.33s ease;
+}
+
+.link:hover {
+  background: var(--color-primary-light);
+}
+
+.colored {
+  color: var(--color-primary);
+}
+
+@media screen and (min-width: 600px) {
+  .link {
+    width: 270px;
+  }
+}

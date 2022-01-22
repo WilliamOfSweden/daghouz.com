@@ -1,8 +1,11 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+import { MDXRenderer } from 'gatsby-plugin-mdx'
+import { Link } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
-import FlexSection from './flexSection/'
+import * as mastheadStyles from './masthead.module.css'
+import Canvas from './canvas/'
+import { StaticImage } from 'gatsby-plugin-image'
 
 interface MastheadData extends DefaultSectionData {
   coloredTitle: string
@@ -13,16 +16,34 @@ interface Props {
 }
 
 const Masthead = ({ mastheadData }: Props) => (
-  <FlexSection sectionContent={mastheadData}>
-    <StaticImage
-      src='../../../images/rocket.svg'
-      alt='Isometric web development items and rocket.'
-      loading='eager'
-      formats={['auto', 'webp', 'avif']}
-      placeholder='tracedSVG'
-      layout='fullWidth'
-    />
-  </FlexSection>
+  <section className={`${mastheadStyles.flexSection} container`}>
+    <div className={mastheadStyles.textWrapper}>
+      <h1>
+        <span className={mastheadStyles.colored}>
+          {mastheadData.coloredTitle}
+        </span>{' '}
+        {mastheadData.title}
+      </h1>
+      <MDXRenderer>{mastheadData.content.childMdx.body}</MDXRenderer>
+      <Link className={`${mastheadStyles.link} desktop-only`} to='/contact'>
+        Contact Me
+      </Link>
+    </div>
+    <div>
+      <Canvas />
+      <StaticImage
+        alt='Isometric web development items and rocket.'
+        loading='eager'
+        formats={['auto', 'webp', 'avif']}
+        layout='fullWidth'
+        placeholder='tracedSVG'
+        src='../../../images/rocket.svg'
+      />
+    </div>
+    <Link className={`${mastheadStyles.link} mobile-only`} to='/contact'>
+      Contact Me
+    </Link>
+  </section>
 )
 
 export default Masthead

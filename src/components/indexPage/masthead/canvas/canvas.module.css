@@ -1,0 +1,17 @@
+@import '../../../../styles/vars.css';
+
+.canvas {
+  background: var(--color-bg);
+  height: 100%;
+  padding-top: 97.375%;
+  position: relative !important;
+}
+
+.canvas > canvas {
+  position: absolute !important;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
