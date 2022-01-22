@@ -1,10 +1,16 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import * as mobileImageStyles from './mobileImage.module.css'
+import useIsMobile from '../../../hooks/useIsMobile'
 
-const MobileImage = () => (
-  <div className={mobileImageStyles.imgWrapper}>
+const MobileImage = () => {
+  const isMobile = useIsMobile()
+
+  if (!isMobile) {
+    return null
+  }
+
+  return (
     <StaticImage
       src='../../../../images/rocket.svg'
       alt='Isometric web development items and rocket.'
@@ -13,7 +19,7 @@ const MobileImage = () => (
       placeholder='tracedSVG'
       layout='fullWidth'
     />
-  </div>
-)
+  )
+}
 
 export default MobileImage

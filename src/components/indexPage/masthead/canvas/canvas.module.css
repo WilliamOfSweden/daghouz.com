@@ -19,22 +19,14 @@
   width: 100%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .canvasWrapper {
-    flex: 5;
-  }
-
-  .fallback {
-    flex: 5;
+    flex: 6;
   }
 }
 
 @media (min-width: 900px) {
   .canvasWrapper {
-    flex: 6;
-  }
-
-  .fallback {
     flex: 6;
   }
 }

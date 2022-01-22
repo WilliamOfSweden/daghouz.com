@@ -1,4 +1,5 @@
 import React, { Fragment, useState, useEffect, Suspense, lazy } from 'react'
+import useIsMobile from '../../../../hooks/useIsMobile'
 
 import CanvasFallback from './canvasFallback'
 const R3FCanvas = lazy(() => import('./r3fCanvas'))
@@ -10,10 +11,12 @@ const Canvas = () => {
     setIsMounted(true)
   }, [])
 
+  const isMobile = useIsMobile()
+
   return (
     <Fragment>
       {!isMounted && <CanvasFallback />}
-      {!isMounted || !matchMedia('(min-width: 768px)').matches ? null : (
+      {!isMounted || isMobile ? null : (
         <Suspense fallback={<CanvasFallback />}>
           <R3FCanvas />
         </Suspense>

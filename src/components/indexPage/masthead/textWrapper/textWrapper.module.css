@@ -1,6 +1,6 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 768px) {
   .textWrapper {
-    flex: 7;
+    flex: 6;
     max-width: 78ch;
     margin: auto 0;
   }
