@@ -79,7 +79,9 @@ section {
     padding-left: var(--space-md);
     padding-right: var(--space-md);
   }
+}
 
+@media (min-width: 768px) {
   .desktop-only {
     display: inherit;
   }

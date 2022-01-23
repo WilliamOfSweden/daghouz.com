@@ -1,8 +1,8 @@
 import React, { Fragment, useState, useEffect, Suspense, lazy } from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
+// import useIsMobile from '../../../../hooks/useIsMobile'
 
-const R3fCanvas = lazy(() => import('./r3fCanvas'))
-import * as canvasStyles from './canvas.module.css'
+import CanvasFallback from './canvasFallback'
+const R3FCanvas = lazy(() => import('./r3fCanvas'))
 
 const Canvas = () => {
   const [isMounted, setIsMounted] = useState(false)
@@ -11,22 +11,17 @@ const Canvas = () => {
     setIsMounted(true)
   }, [])
 
-  interface Net extends NetworkInformation {
-    saveData: boolean
-  }
+  // const isMobile = useIsMobile()
+  const isMobile = false
 
   return (
     <Fragment>
-      {/*  Since the canvas, in this case, decidedes the height of the parent component, we need to render a element with the same height, even if it's not mounted, to prevent 'jumping' in the layout. */}
-      {!isMounted && <canvas className={canvasStyles.canvas} />}
-      {!isMounted ||
-        ((typeof window !== 'undefined' &&
-          (navigator.connection as Net).saveData) ||
-        !matchMedia('(min-width: 768px)').matches ? null : (
-          <Suspense fallback={null}>
-            <R3fCanvas />
-          </Suspense>
-        ))}
+      {!isMounted && <CanvasFallback />}
+      {!isMounted || isMobile ? null : (
+        <Suspense fallback={<CanvasFallback />}>
+          <R3FCanvas />
+        </Suspense>
+      )}
     </Fragment>
   )
 }

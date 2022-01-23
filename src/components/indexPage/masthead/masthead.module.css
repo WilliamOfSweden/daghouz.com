@@ -1,68 +1,11 @@
-@import '../../../styles/vars.css';
-
-.flexSection {
+.masthead {
   padding-top: 32px;
 }
 
-.flexSection > div:nth-child(2) {
-  width: 100%;
-}
-
-@media (min-width: 768px) {
-  .flexSection {
+@media screen and (min-width: 768px) {
+  .masthead {
     display: flex;
+    flex-direction: row;
+    padding-top: 0;
   }
-
-  .flexSection > div:first-child {
-    flex: 7;
-    max-width: 78ch;
-    margin: auto 0;
-  }
-
-  .flexSection > div:nth-child(2) {
-    flex: 5;
-  }
-
-  .flexSection > div:nth-child(2) > div:first-child {
-    display: none;
-  }
-
-  .link {
-    width: 270px;
-  }
-}
-
-@media (min-width: 900px) {
-  .flexSection > div:first-child {
-    flex: 6;
-  }
-
-  .flexSection > div:nth-child(2) {
-    flex: 6;
-  }
-}
-
-.link {
-  background: var(--color-primary);
-  border: none;
-  border-radius: var(--shape-radius-sm);
-  color: var(--color-bg);
-  cursor: pointer;
-  font-family: var(--font-body);
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 2px;
-  margin-top: var(--space-lg);
-  padding: var(--space-md);
-  text-align: center;
-  text-transform: uppercase;
-  transition: background-color 0.33s ease;
-}
-
-.link:hover {
-  background: var(--color-primary-light);
-}
-
-.colored {
-  color: var(--color-primary);
 }
