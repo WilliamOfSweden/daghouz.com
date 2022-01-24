@@ -19,7 +19,7 @@
         "@mdx-js/react": "1.6.22",
         "@react-three/drei": "8.6.3",
         "@react-three/fiber": "7.0.25",
-        "gatsby": "4.5.4",
+        "gatsby": "4.5.5",
         "gatsby-plugin-image": "2.5.2",
         "gatsby-plugin-mdx": "3.5.2",
         "gatsby-plugin-react-helmet": "5.5.0",
