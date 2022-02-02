@@ -1,0 +1,8 @@
+/* Mulish-latin-700-bold*/
+@font-face {
+  font-display: optional;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./files/mulish-latin-700-normal.woff2') format('woff2');
+}

@@ -1,0 +1,8 @@
+/* Roboto-latin-400-bold*/
+@font-face {
+  font-display: optional;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: url('./files/roboto-latin-700-normal.woff2') format('woff2');
+}

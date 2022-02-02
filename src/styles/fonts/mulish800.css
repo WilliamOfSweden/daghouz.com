@@ -1,0 +1,8 @@
+/* Mulish-latin-800-extra-bold*/
+@font-face {
+  font-display: optional;
+  font-family: 'Mulish';
+  font-style: normal;
+  font-weight: 800;
+  src: url('./files/mulish-latin-800-normal.woff2') format('woff2');
+}

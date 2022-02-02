@@ -8,8 +8,8 @@
   --color-text: #707070;
 
   /* FONTS */
-  --font-body: Verdana, Sans-Serif;
-  --font-heading: Arial, Sans-Serif;
+  --font-body: 'Roboto', Verdana, Sans-Serif;
+  --font-heading: 'Mulish', 'Roboto', Arial, Sans-Serif;
 
   /* SPACING */
   --space-xs: 0.25rem;
