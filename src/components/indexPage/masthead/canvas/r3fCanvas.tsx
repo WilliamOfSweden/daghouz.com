@@ -15,7 +15,7 @@ const R3FCanvas = () => (
     <ThreeCanvas
       className={canvasStyles.canvas}
       shadows
-      gl={{ alpha: true, precision: 'highp' }}
+      gl={{ alpha: true, antialias: true, precision: 'highp' }}
       camera={{ position: [-5, 2, 10], fov: 60 }}
     >
       <ambientLight intensity={0.4} />
