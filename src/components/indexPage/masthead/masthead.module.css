@@ -5,7 +5,7 @@
 @media screen and (min-width: 768px) {
   .masthead {
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     padding-top: 0;
   }
 }

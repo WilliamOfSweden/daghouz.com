@@ -2,9 +2,9 @@ import React, { Fragment, useState, useEffect, Suspense, lazy } from 'react'
 
 import useIsMobile from '../../../../hooks/useIsMobile'
 import CanvasFallback from './canvasFallback'
-const R3FCanvas = lazy(() => import('./r3fCanvas'))
+const Canvas = lazy(() => import('./canvas'))
 
-const Canvas = () => {
+const LazyCanvas = () => {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -18,11 +18,11 @@ const Canvas = () => {
       {!isMounted && <CanvasFallback />}
       {!isMounted || isMobile ? null : (
         <Suspense fallback={<CanvasFallback />}>
-          <R3FCanvas />
+          <Canvas />
         </Suspense>
       )}
     </Fragment>
   )
 }
 
-export default Canvas
+export default LazyCanvas

@@ -1,12 +1,10 @@
 import React from 'react'
 
-const PlaneComponent = () => {
-  return (
-    <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -2, 0]} receiveShadow>
-      <planeBufferGeometry args={[100, 100]} />
-      <shadowMaterial transparent opacity={0.6} color='#cccccc' />
-    </mesh>
-  )
-}
+const Plane = () => (
+  <mesh position={[0, -2, 0]} receiveShadow rotation={[-Math.PI / 2, 0, 0]}>
+    <planeBufferGeometry args={[100, 100]} />
+    <shadowMaterial color='#cccccc' opacity={0.6} transparent />
+  </mesh>
+)
 
-export default PlaneComponent
+export default Plane

@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { Torus } from '@react-three/drei'
+import { Torus as DreiTorus } from '@react-three/drei'
 
-const TorusComponent = () => {
+const Torus = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
@@ -11,20 +11,20 @@ const TorusComponent = () => {
   })
 
   return (
-    <Torus
-      castShadow
-      ref={mesh}
+    <DreiTorus
       args={[1.5, 0.75, 24, 24]}
+      castShadow
       position={[7, 0, 0]}
+      ref={mesh}
     >
       <meshStandardMaterial
         color='#ffffff'
-        roughness={0.5}
         metalness={0}
+        roughness={0.5}
         wireframe
       />
-    </Torus>
+    </DreiTorus>
   )
 }
 
-export default TorusComponent
+export default Torus

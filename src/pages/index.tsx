@@ -53,15 +53,6 @@ export const query = graphql`
         }
       }
     }
-    contentfulIndexPageMasthead {
-      coloredTitle
-      title
-      content {
-        childMdx {
-          body
-        }
-      }
-    }
     contentfulIndexPageFeaturesSection {
       title
       content {

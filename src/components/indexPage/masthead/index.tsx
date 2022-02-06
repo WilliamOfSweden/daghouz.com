@@ -1,27 +1,34 @@
 import React from 'react'
 
-import { DefaultSectionData } from '../../../@types/'
+import { useStaticQuery, graphql } from 'gatsby'
 import * as mastheadStyles from './masthead.module.css'
-import TextWrapper from './textWrapper/'
 import MobileImage from './mobileImage'
-import Canvas from './canvas/'
-import ContactButton from './contactButton/'
+import LazyCanvas from './canvas/'
+import TextWrapper from './textWrapper/'
 
-interface MastheadData extends DefaultSectionData {
-  coloredTitle: string
+const Masthead = () => {
+  const { contentfulIndexPageMasthead: data } = useStaticQuery(graphql`
+    query IndexPageMastheadQuery {
+      contentfulIndexPageMasthead {
+        id
+        title
+        coloredTitle
+        content {
+          childMdx {
+            body
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <section className={`${mastheadStyles.masthead} container`}>
+      <MobileImage />
+      <LazyCanvas />
+      <TextWrapper sectionContent={data} />
+    </section>
+  )
 }
-
-interface Props {
-  mastheadData: MastheadData
-}
-
-const Masthead = ({ mastheadData }: Props) => (
-  <section className={`${mastheadStyles.masthead} container`}>
-    <TextWrapper sectionContent={mastheadData} />
-    <MobileImage />
-    <Canvas />
-    <ContactButton limitedVisibility='mobile-only' />
-  </section>
-)
 
 export default Masthead

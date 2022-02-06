@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import useIsMobile from '../../../../hooks/useIsMobile'
-import * as mobileImageStyles from './mobileImage.module.css'
 
 const MobileImage = () => {
   const [isHidden, setIsHidden] = useState(false)
@@ -18,7 +17,7 @@ const MobileImage = () => {
   return (
     <StaticImage
       alt='Isometric web development items and rocket.'
-      className={`${mobileImageStyles.img} mobile-only`}
+      className={'mobile-only'}
       formats={['auto', 'webp', 'avif']}
       layout='fullWidth'
       loading='eager'

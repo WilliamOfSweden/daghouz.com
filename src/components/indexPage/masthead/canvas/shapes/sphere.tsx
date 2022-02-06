@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { Sphere } from '@react-three/drei'
+import { Sphere as DreiSphere } from '@react-three/drei'
 
-const SphereComponent = () => {
+const Sphere = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
@@ -10,10 +10,10 @@ const SphereComponent = () => {
   })
 
   return (
-    <Sphere castShadow ref={mesh} position={[-3.5, 0, 0]}>
-      <meshStandardMaterial color='#3162c3' roughness={0.5} metalness={0.1} />
-    </Sphere>
+    <DreiSphere castShadow ref={mesh} position={[-3.5, 0, 0]}>
+      <meshStandardMaterial color='#3162c3' metalness={0.1} roughness={0.5} />
+    </DreiSphere>
   )
 }
 
-export default SphereComponent
+export default Sphere
