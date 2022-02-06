@@ -22,7 +22,7 @@ const MobileImage = () => {
       layout='fullWidth'
       loading='eager'
       placeholder='tracedSVG'
-      src='../../../../images/rocket.svg'
+      src='../../../../images/projects.svg'
     />
   )
 }
