@@ -1,0 +1,18 @@
+.section {
+  padding-top: 32px;
+}
+
+@media screen and (min-width: 900px) {
+  .section {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding-top: 0;
+  }
+}
+
+@media screen and (min-width: 1536px) {
+  .section {
+    gap: 6.25rem;
+  }
+}
