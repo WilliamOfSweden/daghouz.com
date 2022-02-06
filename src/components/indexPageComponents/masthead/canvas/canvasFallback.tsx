@@ -3,8 +3,8 @@ import React from 'react'
 import * as CanvasFallbackStyles from './canvas.module.css'
 
 const CanvasFallback = () => (
-  <div className={`${CanvasFallbackStyles.canvasWrapper}`}>
-    <div className={CanvasFallbackStyles.canvas}>
+  <div className={`${CanvasFallbackStyles.outerCanvasWrapper}`}>
+    <div className={CanvasFallbackStyles.innerCanvasWrapper}>
       <canvas />
     </div>
   </div>

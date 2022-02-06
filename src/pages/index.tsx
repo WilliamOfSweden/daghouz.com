@@ -4,12 +4,13 @@ import { graphql, PageProps } from 'gatsby'
 import { DefaultSectionData } from '../@types/'
 import SEO from '../components/shared/seo'
 import Layout from '../components/layout/'
-import Masthead from '../components/indexPage/masthead/'
-import JamstackSection from '../components/indexPage/jamstackSection/'
-import ServicesSection from '../components/indexPage/servicesSection/'
-import ECommerceSection from '../components/indexPage/eCommerceSection'
-import FeaturesSection from '../components/indexPage/featuresSection/'
-import AboutSection from '../components/indexPage/aboutSection/'
+import {
+  AboutSection,
+  ECommerceSection,
+  FeaturesSection,
+  JamstackSection,
+  Masthead,
+} from '../components/indexPageComponents/'
 
 interface MastheadData extends DefaultSectionData {
   coloredTitle: string
@@ -26,16 +27,14 @@ interface DataProps extends PageProps {
 const IndexPage = ({
   data: {
     contentfulIndexPageAboutSection: aboutSectionData,
-    contentfulIndexPageMasthead: mastheadData,
     contentfulIndexPageFeaturesSection: featuresSectionData,
   },
 }: DataProps) => (
   <Fragment>
     <SEO />
     <Layout>
-      <Masthead mastheadData={mastheadData} />
+      <Masthead />
       <JamstackSection />
-      {/* <ServicesSection /> */}
       <ECommerceSection />
       <FeaturesSection featuresSectionData={featuresSectionData} />
       <AboutSection aboutSectionData={aboutSectionData} />

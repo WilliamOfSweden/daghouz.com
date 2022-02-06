@@ -2,7 +2,7 @@ import React from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 import * as mastheadStyles from './masthead.module.css'
-import MobileImage from './mobileImage'
+import MobileImage from './mobileImage/'
 import LazyCanvas from './canvas/'
 import TextWrapper from './textWrapper/'
 
