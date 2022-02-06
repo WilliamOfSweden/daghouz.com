@@ -2,13 +2,13 @@ import React from 'react'
 
 import { useStaticQuery, graphql } from 'gatsby'
 import * as jamstackSection from './jamstackSection.module.css'
-import TextWrapper from './textWrapper/'
 import MobileImage from './mobileImage/'
 import LazyCanvas from './canvas/'
+import TextWrapper from './textWrapper/'
 
 const JamstackSection = () => {
   const { contentfulIndexPageJamstackSection: data } = useStaticQuery(graphql`
-    query IndexPageJamstacSectionQuery {
+    query IndexPageJamstackSectionQuery {
       contentfulIndexPageJamstackSection {
         title
         body {
@@ -21,10 +21,12 @@ const JamstackSection = () => {
   `)
 
   return (
-    <section className={`${jamstackSection.section} container`}>
-      <LazyCanvas />
-      <MobileImage />
-      <TextWrapper data={data} />
+    <section className={jamstackSection.section}>
+      <div className={`${jamstackSection.wrapper} container`}>
+        <MobileImage />
+        <LazyCanvas />
+        <TextWrapper data={data} />
+      </div>
     </section>
   )
 }

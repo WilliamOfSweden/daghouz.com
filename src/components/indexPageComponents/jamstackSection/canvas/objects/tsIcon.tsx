@@ -15,7 +15,7 @@ const TsIcon = () => {
     <group
       dispose={null}
       ref={group}
-      position={[-3, -1.8, 11.5]}
+      position={[-1, -1.8, 8]}
       rotation={[-0.56, 0, 0]}
       scale-x={15}
       scale-y={15}

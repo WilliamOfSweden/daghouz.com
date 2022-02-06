@@ -1,6 +1,7 @@
 :root {
   /* COLOR PALETTE */
   --color-bg: #fafafa;
+  --color-bg-alt: #f6f6fa;
   --color-logo-text: #bbb;
   --color-primary: #3162c3;
   --color-primary-light: #3162c3cc;

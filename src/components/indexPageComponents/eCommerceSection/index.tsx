@@ -1,33 +1,32 @@
 import React from 'react'
-import { StaticImage } from 'gatsby-plugin-image'
-import { Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
-import * as eCommerceSectionStyles from './eCommerceSection.module.css'
+import * as jamstackSection from './eCommerceSection.module.css'
+import MobileImage from './mobileImage/'
+import LazyCanvas from './canvas/'
+import TextWrapper from './textWrapper/'
 
-const ECommerceSection = () => (
-  <section className={`${eCommerceSectionStyles.eCommerceSection} container`}>
-    <div className={eCommerceSectionStyles.imgWrapper}>
-      <StaticImage
-        src='../../../images/e-commerce.svg'
-        alt='Isometric web development items.'
-        loading='eager'
-        formats={['auto', 'webp', 'avif']}
-        placeholder='tracedSVG'
-        layout='fullWidth'
-      />
-    </div>
-    <div className={eCommerceSectionStyles.textWrapper}>
-      <h2>E-commerce</h2>
-      <p>
-        Allow your business to reach new heights and drive revenue by providing
-        your customers with compelling and fast e-commerce experiences with
-        near-instant page loads.
-      </p>
-      <Link className={eCommerceSectionStyles.link} to='/contact'>
-        Contact Me
-      </Link>
-    </div>
-  </section>
-)
+const ECommerceSection = () => {
+  const { contentfulIndexPageThirdSection: data } = useStaticQuery(graphql`
+    query ECommerceSectionQuery {
+      contentfulIndexPageThirdSection {
+        title
+        body {
+          childMdx {
+            body
+          }
+        }
+      }
+    }
+  `)
+
+  return (
+    <section className={`${jamstackSection.section} container`}>
+      <MobileImage />
+      <LazyCanvas />
+      <TextWrapper data={data} />
+    </section>
+  )
+}
 
 export default ECommerceSection

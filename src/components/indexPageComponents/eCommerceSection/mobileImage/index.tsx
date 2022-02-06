@@ -16,13 +16,13 @@ const MobileImage = () => {
 
   return (
     <StaticImage
-      alt='Isometric web development items.'
-      className={'mobile-only'}
+      alt='Isometric laptop with credit card being inseted into the screen.'
+      className='mobile-only'
       formats={['auto', 'webp', 'avif']}
       layout='fullWidth'
       loading='eager'
       placeholder='tracedSVG'
-      src='../../../../images/projects.svg'
+      src='../../../../images/e-commerce.svg'
     />
   )
 }

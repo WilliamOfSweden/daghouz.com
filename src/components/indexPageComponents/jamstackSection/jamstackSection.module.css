@@ -1,12 +1,11 @@
-@media screen and (min-width: 768px) {
-  .section {
-    display: flex;
-    gap: 2rem;
-  }
+.section {
+  background: var(--color-bg-alt);
+  padding-bottom: 2.25rem;
+  padding-top: 1.25rem;
 }
 
-@media screen and (min-width: 1536px) {
-  .section {
-    gap: 6.25rem;
+@media screen and (min-width: 768px) {
+  .wrapper {
+    display: flex;
   }
 }

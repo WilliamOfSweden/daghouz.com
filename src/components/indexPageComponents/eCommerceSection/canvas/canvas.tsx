@@ -3,7 +3,6 @@ import { softShadows } from '@react-three/drei'
 import { Canvas as ThreeCanvas } from '@react-three/fiber'
 
 import * as canvasStyles from './canvas.module.css'
-import { Box, JamstackIcon, Plane, ReactIcon, TsIcon } from './objects/'
 
 softShadows()
 
@@ -19,7 +18,7 @@ const Canvas = () => (
       <directionalLight
         castShadow
         intensity={1.5}
-        position={[1, 8, 10]}
+        position={[1, 8, 5]}
         shadow-camera-bottom={-10}
         shadow-camera-far={50}
         shadow-camera-left={-10}
@@ -30,11 +29,6 @@ const Canvas = () => (
       />
       <pointLight color='#3162c3' intensity={2.5} position={[-10, 0, -20]} />
       <pointLight intensity={1.5} position={[0, -10, 0]} />
-      <Box />
-      <JamstackIcon />
-      <Plane />
-      <ReactIcon />
-      <TsIcon />
     </ThreeCanvas>
   </div>
 )

@@ -23,13 +23,15 @@ const ReactIcon = () => {
     <mesh
       castShadow
       geometry={nodes.React.geometry}
-      position={[9, 9, 4]}
+      position={[-4, 5, 8]}
       ref={mesh}
-      scale={19}
+      scale={9}
     >
       <meshMatcapMaterial matcap={matcap} />
     </mesh>
   )
+
+  useGLTF.preload('/level-react-draco.glb')
 }
 
 export default ReactIcon

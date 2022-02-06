@@ -12,10 +12,10 @@ const JamstackIcon = () => {
 
   return (
     <group
-      position={[-4.5, 0, 2.5]}
+      position={[-5.5, 0, 2.5]}
       ref={mesh}
       rotation={[Math.PI / 2, 0, Math.PI / -8]}
-      scale={0.8}
+      scale={0.7}
     >
       <Cylinder args={[2, 2, 0.4, 64]} castShadow position={[-3.5, 0, 0]}>
         <meshStandardMaterial color='#f0047f' metalness={0.1} roughness={0.5} />

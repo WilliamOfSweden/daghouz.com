@@ -1,27 +1,16 @@
-import React, { useRef } from 'react'
-import { useFrame } from '@react-three/fiber'
+import React from 'react'
 import { RoundedBox } from '@react-three/drei'
 
-const BoxComponent = () => {
-  const mesh = useRef<THREE.Mesh>(null!)
+const Box = () => (
+  <RoundedBox
+    args={[2.5, 2.5, 2.5]}
+    castShadow
+    radius={0.3}
+    receiveShadow
+    position={[0, -1, 5]}
+  >
+    <meshStandardMaterial color='#ffffff' metalness={0.1} roughness={0.5} />
+  </RoundedBox>
+)
 
-  useFrame(state => {
-    // mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) + 7.5
-    // mesh.current.rotation.z = state.clock.getElapsedTime()
-    // mesh.current.rotation.y = Math.sin(state.clock.getElapsedTime())
-  })
-
-  return (
-    <RoundedBox
-      castShadow
-      ref={mesh}
-      radius={0.3}
-      args={[2.5, 2.5, 2.5]}
-      position={[-2, -1, 8.5]}
-    >
-      <meshStandardMaterial color='#ffffff' roughness={0.5} metalness={0.1} />
-    </RoundedBox>
-  )
-}
-
-export default BoxComponent
+export default Box

@@ -1,7 +1,7 @@
 @import '../../../styles/vars.css';
 
 .featuresSection {
-  background: #f1f4f8;
+  background: var(--color-bg-alt);
   color: #3a3a40;
   margin-bottom: 0;
   padding-bottom: 60px;
