@@ -2,6 +2,7 @@ import Box from './box'
 import JamstackIcon from './jamstackIcon'
 import Plane from './plane'
 import ReactIcon from './reactIcon'
-import TsIcon from './tsIcon'
+import Rocket from './rocket'
+import TsIcon from './ts-icon'
 
-export { Box, JamstackIcon, Plane, ReactIcon, TsIcon }
+export { Box, JamstackIcon, Plane, ReactIcon, Rocket, TsIcon }

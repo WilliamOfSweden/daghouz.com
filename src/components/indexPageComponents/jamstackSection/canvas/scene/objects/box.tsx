@@ -3,11 +3,11 @@ import { RoundedBox } from '@react-three/drei'
 
 const Box = () => (
   <RoundedBox
-    args={[2.5, 2.5, 2.5]}
+    args={[1, 1, 1]}
     castShadow
-    radius={0.3}
+    radius={0.1}
     receiveShadow
-    position={[0, -1, 5]}
+    position={[0, 0.5, 0]}
   >
     <meshStandardMaterial color='#ffffff' metalness={0.1} roughness={0.5} />
   </RoundedBox>

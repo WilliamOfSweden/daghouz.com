@@ -13,23 +13,21 @@ const TsIcon = () => {
 
   return (
     <group
+      position={[0, 0, 0.7]}
       dispose={null}
       ref={group}
-      position={[-1, -1.8, 8]}
-      rotation={[-0.56, 0, 0]}
-      scale-x={15}
-      scale-y={15}
-      scale-z={15}
+      rotation={[Math.PI / 6, 0, 0]}
+      scale={5}
     >
       <mesh
-        castShadow
+        // castShadow
         geometry={model.nodes.Text.geometry}
         material={model.materials['Matte 2']}
         position={[0.025, 0.02, -0.0035]}
         scale={0.85}
       />
       <mesh
-        castShadow
+        // castShadow
         geometry={model.nodes.Rounded_Cube_Flat.geometry}
         material={model.materials.Matte}
         position={[0.08, 0.1, -0.01]}
