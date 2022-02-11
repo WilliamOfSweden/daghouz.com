@@ -29,8 +29,8 @@ export default function Rocket({ ...props }: JSX.IntrinsicElements['group']) {
       ref={group}
       {...props}
       dispose={null}
-      scale={0.09}
-      position={[-0.5, 0, 8]}
+      position={[-1.2, 0, 8.2]}
+      scale={0.05}
     >
       <group rotation={[-Math.PI / 2, 0, 0]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
