@@ -32,14 +32,14 @@ h1 {
   font-size: 3.5rem;
   font-weight: 900;
   line-height: 1;
-  margin-bottom: var(--space-xl);
+  margin-bottom: var(--space-lg);
 }
 
 h2 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 900;
   line-height: 1;
-  margin-bottom: 3rem;
+  margin-bottom: var(--space-md);
 }
 
 a {
@@ -49,10 +49,6 @@ a {
 
 li {
   list-style: none;
-}
-
-section {
-  margin-bottom: 120px;
 }
 
 .container {
@@ -71,6 +67,10 @@ section {
 @media screen and (max-width: 319px) {
   h1 {
     font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
   }
 }
 

@@ -1,0 +1,266 @@
+{
+    "asset": {
+        "copyright": "2020 (c) Adobe Inc.",
+        "generator": "Adobe Dimension - 3de52ae4ccc0c25be48106335282fae5a6a58dee",
+        "version": "2.0"
+    },
+    "accessors": [
+        {
+            "bufferView": 0,
+            "componentType": 5126,
+            "count": 5664,
+            "type": "VEC3",
+            "max": [
+                0.1578662097454071,
+                0.0936914011836052,
+                0.0
+            ],
+            "min": [
+                0.0022851561661809685,
+                -0.0012695312034338713,
+                -0.009999999776482582
+            ]
+        },
+        {
+            "bufferView": 1,
+            "componentType": 5126,
+            "count": 5664,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 2,
+            "componentType": 5126,
+            "count": 5664,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 3,
+            "componentType": 5125,
+            "count": 5664,
+            "type": "SCALAR",
+            "max": [
+                5663.0
+            ],
+            "min": [
+                0.0
+            ]
+        },
+        {
+            "bufferView": 4,
+            "componentType": 5126,
+            "count": 9504,
+            "type": "VEC3",
+            "max": [
+                0.10017989575862885,
+                0.020706389099359514,
+                0.10017989575862885
+            ],
+            "min": [
+                -0.10017989575862885,
+                -0.00036475999513641,
+                -0.10017989575862885
+            ]
+        },
+        {
+            "bufferView": 5,
+            "componentType": 5126,
+            "count": 9504,
+            "type": "VEC3"
+        },
+        {
+            "bufferView": 6,
+            "componentType": 5126,
+            "count": 9504,
+            "type": "VEC2"
+        },
+        {
+            "bufferView": 7,
+            "componentType": 5125,
+            "count": 54084,
+            "type": "SCALAR",
+            "max": [
+                9503.0
+            ],
+            "min": [
+                0.0
+            ]
+        }
+    ],
+    "bufferViews": [
+        {
+            "buffer": 0,
+            "byteOffset": 0,
+            "byteLength": 67968,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 67968,
+            "byteLength": 67968,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 135936,
+            "byteLength": 45312,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 181248,
+            "byteLength": 22656,
+            "target": 34963
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 203904,
+            "byteLength": 114048,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 317952,
+            "byteLength": 114048,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 432000,
+            "byteLength": 76032,
+            "target": 34962
+        },
+        {
+            "buffer": 0,
+            "byteOffset": 508032,
+            "byteLength": 216336,
+            "target": 34963
+        }
+    ],
+    "buffers": [
+        {
+            "byteLength": 724368,
+            "uri": "Untitled_binary.bin"
+        }
+    ],
+    "cameras": [
+        {
+            "perspective": {
+                "znear": 0.000010000000656873454,
+                "yfov": 0.6024156808853149,
+                "zfar": 2.0,
+                "aspectRatio": 1.3333333730697632
+            },
+            "type": "perspective",
+            "name": "render_camera"
+        }
+    ],
+    "materials": [
+        {
+            "pbrMetallicRoughness": {
+                "metallicFactor": 0.0
+            },
+            "name": "Matte 2",
+            "doubleSided": true
+        },
+        {
+            "pbrMetallicRoughness": {
+                "baseColorFactor": [
+                    0.0,
+                    0.19461780786514283,
+                    0.6038274168968201,
+                    1.0
+                ],
+                "metallicFactor": 0.0
+            },
+            "name": "Matte",
+            "doubleSided": true
+        }
+    ],
+    "meshes": [
+        {
+            "name": "TextMesh#",
+            "primitives": [
+                {
+                    "attributes": {
+                        "NORMAL": 1,
+                        "POSITION": 0,
+                        "TEXCOORD_0": 2
+                    },
+                    "indices": 3,
+                    "material": 0
+                }
+            ]
+        },
+        {
+            "name": "Rounded Cube Flat",
+            "primitives": [
+                {
+                    "attributes": {
+                        "POSITION": 4,
+                        "NORMAL": 5,
+                        "TEXCOORD_0": 6
+                    },
+                    "indices": 7,
+                    "material": 1
+                }
+            ]
+        }
+    ],
+    "nodes": [
+        {
+            "translation": [
+                0.5,
+                0.29999998211860659,
+                0.5
+            ],
+            "rotation": [
+                -0.12059047073125839,
+                0.379409521818161,
+                0.04995020851492882,
+                0.9159756302833557
+            ],
+            "scale": [
+                1.0,
+                1.0,
+                0.9999999403953552
+            ],
+            "camera": 0,
+            "name": "render_camera_n3d"
+        },
+        {
+            "translation": [
+                -0.06503520905971527,
+                0.023000020533800126,
+                0.09102613478899002
+            ],
+            "rotation": [
+                -0.7071067690849304,
+                -6.181726064369286e-8,
+                -2.830347548942857e-14,
+                0.7071068286895752
+            ],
+            "scale": [
+                1.0,
+                0.9999999403953552,
+                0.9399136900901794
+            ],
+            "mesh": 0,
+            "name": "Text"
+        },
+        {
+            "mesh": 1,
+            "name": "Rounded Cube Flat"
+        }
+    ],
+    "scenes": [
+        {
+            "nodes": [
+                0,
+                1,
+                2
+            ],
+            "name": "scene"
+        }
+    ],
+    "scene": 0
+}
