@@ -12,7 +12,11 @@ const Canvas = () => (
     <ThreeCanvas
       camera={{ position: [0, 1, 10], fov: 60 }}
       className={canvasStyles.innerCanvasWrapper}
-      gl={{ alpha: true, antialias: true, precision: 'highp' }}
+      gl={{
+        alpha: true,
+        antialias: true,
+        precision: 'highp',
+      }}
       shadows
     >
       <Scene />

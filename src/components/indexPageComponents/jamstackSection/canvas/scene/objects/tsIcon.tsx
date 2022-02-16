@@ -1,42 +1,48 @@
 import React, { useRef } from 'react'
+import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
-import { GLTF } from 'three/examples/jsm/loaders/GLTFLoader'
+import { GLTF } from 'three-stdlib'
 
-interface Model extends GLTF {
-  nodes?: any
-  materials?: any
+type GLTFResult = GLTF & {
+  nodes: {
+    Text: THREE.Mesh
+    Rounded_Cube_Flat: THREE.Mesh
+  }
+  materials: {
+    ['Matte 5']: THREE.MeshStandardMaterial
+    Matte: THREE.MeshStandardMaterial
+  }
 }
 
-const TsIcon = () => {
-  const group = useRef()
-  const model: Model = useGLTF('/ts-logo.gltf')
+const TsIcon = ({ ...props }: JSX.IntrinsicElements['group']) => {
+  const group = useRef<THREE.Group>()
+  const { nodes, materials } = useGLTF('/models/ts-icon.glb') as GLTFResult
 
   return (
     <group
-      position={[0, 0, 0.7]}
+      {...props}
+      position={[0, 0, 1]}
       dispose={null}
       ref={group}
-      rotation={[Math.PI / 6, 0, 0]}
+      rotation={[Math.PI / -6, 0, 0]}
       scale={5}
     >
       <mesh
-        // castShadow
-        geometry={model.nodes.Text.geometry}
-        material={model.materials['Matte 2']}
-        position={[0.025, 0.02, -0.0035]}
-        scale={0.85}
+        geometry={nodes.Text.geometry}
+        material={materials['Matte 5']}
+        position={[-0.06, 0.01, 0.015]}
+        scale={[1, 1, 2.2]}
       />
       <mesh
-        // castShadow
-        geometry={model.nodes.Rounded_Cube_Flat.geometry}
-        material={model.materials.Matte}
-        position={[0.08, 0.1, -0.01]}
+        geometry={nodes.Rounded_Cube_Flat.geometry}
+        material={materials.Matte}
+        position={[0, 0.1, 0.01]}
         rotation={[-Math.PI / 2, 0, 0]}
       />
     </group>
   )
 }
 
-useGLTF.preload('/ts-logo.gltf')
-
 export default TsIcon
+
+useGLTF.preload('/models/ts-icon.glb')
