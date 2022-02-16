@@ -6,7 +6,7 @@ import SEO from '../components/shared/seo'
 import Layout from '../components/layout/'
 import {
   AboutSection,
-  ECommerceSection,
+  // ECommerceSection,
   FeaturesSection,
   JamstackSection,
   Masthead,
@@ -35,7 +35,7 @@ const IndexPage = ({
     <Layout>
       <Masthead />
       <JamstackSection />
-      <ECommerceSection />
+      {/* <ECommerceSection /> */}
       <FeaturesSection featuresSectionData={featuresSectionData} />
       <AboutSection aboutSectionData={aboutSectionData} />
     </Layout>
