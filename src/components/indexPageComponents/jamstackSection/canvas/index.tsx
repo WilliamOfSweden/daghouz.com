@@ -1,4 +1,4 @@
-import React, { Fragment, lazy, Suspense, useEffect, useState } from 'react'
+import React, { lazy, Suspense, useEffect, useState } from 'react'
 
 import useIsMobile from '../../../../hooks/useIsMobile'
 import CanvasFallback from './canvasFallback'
@@ -13,15 +13,18 @@ const LazyCanvas = () => {
 
   const isMobile = useIsMobile()
 
+  if (isMobile) {
+    return null
+  }
+
+  if (!isMounted) {
+    return <CanvasFallback />
+  }
+
   return (
-    <Fragment>
-      {!isMounted && <CanvasFallback />}
-      {!isMounted || isMobile ? null : (
-        <Suspense fallback={<CanvasFallback />}>
-          <Canvas />
-        </Suspense>
-      )}
-    </Fragment>
+    <Suspense fallback={<CanvasFallback />}>
+      <Canvas />
+    </Suspense>
   )
 }
 
