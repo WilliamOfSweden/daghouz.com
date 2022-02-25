@@ -4,7 +4,7 @@ import SEO from '../components/shared/seo'
 import Layout from '../components/layout/'
 import Masthead from '../components/contactPage/masthead/'
 
-const ContactPage = () => (
+const Contact = () => (
   <Fragment>
     <SEO title='Contact' />
     <Layout>
@@ -13,4 +13,4 @@ const ContactPage = () => (
   </Fragment>
 )
 
-export default ContactPage
+export default Contact

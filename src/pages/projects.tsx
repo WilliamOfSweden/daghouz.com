@@ -18,7 +18,7 @@ interface DataProps extends PageProps {
   }
 }
 
-const ProjectsPage = ({
+const Projects = ({
   data: {
     contentfulProjectsPageMasthead: mastheadData,
     allContentfulProject: { edges: projects },
@@ -64,4 +64,4 @@ export const query = graphql`
   }
 `
 
-export default ProjectsPage
+export default Projects
