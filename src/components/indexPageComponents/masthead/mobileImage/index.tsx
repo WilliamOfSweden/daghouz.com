@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import useIsMobile from '../../../../hooks/useIsMobile'
+import { useIsMobile } from '../../../../hooks/'
 
 const MobileImage = () => {
   const [isHidden, setIsHidden] = useState(false)

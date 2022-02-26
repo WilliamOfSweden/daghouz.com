@@ -1,6 +1,6 @@
 import React, { lazy, Suspense, useEffect, useState } from 'react'
 
-import useIsMobile from '../../../../hooks/useIsMobile'
+import { useIsMobile } from '../../../../hooks/'
 import CanvasFallback from './canvasFallback'
 const Canvas = lazy(() => import('./canvas'))
 

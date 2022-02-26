@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Torus as DreiTorus } from '@react-three/drei'
 
-const Torus = () => {
+export const Torus = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
@@ -26,5 +26,3 @@ const Torus = () => {
     </DreiTorus>
   )
 }
-
-export default Torus

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const useIsMobile = () => {
+export const useIsMobile = () => {
   const isBrowser = typeof window !== 'undefined'
 
   const mediaQuery = '(min-width: 768px)'
@@ -25,5 +25,3 @@ const useIsMobile = () => {
 
   return isMobile
 }
-
-export default useIsMobile

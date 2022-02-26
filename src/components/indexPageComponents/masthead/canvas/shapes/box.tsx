@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { RoundedBox } from '@react-three/drei'
 
-const Box = () => {
+export const Box = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
@@ -23,5 +23,3 @@ const Box = () => {
     </RoundedBox>
   )
 }
-
-export default Box

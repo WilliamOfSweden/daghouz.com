@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Sphere as DreiSphere } from '@react-three/drei'
 
-const Sphere = () => {
+export const Sphere = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
@@ -15,5 +15,3 @@ const Sphere = () => {
     </DreiSphere>
   )
 }
-
-export default Sphere
