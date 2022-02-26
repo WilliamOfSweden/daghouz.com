@@ -16,7 +16,7 @@ const MobileImage = () => {
 
   return (
     <StaticImage
-      alt='Isometric web development items.'
+      alt='Isometric image of a computer screen, laptop, tablet, smartphone and flowerpot.'
       className={'mobile-only'}
       formats={['auto', 'webp', 'avif']}
       layout='fullWidth'
