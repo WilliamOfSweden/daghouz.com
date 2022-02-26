@@ -8,7 +8,7 @@ interface Props {
 }
 
 const Heading = ({ coloredTitle, title }: Props) => (
-  <h1>
+  <h1 className={headingStyles.h1}>
     <span className={headingStyles.colored}>{coloredTitle}</span> {title}
   </h1>
 )
