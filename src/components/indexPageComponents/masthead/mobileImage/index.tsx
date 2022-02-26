@@ -22,7 +22,7 @@ const MobileImage = () => {
       layout='fullWidth'
       loading='eager'
       placeholder='tracedSVG'
-      src='../../../../images/projects.svg'
+      src='../../../../images/indexPageMasthead.svg'
     />
   )
 }
