@@ -1,4 +1,4 @@
-export default interface LinksData {
+export interface LinksData {
   site: {
     siteMetadata: {
       navLinks: {

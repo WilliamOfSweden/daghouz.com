@@ -1,6 +1,6 @@
 import { IGatsbyImageData } from 'gatsby-plugin-image'
 
-export default interface ProjectData {
+export interface ProjectData {
   content: {
     childMdx: {
       body: string

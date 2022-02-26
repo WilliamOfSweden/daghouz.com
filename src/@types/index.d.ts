@@ -1,6 +1,5 @@
-import LinksData from './LinksData'
-import PageData from './PageData'
-import ProjectData from './ProjectData'
-import DefaultSectionData from './DefaultSectionData'
-
-export { LinksData, PageData, ProjectData, DefaultSectionData }
+export * from './DefaultSectionData'
+export * from './IndexPageMastheadData'
+export * from './LinksData'
+export * from './PageData'
+export * from './ProjectData'

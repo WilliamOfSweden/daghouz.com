@@ -1,4 +1,4 @@
-export default interface DefaultSectionData {
+export interface DefaultSectionData {
   content: {
     childMdx: {
       body: string
