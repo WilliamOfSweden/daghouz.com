@@ -10,13 +10,9 @@ softShadows()
 const Canvas = () => (
   <div className={canvasStyles.outerCanvasWrapper}>
     <ThreeCanvas
-      camera={{ position: [0, 1, 10], fov: 60 }}
+      camera={{ fov: 60, position: [0, 1, 10] }}
       className={canvasStyles.innerCanvasWrapper}
-      gl={{
-        alpha: true,
-        antialias: true,
-        precision: 'highp',
-      }}
+      gl={{ alpha: true, antialias: true, precision: 'highp' }}
       shadows
     >
       <Scene />

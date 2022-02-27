@@ -3,7 +3,7 @@ import { useFrame } from '@react-three/fiber'
 import { Cylinder, Box } from '@react-three/drei'
 import { DoubleSide } from 'three'
 
-const JamstackIcon = () => {
+export const JamstackIcon = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
@@ -53,5 +53,3 @@ const JamstackIcon = () => {
     </group>
   )
 }
-
-export default JamstackIcon

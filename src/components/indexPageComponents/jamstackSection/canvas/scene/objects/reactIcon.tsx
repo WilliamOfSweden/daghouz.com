@@ -2,7 +2,7 @@ import React, { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import { Sphere, Torus } from '@react-three/drei'
 
-const ReactIcon = () => {
+export const ReactIcon = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
@@ -35,5 +35,3 @@ const ReactIcon = () => {
     </group>
   )
 }
-
-export default ReactIcon

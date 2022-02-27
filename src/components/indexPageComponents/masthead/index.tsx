@@ -1,11 +1,15 @@
 import React from 'react'
 
-import { IndexPageMastheadQuery } from '../../../@types/'
+import { IndexPageMastheadData } from '../../../@types/'
 import { useStaticQuery, graphql } from 'gatsby'
 import * as mastheadStyles from './masthead.module.css'
 import MobileImage from './mobileImage/'
 import LazyCanvas from './canvas/'
 import TextWrapper from './textWrapper/'
+
+interface IndexPageMastheadQuery {
+  contentfulIndexPageMasthead: IndexPageMastheadData
+}
 
 const Masthead = () => {
   const { contentfulIndexPageMasthead: data } =

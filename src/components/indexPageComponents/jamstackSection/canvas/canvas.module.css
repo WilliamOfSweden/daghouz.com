@@ -5,6 +5,7 @@
 }
 
 .innerCanvasWrapper > canvas {
+  background: var(--color-bg);
   bottom: 0;
   height: 100%;
   left: 0;
