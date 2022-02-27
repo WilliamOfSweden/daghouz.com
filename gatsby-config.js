@@ -8,7 +8,8 @@ module.exports = {
     ogImageUrl: `https://daghouz.com/banner.png`,
     ogType: 'website',
     siteDescription: `Personal website for William Daghouz, Jamstack Developer.`,
-    siteTitle: `William Daghouz | Jamstack Developer`,
+    siteTitle: `William Daghouz | Front-end Developer`,
+    siteTitleShort: `William Daghouz`,
     siteUrl: `https://daghouz.com`,
     navLinks: [
       {

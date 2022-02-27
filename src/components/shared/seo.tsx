@@ -17,6 +17,7 @@ const SEO = ({ description, title }: Props) => {
           ogType
           siteDescription
           siteTitle
+          siteTitleShort
           siteUrl
         }
       }
@@ -29,6 +30,7 @@ const SEO = ({ description, title }: Props) => {
     ogType,
     siteDescription,
     siteTitle,
+    siteTitleShort,
     siteUrl,
   } = data.site.siteMetadata
 
@@ -40,7 +42,7 @@ const SEO = ({ description, title }: Props) => {
         name='description'
         content={description ? description : siteDescription}
       />
-      <title>{title ? `William Daghouz | ${title}` : siteTitle}</title>
+      <title>{title ? `${title} | ${siteTitleShort}` : siteTitle}</title>
       <meta property='og:url' content={siteUrl} />
       <meta property='og:type' content={ogType} />
       <meta property='og:title' content={siteTitle} />
