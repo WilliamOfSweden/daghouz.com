@@ -4,7 +4,7 @@ import {
   GitHubIcon,
   LinkedInIcon,
   TwitterIcon,
-} from '../../../../illustrations/icons/social/'
+} from '../../../../illustrations/icons/'
 
 export const links = [
   {
