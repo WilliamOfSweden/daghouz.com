@@ -3,6 +3,8 @@ import { GLTF } from 'three-stdlib'
 import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
+useGLTF.preload('/models/ts-icon.glb')
+
 type GLTFResult = GLTF & {
   nodes: {
     Text: THREE.Mesh
@@ -42,5 +44,3 @@ export const TsIcon = ({ ...props }: JSX.IntrinsicElements['group']) => {
     </group>
   )
 }
-
-useGLTF.preload('/models/ts-icon.glb')

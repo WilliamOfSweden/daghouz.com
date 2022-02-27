@@ -40,7 +40,20 @@ h2 {
   font-size: 3rem;
   font-weight: 900;
   line-height: 1;
-  margin-bottom: var(--space-md);
+  margin-bottom: var(--space-lg);
+  margin-top: var(--space-lg);
+}
+
+@supports (font-size: clamp(1.8rem, 5vw, 3rem)) {
+  h2 {
+    font-size: clamp(2.3rem, 5vw, 3rem);
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--space-sm);
 }
 
 a {
@@ -65,12 +78,6 @@ li {
   display: inherit;
 }
 
-@media screen and (max-width: 319px) {
-  h2 {
-    font-size: 2rem;
-  }
-}
-
 @media (min-width: 600px) {
   .container {
     padding-left: var(--space-md);
@@ -79,7 +86,8 @@ li {
 }
 
 @media (min-width: 768px) {
-  h1 {
+  h1,
+  h2 {
     margin-top: 0;
   }
 

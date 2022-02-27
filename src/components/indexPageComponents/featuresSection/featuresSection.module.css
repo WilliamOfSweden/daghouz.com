@@ -1,19 +1,22 @@
 .featuresSection {
-  background: var(--color-bg-alt);
-  color: #3a3a40;
   margin-bottom: 0;
   padding-bottom: 60px;
   padding-top: 60px;
 }
 
 .title {
-  font-size: 2.5rem;
-  font-weight: 800;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
 @media screen and (max-width: 319px) {
   .title {
     font-size: 2rem;
+  }
+}
+
+@media (min-width: 600px) {
+  .title {
+    margin-bottom: 5rem;
   }
 }
