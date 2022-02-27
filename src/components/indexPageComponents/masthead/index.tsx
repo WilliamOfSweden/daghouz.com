@@ -7,13 +7,13 @@ import MobileImage from './mobileImage/'
 import LazyCanvas from './canvas/'
 import TextWrapper from './textWrapper/'
 
-interface IndexPageMastheadQuery {
+interface GraphQLData {
   contentfulIndexPageMasthead: IndexPageMastheadData
 }
 
 const Masthead = () => {
   const { contentfulIndexPageMasthead: data } =
-    useStaticQuery<IndexPageMastheadQuery>(graphql`
+    useStaticQuery<GraphQLData>(graphql`
       query IndexPageMastheadQuery {
         contentfulIndexPageMasthead {
           title

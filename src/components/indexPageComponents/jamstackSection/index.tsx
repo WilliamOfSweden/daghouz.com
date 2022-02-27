@@ -7,13 +7,13 @@ import MobileImage from './mobileImage/'
 import LazyCanvas from './canvas/'
 import TextWrapper from './textWrapper/'
 
-interface JamstackSection {
+interface GraphQLData {
   contentfulIndexPageJamstackSection: DefaultSectionData
 }
 
 const JamstackSection = () => {
   const { contentfulIndexPageJamstackSection: data } =
-    useStaticQuery<JamstackSection>(graphql`
+    useStaticQuery<GraphQLData>(graphql`
       query IndexPageJamstackSectionQuery {
         contentfulIndexPageJamstackSection {
           title
