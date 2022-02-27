@@ -4,19 +4,35 @@
   padding-top: 60px;
 }
 
+.featuresSection > div > ul {
+  display: grid;
+  grid-gap: 3rem;
+}
+
+.featuresSection h3 {
+  line-height: 1;
+  margin-bottom: var(--space-md);
+  margin-top: var(--space-sm);
+}
+
 .title {
   margin-bottom: 3rem;
   text-align: center;
 }
 
-@media screen and (max-width: 319px) {
+@media (min-width: 768px) {
+  .featuresSection > div > ul {
+    grid-gap: 5rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .title {
-    font-size: 2rem;
+    margin-bottom: 5rem;
   }
 }
 
-@media (min-width: 600px) {
+@media screen and (max-width: 319px) {
   .title {
-    margin-bottom: 5rem;
+    font-size: 2rem;
   }
 }

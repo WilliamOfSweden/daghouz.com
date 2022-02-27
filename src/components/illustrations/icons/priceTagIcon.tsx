@@ -5,7 +5,7 @@ export const PriceTagIcon = () => (
     data-name='Layer 1'
     id='e1eaa5f7-9ff6-4e61-ad1b-e71b0b25c5d9'
     role='img'
-    style={{ height: '2.7rem', marginBottom: '1rem' }}
+    style={{ height: '2.7rem' }}
     viewBox='0 0 177.426 200'
     xmlns='http://www.w3.org/2000/svg'
   >

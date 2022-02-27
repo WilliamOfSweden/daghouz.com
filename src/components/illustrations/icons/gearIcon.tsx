@@ -5,7 +5,7 @@ export const GearIcon = () => (
     data-name='Layer 1'
     id='be01cddc-aa68-47ea-ae33-8fb9ec101af5'
     role='img'
-    style={{ height: '2.7rem', marginBottom: '12px' }}
+    style={{ height: '2.7rem' }}
     viewBox='0 0 233.083 200'
     xmlns='http://www.w3.org/2000/svg'
   >

@@ -5,7 +5,7 @@ export const FastForwardIcon = () => (
     data-name='Layer 1'
     id='ee5326b1-07bf-4a8a-891a-4a11c2b6f04c'
     role='img'
-    style={{ height: '2.7rem', marginBottom: '12px' }}
+    style={{ height: '2.7rem' }}
     viewBox='0 0 223.545 180.051'
     xmlns='http://www.w3.org/2000/svg'
   >
