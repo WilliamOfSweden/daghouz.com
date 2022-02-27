@@ -1,15 +1,15 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { DefaultSectionData } from '../../../@types/'
-import { useStaticQuery, graphql } from 'gatsby'
 import * as featuresSectionStyles from './featuresSection.module.css'
 
 interface GraphQLData {
   contentfulIndexPageFeaturesSection: DefaultSectionData
 }
 
-const FeaturesSection = () => {
+export const FeaturesSection = () => {
   const { contentfulIndexPageFeaturesSection: data } =
     useStaticQuery<GraphQLData>(graphql`
       query IndexPageFeaturesSectionQuery {
@@ -33,5 +33,3 @@ const FeaturesSection = () => {
     </section>
   )
 }
-
-export default FeaturesSection

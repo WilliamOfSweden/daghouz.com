@@ -1,7 +1,7 @@
 import React from 'react'
-import { OpenExternalIcon } from '../../../../illustrations/icons/'
 
-import * as projectItemStyles from '../projectItem.module.css'
+import * as projectInfoStyles from './projectInfo.module.css'
+import { OpenExternalIcon } from '../../../../illustrations/icons/'
 
 interface Props {
   projectLink: string
@@ -10,7 +10,7 @@ interface Props {
 const Button = ({ projectLink }: Props) => (
   <a
     aria-label='Link to project website.'
-    className={projectItemStyles.btn}
+    className={projectInfoStyles.btn}
     href={projectLink}
     rel='noreferrer noopener'
     target='_blank'

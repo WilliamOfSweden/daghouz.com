@@ -1,28 +1,27 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { IndexPageMastheadData } from '../../../@types/'
+import { DefaultSectionData } from '../../../@types/'
 import * as mastheadStyles from './masthead.module.css'
 import MobileImage from './mobileImage/'
 import LazyCanvas from './canvas/'
 import TextWrapper from './textWrapper/'
 
 interface GraphQLData {
-  contentfulIndexPageMasthead: IndexPageMastheadData
+  contentfulProjectsPageMasthead: DefaultSectionData
 }
 
 export const Masthead = () => {
-  const { contentfulIndexPageMasthead: data } =
+  const { contentfulProjectsPageMasthead: data } =
     useStaticQuery<GraphQLData>(graphql`
-      query IndexPageMastheadQuery {
-        contentfulIndexPageMasthead {
-          title
-          coloredTitle
+      query ProjectsPageMastheadQuery {
+        contentfulProjectsPageMasthead {
           content {
             childMdx {
               body
             }
           }
+          title
         }
       }
     `)

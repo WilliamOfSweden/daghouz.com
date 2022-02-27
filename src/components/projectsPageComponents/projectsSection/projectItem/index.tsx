@@ -2,10 +2,10 @@ import React from 'react'
 
 import { ProjectData } from '../../../../@types/'
 import * as projectItemStyles from './projectItem.module.css'
-import ProjectInfo from './projectInfo/'
 import ProjectImage from './projectImage'
+import ProjectInfo from './projectInfo/'
 
-interface DataProps {
+interface Props {
   node: ProjectData
 }
 
@@ -18,7 +18,7 @@ const ProjectItem = ({
     link,
     title,
   },
-}: DataProps) => (
+}: Props) => (
   <div className={projectItemStyles.wrapper}>
     <ProjectImage image={image} projectLink={link} />
     <ProjectInfo body={body} clientName={title} projectLink={link} />

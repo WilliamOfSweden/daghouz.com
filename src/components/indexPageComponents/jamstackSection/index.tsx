@@ -1,7 +1,7 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
-import { useStaticQuery, graphql } from 'gatsby'
 import * as jamstackSection from './jamstackSection.module.css'
 import MobileImage from './mobileImage/'
 import LazyCanvas from './canvas/'
@@ -11,7 +11,7 @@ interface GraphQLData {
   contentfulIndexPageJamstackSection: DefaultSectionData
 }
 
-const JamstackSection = () => {
+export const JamstackSection = () => {
   const { contentfulIndexPageJamstackSection: data } =
     useStaticQuery<GraphQLData>(graphql`
       query IndexPageJamstackSectionQuery {
@@ -36,5 +36,3 @@ const JamstackSection = () => {
     </section>
   )
 }
-
-export default JamstackSection

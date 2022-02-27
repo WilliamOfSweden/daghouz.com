@@ -1,67 +1,20 @@
 import React, { Fragment } from 'react'
-import { graphql, PageProps } from 'gatsby'
 
-import { ProjectData, DefaultSectionData } from '../@types/'
 import SEO from '../components/shared/seo'
 import Layout from '../components/layout/'
-import Masthead from '../components/projectsPage/masthead/'
-import ProjectsSection from '../components/projectsPage/projectsSection/'
+import {
+  Masthead,
+  ProjectsSection,
+} from '../components/projectsPageComponents/'
 
-interface DataProps extends PageProps {
-  data: {
-    contentfulProjectsPageMasthead: DefaultSectionData
-    allContentfulProject: {
-      edges: {
-        node: ProjectData
-      }[]
-    }
-  }
-}
-
-const Projects = ({
-  data: {
-    contentfulProjectsPageMasthead: mastheadData,
-    allContentfulProject: { edges: projects },
-  },
-}: DataProps) => (
+const Projects = () => (
   <Fragment>
     <SEO title='Projects' />
     <Layout>
-      <Masthead mastheadData={mastheadData} />
-      <ProjectsSection projects={projects} />
+      <Masthead />
+      <ProjectsSection />
     </Layout>
   </Fragment>
 )
-
-export const query = graphql`
-  query ProjectsPageQuery {
-    allContentfulProject(filter: { node_locale: { eq: "en-US" } }) {
-      edges {
-        node {
-          id
-          image {
-            gatsbyImageData
-            description
-          }
-          link
-          title
-          content {
-            childMdx {
-              body
-            }
-          }
-        }
-      }
-    }
-    contentfulProjectsPageMasthead {
-      content {
-        childMdx {
-          body
-        }
-      }
-      title
-    }
-  }
-`
 
 export default Projects

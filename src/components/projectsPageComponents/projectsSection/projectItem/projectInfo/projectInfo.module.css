@@ -1,5 +1,3 @@
-@import '../../../../styles/vars.css';
-
 .btn {
   align-items: center;
   background: var(--color-primary);
@@ -25,43 +23,14 @@
   background: var(--color-primary-light);
 }
 
-.title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: var(--space-md);
-}
-
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-md);
-  margin-bottom: 160px;
-}
-
-.wrapper > a,
-.img > picture > img {
-  border-radius: var(--shape-radius-md);
-}
-
 @media (min-width: 900px) {
   .btn {
     width: 270px;
   }
+}
 
-  .wrapper {
-    flex-direction: row;
-  }
-
-  .wrapper:nth-child(odd) {
-    flex-direction: row-reverse;
-  }
-
-  .wrapper > div,
-  .wrapper > a {
-    flex: 1;
-  }
-
-  .wrapper > div {
-    margin: auto 0;
-  }
+.title {
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: var(--space-md);
 }
