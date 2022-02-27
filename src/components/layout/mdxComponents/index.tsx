@@ -1,34 +1,21 @@
-import React, { ReactNode } from 'react'
-
-import * as mdxStyles from './mdx.module.css'
 import {
   BoxesIcon,
   GearIcon,
   FastForwardIcon,
   PriceTagIcon,
 } from '../../illustrations/icons/'
-
-interface Props {
-  children: ReactNode
-}
-
-export const MdxGrid = ({ children }: Props) => (
-  <ul className={mdxStyles.grid}>{children}</ul>
-)
-
-const MdxH3 = ({ children }: Props) => <h3>{children}</h3>
-
-const MdxP = ({ children }: Props) => (
-  <p className={mdxStyles.paragraph}>{children}</p>
-)
+import { MdxH3 } from './mdxH3'
+import { MdxP } from './mdxP'
+import { MdxGrid } from './mdxGrid'
 
 const MdxComponents = {
-  p: MdxP,
-  h3: MdxH3,
   BoxesIcon,
   FastForwardIcon,
   GearIcon,
+  h3: MdxH3,
+  p: MdxP,
   PriceTagIcon,
+  ul: MdxGrid,
 }
 
 export default MdxComponents

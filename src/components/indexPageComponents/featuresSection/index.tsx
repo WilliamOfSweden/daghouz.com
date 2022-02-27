@@ -1,10 +1,8 @@
 import React from 'react'
-import { MDXProvider } from '@mdx-js/react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
 import { DefaultSectionData } from '../../../@types/'
 import * as featuresSectionStyles from './featuresSection.module.css'
-import { MdxGrid } from '../../layout/mdxComponents/'
 
 interface Props {
   featuresSectionData: DefaultSectionData
@@ -16,9 +14,7 @@ const FeaturesSection = ({ featuresSectionData }: Props) => (
       <h2 className={featuresSectionStyles.title}>
         {featuresSectionData.title}
       </h2>
-      <MDXProvider components={{ ul: MdxGrid }}>
-        <MDXRenderer>{featuresSectionData.content.childMdx.body}</MDXRenderer>
-      </MDXProvider>
+      <MDXRenderer>{featuresSectionData.content.childMdx.body}</MDXRenderer>
     </div>
   </section>
 )

@@ -1,5 +1,3 @@
-@import '../../../styles/vars.css';
-
 .paragraph {
   margin-bottom: var(--spacie-xl);
 }
@@ -9,13 +7,13 @@
   grid-gap: 5rem;
 }
 
+h3 {
+  font-size: 2rem;
+  margin-bottom: var(--space-sm);
+}
+
 @media (min-width: 600px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-}
-
-h3 {
-  font-size: 2rem;
-  margin-bottom: var(--space-sm);
 }
