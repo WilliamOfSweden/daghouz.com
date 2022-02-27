@@ -1,5 +1,5 @@
 import React from 'react'
-import OpenExternalIcon from '../../../../illustrations/icons/openExternalIcon'
+import { OpenExternalIcon } from '../../../../illustrations/icons/'
 
 import * as projectItemStyles from '../projectItem.module.css'
 
