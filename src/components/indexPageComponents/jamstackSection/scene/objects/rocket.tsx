@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { GLTF } from 'three-stdlib'
-import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 useGLTF.preload('/models/rocket.glb')
@@ -16,7 +15,8 @@ interface GLTFResult extends GLTF {
 
 export const Rocket = () => {
   const group = useRef<THREE.Group>()
-  const { materials, nodes } = useGLTF('/models/rocket.glb') as GLTFResult
+  const model: unknown = useGLTF('/models/rocket.glb')
+  const { materials, nodes } = model as GLTFResult
 
   return (
     <group dispose={null} position={[-1, 0, 8.2]} ref={group} scale={0.05}>

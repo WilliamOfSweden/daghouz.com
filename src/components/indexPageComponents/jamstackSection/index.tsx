@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { DefaultSectionData } from '../../../@types/'
 import * as jamstackSection from './jamstackSection.module.css'
 import MobileImage from './mobileImage/'
-import LazyCanvas from './canvas/'
+import LazyCanvas from '../../shared/canvas/'
+import Scene from './scene/'
 import TextWrapper from './textWrapper/'
 
 interface GraphQLData {
@@ -30,7 +31,9 @@ export const JamstackSection = () => {
     <section className={jamstackSection.section}>
       <div className={`${jamstackSection.wrapper} container`}>
         <MobileImage />
-        <LazyCanvas />
+        <LazyCanvas>
+          <Scene />
+        </LazyCanvas>
         <TextWrapper data={data} />
       </div>
     </section>

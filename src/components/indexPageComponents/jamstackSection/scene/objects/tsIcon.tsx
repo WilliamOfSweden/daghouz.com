@@ -1,6 +1,5 @@
 import React, { useRef } from 'react'
 import { GLTF } from 'three-stdlib'
-import * as THREE from 'three'
 import { useGLTF } from '@react-three/drei'
 
 useGLTF.preload('/models/ts-icon.glb')
@@ -18,7 +17,8 @@ type GLTFResult = GLTF & {
 
 export const TsIcon = ({ ...props }: JSX.IntrinsicElements['group']) => {
   const group = useRef<THREE.Group>()
-  const { nodes, materials } = useGLTF('/models/ts-icon.glb') as GLTFResult
+  const model: unknown = useGLTF('/models/ts-icon.glb')
+  const { nodes, materials } = model as GLTFResult
 
   return (
     <group
