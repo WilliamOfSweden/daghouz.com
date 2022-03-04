@@ -2,7 +2,6 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
-import * as mastheadStyles from './masthead.module.css'
 import TextWrapper from './textWrapper/'
 
 interface GraphQLData {
