@@ -1,10 +1,14 @@
-import React, { useState, useEffect, Suspense, lazy } from 'react'
+import React, { lazy, ReactNode, Suspense, useEffect, useState } from 'react'
 
-import { useIsMobile } from '../../../../hooks/'
+import { useIsMobile } from '../../../hooks/'
 import CanvasFallback from './canvasFallback'
 const Canvas = lazy(() => import('./canvas'))
 
-const LazyCanvas = () => {
+interface Props {
+  children: ReactNode
+}
+
+const LazyCanvas = ({ children }: Props) => {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -23,7 +27,7 @@ const LazyCanvas = () => {
 
   return (
     <Suspense fallback={<CanvasFallback />}>
-      <Canvas />
+      <Canvas>{children}</Canvas>
     </Suspense>
   )
 }

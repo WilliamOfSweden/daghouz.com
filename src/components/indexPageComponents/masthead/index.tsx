@@ -4,7 +4,8 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { IndexPageMastheadData } from '../../../@types/'
 import * as mastheadStyles from './masthead.module.css'
 import MobileImage from './mobileImage/'
-import LazyCanvas from './canvas/'
+import LazyCanvas from '../../shared/canvas/'
+import Scene from './scene/'
 import TextWrapper from './textWrapper/'
 
 interface GraphQLData {
@@ -30,7 +31,9 @@ export const Masthead = () => {
   return (
     <section className={`${mastheadStyles.masthead} container`}>
       <MobileImage />
-      <LazyCanvas />
+      <LazyCanvas>
+        <Scene />
+      </LazyCanvas>
       <TextWrapper sectionContent={data} />
     </section>
   )
