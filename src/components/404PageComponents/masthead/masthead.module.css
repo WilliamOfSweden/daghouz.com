@@ -2,16 +2,3 @@
   padding-bottom: 2.25rem;
   padding-top: 1.25rem;
 }
-
-@media screen and (min-width: 768px) {
-  .masthead {
-    display: flex;
-    flex-direction: row-reverse;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .masthead {
-    padding-bottom: 4.25rem;
-  }
-}

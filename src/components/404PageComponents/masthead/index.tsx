@@ -3,8 +3,6 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
 import * as mastheadStyles from './masthead.module.css'
-import MobileImage from './mobileImage/'
-import LazyCanvas from './canvas/'
 import TextWrapper from './textWrapper/'
 
 interface GraphQLData {
@@ -27,9 +25,7 @@ export const Masthead = () => {
     `)
 
   return (
-    <section className={`${mastheadStyles.masthead} container`}>
-      <MobileImage />
-      <LazyCanvas />
+    <section className='container'>
       <TextWrapper sectionContent={data} />
     </section>
   )
