@@ -12,10 +12,11 @@ export const Torus = () => {
 
   return (
     <DreiTorus
-      args={[1.5, 0.75, 24, 24]}
+      args={[1, 0.5, 24, 24]}
       castShadow
-      position={[7, 0, 0]}
+      position={[2, 3.9, 4]}
       ref={mesh}
+      scale={0.8}
     >
       <meshStandardMaterial
         color='#ffffff'

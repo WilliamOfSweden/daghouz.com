@@ -6,11 +6,18 @@ export const Sphere = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
-    mesh.current.position.y = Math.sin(state.clock.getElapsedTime() * 0.8) + 3
+    mesh.current.position.y =
+      Math.sin(state.clock.getElapsedTime() * 0.8) / 4 + 3.5
   })
 
   return (
-    <DreiSphere castShadow ref={mesh} position={[-3.5, 0, 0]}>
+    <DreiSphere
+      args={[1, 32, 32]}
+      castShadow
+      ref={mesh}
+      position={[-4, 0, 4]}
+      scale={0.6}
+    >
       <meshStandardMaterial color='#3162c3' metalness={0.1} roughness={0.5} />
     </DreiSphere>
   )
