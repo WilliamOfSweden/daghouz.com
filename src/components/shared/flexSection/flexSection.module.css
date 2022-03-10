@@ -4,9 +4,12 @@
 }
 
 @media screen and (min-width: 768px) {
+  .reverse {
+    flex-direction: row-reverse;
+  }
+
   .section {
     display: flex;
-    flex-direction: row-reverse;
   }
 }
 

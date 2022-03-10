@@ -2,6 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
+import { FlexSection } from '../../shared/'
 import * as jamstackSection from './jamstackSection.module.css'
 import MobileImage from './mobileImage/'
 import { LazyCanvas } from '../../shared/'
@@ -28,14 +29,14 @@ export const JamstackSection = () => {
     `)
 
   return (
-    <section className={jamstackSection.section}>
-      <div className={`${jamstackSection.wrapper} container`}>
+    <div className={jamstackSection.bg}>
+      <FlexSection>
         <MobileImage />
         <LazyCanvas>
           <Scene />
         </LazyCanvas>
         <TextWrapper data={data} />
-      </div>
-    </section>
+      </FlexSection>
+    </div>
   )
 }

@@ -28,7 +28,7 @@ export const Masthead = () => {
     `)
 
   return (
-    <FlexSection>
+    <FlexSection reverseFlexDirectionOnDesktop>
       <MobileImage />
       <LazyCanvas>
         <Scene />
