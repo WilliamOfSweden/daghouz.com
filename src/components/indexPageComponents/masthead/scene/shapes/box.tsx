@@ -13,9 +13,9 @@ export const Box = () => {
 
   return (
     <RoundedBox
-      args={[2, 2, 2]}
+      args={[3, 3, 3]}
       castShadow
-      position={[6, 4, -10]}
+      position={[4, 4, -10]}
       radius={0.3}
       ref={mesh}
     >

@@ -12,10 +12,10 @@ export const Sphere = () => {
 
   return (
     <DreiSphere
-      args={[1, 32, 32]}
+      args={[1.25, 32, 32]}
       castShadow
       ref={mesh}
-      position={[-4, 0, 4]}
+      position={[-4, 0.5, 4]}
       scale={0.6}
     >
       <meshStandardMaterial color='#3162c3' metalness={0.1} roughness={0.5} />
