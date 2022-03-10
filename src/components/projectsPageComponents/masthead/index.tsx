@@ -2,9 +2,9 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
-import * as mastheadStyles from './masthead.module.css'
+import { FlexSection } from '../../shared/'
 import MobileImage from './mobileImage/'
-import LazyCanvas from '../../shared/canvas/'
+import { LazyCanvas } from '../../shared/'
 import Scene from './scene/'
 import TextWrapper from './textWrapper/'
 
@@ -28,12 +28,12 @@ export const Masthead = () => {
     `)
 
   return (
-    <section className={`${mastheadStyles.masthead} container`}>
+    <FlexSection>
       <MobileImage />
       <LazyCanvas>
         <Scene />
       </LazyCanvas>
       <TextWrapper sectionContent={data} />
-    </section>
+    </FlexSection>
   )
 }

@@ -8,7 +8,7 @@ interface Props {
   children: ReactNode
 }
 
-const LazyCanvas = ({ children }: Props) => {
+export const LazyCanvas = ({ children }: Props) => {
   const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
@@ -31,5 +31,3 @@ const LazyCanvas = ({ children }: Props) => {
     </Suspense>
   )
 }
-
-export default LazyCanvas

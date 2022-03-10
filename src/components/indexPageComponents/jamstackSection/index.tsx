@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { DefaultSectionData } from '../../../@types/'
 import * as jamstackSection from './jamstackSection.module.css'
 import MobileImage from './mobileImage/'
-import LazyCanvas from '../../shared/canvas/'
+import { LazyCanvas } from '../../shared/'
 import Scene from './scene/'
 import TextWrapper from './textWrapper/'
 

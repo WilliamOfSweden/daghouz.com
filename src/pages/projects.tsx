@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 
-import SEO from '../components/shared/seo'
+import { SEO } from '../components/shared/'
 import Layout from '../components/layout/'
 import {
   Masthead,
