@@ -11,7 +11,7 @@ export const ReactIcon = () => {
   })
 
   return (
-    <group position={[3.5, 3, 1]} ref={mesh} scale={1.3}>
+    <group position={[3.5, 3, 1]} ref={mesh} scale={1.8}>
       <Sphere args={[0.1, 32, 32]} castShadow>
         <meshPhysicalMaterial color='#61dbfb' metalness={0.1} roughness={0.5} />
       </Sphere>
