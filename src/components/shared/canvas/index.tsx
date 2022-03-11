@@ -1,6 +1,6 @@
 import React, { lazy, ReactNode, Suspense, useEffect, useState } from 'react'
 
-import { useIsMobile } from '../../../hooks/'
+// import { useIsMobile } from '../../../hooks/'
 import CanvasFallback from './canvasFallback'
 const Canvas = lazy(() => import('./canvas'))
 
@@ -15,11 +15,11 @@ export const LazyCanvas = ({ children }: Props) => {
     setIsMounted(true)
   }, [])
 
-  const isMobile = useIsMobile()
+  // const isMobile = useIsMobile()
 
-  if (isMobile) {
-    return null
-  }
+  // if (isMobile) {
+  //   return null
+  // }
 
   if (!isMounted) {
     return <CanvasFallback />

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
 import { FlexSection, LazyCanvas } from '../../shared/'
-import MobileImage from './mobileImage/'
+// import MobileImage from './mobileImage/'
 import Scene from './scene/'
 import TextWrapper from './textWrapper/'
 
@@ -28,7 +28,7 @@ export const Masthead = () => {
 
   return (
     <FlexSection reverseFlexDirectionOnDesktop>
-      <MobileImage />
+      {/* <MobileImage /> */}
       <LazyCanvas>
         <Scene />
       </LazyCanvas>
