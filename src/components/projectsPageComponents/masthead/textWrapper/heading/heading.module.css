@@ -1,5 +1,6 @@
 .heading {
   fill: var(--color-text);
   font-family: 'Mulish';
+  font-size: 6rem;
   font-weight: 900;
 }
