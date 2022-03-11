@@ -11,7 +11,7 @@
   font-weight: 500;
   justify-content: center;
   letter-spacing: 2px;
-  margin-top: var(--space-md);
+  margin-top: var(--space-lg);
   padding: var(--space-md);
   text-align: center;
   text-transform: uppercase;
@@ -23,14 +23,19 @@
   background: var(--color-primary-light);
 }
 
+.title {
+  font-weight: 800;
+  margin-bottom: var(--space-lg);
+}
+
 @media (min-width: 900px) {
   .btn {
     width: 270px;
   }
 }
 
-.title {
-  font-size: 2rem;
-  font-weight: 800;
-  margin-bottom: var(--space-md);
+@supports (font-size: clamp(1.8rem, 5vw, 3rem)) {
+  .title {
+    font-size: clamp(2.1rem, 5vw, 2.8rem);
+  }
 }
