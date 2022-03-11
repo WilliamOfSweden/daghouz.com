@@ -2,9 +2,8 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
-import { FlexSection } from '../../shared/'
+import { FlexSection, LazyCanvas } from '../../shared/'
 import MobileImage from './mobileImage/'
-import { LazyCanvas } from '../../shared/'
 import Scene from './scene/'
 import TextWrapper from './textWrapper/'
 
