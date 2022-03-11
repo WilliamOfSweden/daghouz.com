@@ -7,7 +7,18 @@ interface Props {
 }
 
 const Heading = ({ title }: Props) => (
-  <h1 className={headingStyles.h1}>{title}</h1>
+  <h1>
+    <span className='visuallyHidden'>{title}</span>
+    <svg
+      aria-hidden='true'
+      viewBox='0 0 975.8027 100'
+      xmlns='http://www.w3.org/2000/svg'
+    >
+      <text x={-5} y={73} className={headingStyles.heading}>
+        {title}
+      </text>
+    </svg>
+  </h1>
 )
 
 export default Heading
