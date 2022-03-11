@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
 import { FlexSection } from '../../shared/'
-import * as jamstackSection from './jamstackSection.module.css'
+import * as jamstackSectionStyles from './jamstackSection.module.css'
 import MobileImage from './mobileImage/'
 import { LazyCanvas } from '../../shared/'
 import Scene from './scene/'
@@ -29,7 +29,7 @@ export const JamstackSection = () => {
     `)
 
   return (
-    <div className={jamstackSection.bg}>
+    <div className={jamstackSectionStyles.bg}>
       <FlexSection>
         <MobileImage />
         <LazyCanvas>

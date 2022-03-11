@@ -2,6 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { ProjectData } from '../../../@types/'
+import * as projectsSectionStyles from './projectsSection.module.css'
 import ProjectItem from './projectItem/'
 
 interface GraphQLData {
@@ -37,7 +38,7 @@ export const ProjectsSection = () => {
   `)
 
   return (
-    <section className='container'>
+    <section className={`${projectsSectionStyles.section} container`}>
       {data.edges.map(project => (
         <ProjectItem key={project.node.id} node={project.node} />
       ))}
