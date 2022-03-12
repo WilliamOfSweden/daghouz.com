@@ -3,25 +3,21 @@ import { useState, useEffect } from 'react'
 export const useIsMobile = () => {
   const isBrowser = typeof window !== 'undefined'
 
-  const mediaQuery = '(min-width: 768px)'
-
-  const [isMobile, setIsMobile] = useState(
-    isBrowser && !matchMedia(mediaQuery).matches
+  const [width, setWidth] = useState<number>(
+    isBrowser ? window.innerWidth : 300
   )
 
+  const handleWindowSizeChange = () => {
+    setWidth(window.innerWidth)
+  }
+
   useEffect(() => {
-    const mediaQueryList = window.matchMedia(mediaQuery)
+    window.addEventListener('resize', handleWindowSizeChange)
 
-    const handleMediaQueryChange = (event: MediaQueryListEventInit) => {
-      if (event.matches && isMobile) {
-        setIsMobile(false)
-      }
+    return () => {
+      window.removeEventListener('resize', handleWindowSizeChange)
     }
-
-    mediaQueryList.addEventListener('change', handleMediaQueryChange)
-
-    return () => window.removeEventListener('change', handleMediaQueryChange)
   }, [])
 
-  return isMobile
+  return width <= 768
 }

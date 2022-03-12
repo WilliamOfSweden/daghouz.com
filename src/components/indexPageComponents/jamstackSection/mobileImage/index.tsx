@@ -1,30 +1,16 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
-import { useIsMobile } from '../../../../hooks/'
-
-const MobileImage = () => {
-  const [isHidden, setIsHidden] = useState(false)
-
-  const isMobile = useIsMobile()
-
-  useEffect(() => {
-    !isMobile && setIsHidden(true)
-  }, [isMobile])
-
-  if (isHidden) return null
-
-  return (
-    <StaticImage
-      alt='Isometric web development items and rocket.'
-      className='mobile-only'
-      formats={['auto', 'webp', 'avif']}
-      layout='fullWidth'
-      loading='eager'
-      placeholder='tracedSVG'
-      src='../../../../images/rocket.svg'
-    />
-  )
-}
+const MobileImage = () => (
+  <StaticImage
+    alt='Isometric web development items and rocket.'
+    className='mobile-only'
+    formats={['auto', 'webp', 'avif']}
+    layout='fullWidth'
+    loading='eager'
+    placeholder='tracedSVG'
+    src='../../../../images/rocket.svg'
+  />
+)
 
 export default MobileImage

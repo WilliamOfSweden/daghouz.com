@@ -6,10 +6,10 @@ import { DefaultSectionData } from '../../../../@types/'
 import * as textWrapperStyles from './textWrapper.module.css'
 
 interface Props {
-  data: DefaultSectionData
+  sectionContent: DefaultSectionData
 }
 
-const TextWrapper = ({ data: { content, title } }: Props) => (
+const TextWrapper = ({ sectionContent: { content, title } }: Props) => (
   <div className={textWrapperStyles.textWrapper}>
     <h2>{title}</h2>
     <MDXRenderer>{content.childMdx.body}</MDXRenderer>

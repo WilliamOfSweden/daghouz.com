@@ -2,9 +2,9 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
-import { FlexSection, LazyCanvas } from '../../shared/'
+import { FlexSection } from '../../shared/'
 import * as jamstackSectionStyles from './jamstackSection.module.css'
-// import MobileImage from './mobileImage/'
+import MobileImage from './mobileImage/'
 import Scene from './scene/'
 import TextWrapper from './textWrapper/'
 
@@ -29,13 +29,11 @@ export const JamstackSection = () => {
 
   return (
     <div className={jamstackSectionStyles.bg}>
-      <FlexSection>
-        {/* <MobileImage /> */}
-        <LazyCanvas>
-          <Scene />
-        </LazyCanvas>
-        <TextWrapper data={data} />
-      </FlexSection>
+      <FlexSection
+        content={<TextWrapper sectionContent={data} />}
+        mobileImage={<MobileImage />}
+        scene={<Scene />}
+      />
     </div>
   )
 }

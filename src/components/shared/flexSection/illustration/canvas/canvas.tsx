@@ -7,10 +7,10 @@ import * as canvasStyles from './canvas.module.css'
 softShadows()
 
 interface Props {
-  children: ReactNode
+  children?: ReactNode
 }
 
-const Canvas = ({ children }: Props) => (
+const LazyCanvas = ({ children }: Props) => (
   <div className={canvasStyles.outerCanvasWrapper}>
     <ThreeCanvas
       camera={{ fov: 60, position: [-5, 2, 10] }}
@@ -23,4 +23,4 @@ const Canvas = ({ children }: Props) => (
   </div>
 )
 
-export default Canvas
+export default LazyCanvas

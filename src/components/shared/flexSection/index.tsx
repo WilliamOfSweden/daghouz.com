@@ -1,15 +1,20 @@
 import React, { ReactNode } from 'react'
 
 import * as flexSectionStyles from './flexSection.module.css'
+import Illustration from './illustration/'
 
 interface Props {
-  children: ReactNode
+  content: ReactNode
+  mobileImage: ReactNode
   reverseFlexDirectionOnDesktop?: boolean
+  scene: ReactNode
 }
 
 export const FlexSection = ({
-  children,
+  content,
+  mobileImage,
   reverseFlexDirectionOnDesktop,
+  scene,
 }: Props) => {
   const flexDirectionClassName = reverseFlexDirectionOnDesktop ? 'reverse' : ''
 
@@ -17,7 +22,8 @@ export const FlexSection = ({
     <section
       className={`${flexSectionStyles.section} ${flexSectionStyles[flexDirectionClassName]} container`}
     >
-      {children}
+      <Illustration mobileImage={mobileImage} scene={scene} />
+      {content}
     </section>
   )
 }
