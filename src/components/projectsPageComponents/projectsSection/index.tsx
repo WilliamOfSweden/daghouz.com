@@ -16,7 +16,10 @@ interface GraphQLData {
 export const ProjectsSection = () => {
   const { allContentfulProject: data } = useStaticQuery<GraphQLData>(graphql`
     query ProjectsPageProjectsSectionQuery {
-      allContentfulProject(filter: { node_locale: { eq: "en-US" } }) {
+      allContentfulProject(
+        filter: { node_locale: { eq: "en-US" } }
+        sort: { fields: [title], order: DESC }
+      ) {
         edges {
           node {
             id
