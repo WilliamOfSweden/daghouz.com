@@ -3,7 +3,7 @@ import React, { lazy, ReactNode, Suspense, useEffect, useState } from 'react'
 import { useIsMobile } from '../../../../../hooks/'
 import CanvasFallback from './canvasFallback'
 
-const LazyCanvas = lazy(() => import('./canvas'))
+const LazyCanvas = lazy(() => import('./lazyCanvas'))
 
 interface Props {
   children: ReactNode
