@@ -18,7 +18,7 @@ export const ProjectsSection = () => {
     query ProjectsPageProjectsSectionQuery {
       allContentfulProject(
         filter: { node_locale: { eq: "en-US" } }
-        sort: { fields: [title], order: DESC }
+        sort: { fields: image___createdAt, order: DESC }
       ) {
         edges {
           node {
