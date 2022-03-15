@@ -4,7 +4,7 @@ import { SEO } from '../components/shared/'
 import { Layout } from '../components/layout/'
 import { Masthead } from '../components/404PageComponents/masthead/'
 
-const NotFoundPage = () => (
+const _404 = () => (
   <Fragment>
     <SEO title='Page Not Found' />
     <Layout>
@@ -13,4 +13,4 @@ const NotFoundPage = () => (
   </Fragment>
 )
 
-export default NotFoundPage
+export default _404
