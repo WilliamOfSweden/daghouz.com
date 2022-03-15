@@ -14,6 +14,9 @@ const gatsbyConfig: GatsbyConfig = {
     siteTitle: `William Daghouz | Front-end Developer`,
     siteTitleShort: `William Daghouz`,
     siteUrl: `https://daghouz.com`,
+    twitterCard: 'summary_large_image',
+    twitterCreator: '@WilliamDaghouz',
+    twitterTitle: 'Web Developer | William Daghouz',
     navLinks: [
       {
         name: 'Home',

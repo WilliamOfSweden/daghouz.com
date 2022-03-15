@@ -19,6 +19,9 @@ export const SEO = ({ description, title }: Props) => {
           siteTitle
           siteTitleShort
           siteUrl
+          twitterCard
+          twitterCreator
+          twitterTitle
         }
       }
     }
@@ -32,6 +35,9 @@ export const SEO = ({ description, title }: Props) => {
     siteTitle,
     siteTitleShort,
     siteUrl,
+    twitterCard,
+    twitterCreator,
+    twitterTitle,
   } = data.site.siteMetadata
 
   return (
@@ -48,6 +54,17 @@ export const SEO = ({ description, title }: Props) => {
       <meta property='og:title' content={siteTitle} />
       <meta property='og:description' content={ogDescription} />
       <meta property='og:image' content={ogImageUrl} />
+      <meta property='og:url' content={siteUrl} />
+      <meta
+        property='og:see_also'
+        content='https://twitter.com/WilliamDaghouz'
+      />
+      <meta name='twitter:card' content={twitterCard} />
+      <meta name='twitter:creator' content={twitterCreator} />
+      <meta name='twitter:title' content={twitterTitle} />
+      <meta name='twitter:description' content={ogDescription} />
+      <meta name='twitter:url' content={siteUrl} />
+      <meta property='twitter:image' content={ogImageUrl} />
     </Helmet>
   )
 }
