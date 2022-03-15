@@ -4,9 +4,9 @@ import { useStaticQuery, graphql } from 'gatsby'
 import { DefaultSectionData } from '../../../@types/'
 import { FlexSection } from '../../shared/'
 import * as jamstackSectionStyles from './jamstackSection.module.css'
-import MobileImage from './mobileImage/'
-import Scene from './scene/'
-import TextWrapper from './textWrapper/'
+import { MobileImage } from './mobileImage/'
+import { Scene } from './scene/'
+import { TextWrapper } from './textWrapper/'
 
 interface GraphQLData {
   contentfulIndexPageJamstackSection: DefaultSectionData

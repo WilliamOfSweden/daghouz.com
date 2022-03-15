@@ -7,7 +7,7 @@ interface Props {
   projectLink: string
 }
 
-const Button = ({ projectLink }: Props) => (
+export const Button = ({ projectLink }: Props) => (
   <a
     aria-label='Link to project website.'
     className={projectInfoStyles.btn}
@@ -19,5 +19,3 @@ const Button = ({ projectLink }: Props) => (
     <OpenExternalIcon />
   </a>
 )
-
-export default Button

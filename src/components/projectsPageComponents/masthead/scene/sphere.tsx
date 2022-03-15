@@ -3,7 +3,7 @@ import * as THREE from 'three'
 import { useFrame } from '@react-three/fiber'
 import { MeshDistortMaterial, Sphere as DreiSphere } from '@react-three/drei'
 
-const Sphere = () => {
+export const Sphere = () => {
   const sphere = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
@@ -33,5 +33,3 @@ const Sphere = () => {
     </DreiSphere>
   )
 }
-
-export default Sphere

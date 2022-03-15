@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as logoStyles from './logo.module.css'
 
-const Logo = () => (
+export const Logo = () => (
   <svg
     className={logoStyles.logo}
     data-name='Layer 1'
@@ -24,5 +24,3 @@ const Logo = () => (
     </g>
   </svg>
 )
-
-export default Logo

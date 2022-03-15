@@ -6,8 +6,6 @@ interface Props {
   clientName: string
 }
 
-const Heading = ({ clientName }: Props) => (
+export const Heading = ({ clientName }: Props) => (
   <h2 className={projectInfoStyles.title}>{clientName}</h2>
 )
-
-export default Heading

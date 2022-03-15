@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Illustration404 = () => (
+export const Illustration404 = () => (
   <svg
     style={{ width: '100%', display: 'block' }}
     xmlns='http://www.w3.org/2000/svg'
@@ -1334,5 +1334,3 @@ const Illustration404 = () => (
     </g>
   </svg>
 )
-
-export default Illustration404

@@ -1,8 +1,8 @@
 import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 
-import Heading from './heading'
-import Button from './button'
+import { Heading } from './heading'
+import { Button } from './button'
 
 interface Props {
   body: string
@@ -10,12 +10,10 @@ interface Props {
   projectLink: string
 }
 
-const ProjectInfo = ({ body, clientName, projectLink }: Props) => (
+export const ProjectInfo = ({ body, clientName, projectLink }: Props) => (
   <div>
     <Heading clientName={clientName} />
     <MDXRenderer>{body}</MDXRenderer>
     <Button projectLink={projectLink} />
   </div>
 )
-
-export default ProjectInfo

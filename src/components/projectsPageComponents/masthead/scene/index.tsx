@@ -5,9 +5,9 @@ import {
   ContactShadows,
 } from '@react-three/drei'
 
-import Sphere from './sphere'
+import { Sphere } from './sphere'
 
-const Scene = () => (
+export const Scene = () => (
   <Fragment>
     <PerspectiveCamera makeDefault position={[0, 0, 4]} fov={75}>
       <ambientLight intensity={1.5} />
@@ -25,5 +25,3 @@ const Scene = () => (
     />
   </Fragment>
 )
-
-export default Scene

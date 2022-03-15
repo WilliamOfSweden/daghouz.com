@@ -2,7 +2,7 @@ import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
 import { DefaultSectionData } from '../../../@types/'
-import TextWrapper from './textWrapper/'
+import { TextWrapper } from './textWrapper/'
 
 interface GraphQLData {
   contentfulNotFoundPageMasthead: DefaultSectionData

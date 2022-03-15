@@ -4,13 +4,13 @@ import { Link } from 'gatsby'
 
 import { IndexPageMastheadData } from '../../../../@types/'
 import * as textWrapperStyles from './textWrapper.module.css'
-import Heading from './heading/'
+import { Heading } from './heading/'
 
 interface Props {
   sectionContent: IndexPageMastheadData
 }
 
-const TextWrapper = ({ sectionContent }: Props) => (
+export const TextWrapper = ({ sectionContent }: Props) => (
   <div className={textWrapperStyles.textWrapper}>
     <Heading
       coloredTitle={sectionContent.coloredTitle}
@@ -22,5 +22,3 @@ const TextWrapper = ({ sectionContent }: Props) => (
     </Link>
   </div>
 )
-
-export default TextWrapper

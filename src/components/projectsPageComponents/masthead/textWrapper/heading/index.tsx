@@ -6,7 +6,7 @@ interface Props {
   title: string
 }
 
-const Heading = ({ title }: Props) => (
+export const Heading = ({ title }: Props) => (
   <h1>
     <span className='visuallyHidden'>{title}</span>
     <svg
@@ -20,5 +20,3 @@ const Heading = ({ title }: Props) => (
     </svg>
   </h1>
 )
-
-export default Heading

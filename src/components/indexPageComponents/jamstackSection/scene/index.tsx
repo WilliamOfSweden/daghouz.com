@@ -1,10 +1,10 @@
 import React from 'react'
 import { ContactShadows } from '@react-three/drei'
 
-import Lights from './lights/'
+import { Lights } from './lights/'
 import { Box, JamstackIcon, Plane, ReactIcon, TsIcon } from './objects/'
 
-const Scene = () => (
+export const Scene = () => (
   <group>
     <ContactShadows
       blur={2.5}
@@ -28,5 +28,3 @@ const Scene = () => (
     </group>
   </group>
 )
-
-export default Scene

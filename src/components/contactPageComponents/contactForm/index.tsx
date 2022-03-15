@@ -2,7 +2,7 @@ import React from 'react'
 
 import * as formStyles from './contactForm.module.css'
 
-const ContactForm = () => (
+export const ContactForm = () => (
   <form
     autoComplete='on'
     className={formStyles.form}
@@ -65,5 +65,3 @@ const ContactForm = () => (
     </button>
   </form>
 )
-
-export default ContactForm

@@ -2,14 +2,14 @@ import React from 'react'
 
 import { ProjectData } from '../../../../@types/'
 import * as projectItemStyles from './projectItem.module.css'
-import ProjectImage from './projectImage'
-import ProjectInfo from './projectInfo/'
+import { ProjectImage } from './projectImage'
+import { ProjectInfo } from './projectInfo/'
 
 interface Props {
   node: ProjectData
 }
 
-const ProjectItem = ({
+export const ProjectItem = ({
   node: {
     content: {
       childMdx: { body },
@@ -24,5 +24,3 @@ const ProjectItem = ({
     <ProjectInfo body={body} clientName={title} projectLink={link} />
   </div>
 )
-
-export default ProjectItem

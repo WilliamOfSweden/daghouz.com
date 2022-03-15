@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 
 import * as socialNavStyles from './socialNav.module.css'
-import Logo from '../../../illustrations/logo/'
+import { Logo } from '../../../illustrations/logo/'
 import { SocialMediaLinks } from './socialMediaLinks/'
 
 export const SocialNav = () => (

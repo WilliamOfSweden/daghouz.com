@@ -2,9 +2,9 @@ import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
 import * as mastheadStyles from './masthead.module.css'
-import ContactForm from '../contactForm'
+import { ContactForm } from '../contactForm'
 
-const Masthead = () => (
+export const Masthead = () => (
   <section className={`container ${mastheadStyles.masthead}`}>
     <ContactForm />
     <div className={mastheadStyles.masthead__imgWrapper}>
@@ -19,5 +19,3 @@ const Masthead = () => (
     </div>
   </section>
 )
-
-export default Masthead

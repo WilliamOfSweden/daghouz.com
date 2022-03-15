@@ -11,7 +11,7 @@ interface Props {
   projectLink: string
 }
 
-const ProjectImage = ({
+export const ProjectImage = ({
   image: { description, gatsbyImageData },
   projectLink,
 }: Props) => (
@@ -29,5 +29,3 @@ const ProjectImage = ({
     />
   </a>
 )
-
-export default ProjectImage

@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from 'gatsby'
 
 import { ProjectData } from '../../../@types/'
 import * as projectsSectionStyles from './projectsSection.module.css'
-import ProjectItem from './projectItem/'
+import { ProjectItem } from './projectItem/'
 
 interface GraphQLData {
   allContentfulProject: {

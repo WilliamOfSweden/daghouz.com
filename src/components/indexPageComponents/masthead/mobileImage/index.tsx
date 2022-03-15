@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from 'gatsby-plugin-image'
 
-const MobileImage = () => (
+export const MobileImage = () => (
   <StaticImage
     alt='Isometric image of a computer screen, laptop, tablet, smartphone and flowerpot.'
     className={'mobile-only'}
@@ -12,5 +12,3 @@ const MobileImage = () => (
     src='../../../../images/indexPageMasthead.svg'
   />
 )
-
-export default MobileImage

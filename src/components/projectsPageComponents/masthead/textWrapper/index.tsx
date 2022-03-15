@@ -4,13 +4,13 @@ import { Link } from 'gatsby'
 
 import { DefaultSectionData } from '../../../../@types/'
 import * as textWrapperStyles from './textWrapper.module.css'
-import Heading from './heading/'
+import { Heading } from './heading/'
 
 interface Props {
   sectionContent: DefaultSectionData
 }
 
-const TextWrapper = ({ sectionContent }: Props) => (
+export const TextWrapper = ({ sectionContent }: Props) => (
   <div className={textWrapperStyles.textWrapper}>
     <Heading title={sectionContent.title} />
     <MDXRenderer>{sectionContent.content.childMdx.body}</MDXRenderer>
@@ -19,5 +19,3 @@ const TextWrapper = ({ sectionContent }: Props) => (
     </Link>
   </div>
 )
-
-export default TextWrapper

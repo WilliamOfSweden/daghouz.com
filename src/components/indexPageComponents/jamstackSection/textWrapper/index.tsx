@@ -9,7 +9,7 @@ interface Props {
   sectionContent: DefaultSectionData
 }
 
-const TextWrapper = ({ sectionContent: { content, title } }: Props) => (
+export const TextWrapper = ({ sectionContent: { content, title } }: Props) => (
   <div className={textWrapperStyles.textWrapper}>
     <h2>{title}</h2>
     <MDXRenderer>{content.childMdx.body}</MDXRenderer>
@@ -18,5 +18,3 @@ const TextWrapper = ({ sectionContent: { content, title } }: Props) => (
     </Link>
   </div>
 )
-
-export default TextWrapper
