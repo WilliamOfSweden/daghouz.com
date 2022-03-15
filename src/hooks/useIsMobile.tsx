@@ -19,5 +19,5 @@ export const useIsMobile = () => {
     }
   }, [])
 
-  return width <= 768
+  return width < 768
 }
