@@ -14,10 +14,10 @@ export const JamstackIcon = () => {
   return (
     <group
       castShadow
-      position={[-3.5, 0.5, 3]}
+      position={[-3.7, 0.5, 2.8]}
       ref={mesh}
       rotation={[Math.PI / 2, 0, Math.PI / -7]}
-      scale={0.4}
+      scale={0.35}
     >
       <Cylinder args={[2, 2, 0.4, 64]} castShadow position={[-3.5, 0, 0]}>
         <meshStandardMaterial color='#f0047f' metalness={0.1} roughness={0.5} />
