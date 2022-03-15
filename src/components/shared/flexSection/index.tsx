@@ -1,7 +1,7 @@
 import React, { ReactNode } from 'react'
 
 import * as flexSectionStyles from './flexSection.module.css'
-import Illustration from './illustration/'
+import { Illustration } from './illustration/'
 
 interface Props {
   content: ReactNode
