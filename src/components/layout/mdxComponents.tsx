@@ -3,13 +3,11 @@ import {
   GearIcon,
   FastForwardIcon,
   PriceTagIcon,
-} from '../../illustrations/icons/'
+} from '../illustrations/icons/'
 
-const MdxComponents = {
+export const MdxComponents = {
   BoxesIcon,
   FastForwardIcon,
   GearIcon,
   PriceTagIcon,
 }
-
-export default MdxComponents

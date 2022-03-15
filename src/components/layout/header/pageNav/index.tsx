@@ -4,7 +4,7 @@ import { useStaticQuery, graphql, Link } from 'gatsby'
 import { LinksData } from '../../../../@types/'
 import * as pageNavStyles from './pageNav.module.css'
 
-const PageNav = () => {
+export const PageNav = () => {
   const {
     site: {
       siteMetadata: { navLinks },
@@ -37,5 +37,3 @@ const PageNav = () => {
     </nav>
   )
 }
-
-export default PageNav

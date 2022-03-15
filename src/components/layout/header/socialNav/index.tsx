@@ -3,9 +3,9 @@ import { Link } from 'gatsby'
 
 import * as socialNavStyles from './socialNav.module.css'
 import Logo from '../../../illustrations/logo/'
-import SocialMediaLinks from './socialMediaLinks/'
+import { SocialMediaLinks } from './socialMediaLinks/'
 
-const SocialNav = () => (
+export const SocialNav = () => (
   <nav className={`${socialNavStyles.socialNav} desktop-only`}>
     <Link aria-label='Link to main page.' to='/'>
       <Logo />
@@ -13,5 +13,3 @@ const SocialNav = () => (
     <SocialMediaLinks />
   </nav>
 )
-
-export default SocialNav

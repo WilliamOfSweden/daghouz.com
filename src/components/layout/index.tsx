@@ -1,14 +1,14 @@
 import React, { Fragment, ReactNode } from 'react'
 import { MDXProvider } from '@mdx-js/react'
 
-import Header from './header/'
-import MdxComponents from './mdxComponents/'
+import { Header } from './header/'
+import { MdxComponents } from './mdxComponents'
 
 interface Props {
   children: ReactNode
 }
 
-const Layout = ({ children }: Props) => (
+export const Layout = ({ children }: Props) => (
   <Fragment>
     <Header />
     <MDXProvider components={MdxComponents}>
@@ -16,5 +16,3 @@ const Layout = ({ children }: Props) => (
     </MDXProvider>
   </Fragment>
 )
-
-export default Layout

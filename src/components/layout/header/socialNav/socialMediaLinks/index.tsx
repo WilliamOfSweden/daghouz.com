@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import { links } from './links'
 
-const SocialMediaLinks = () => (
+export const SocialMediaLinks = () => (
   <Fragment>
     {links.map(({ ariaName, link, icon }) => (
       <a
@@ -17,5 +17,3 @@ const SocialMediaLinks = () => (
     ))}
   </Fragment>
 )
-
-export default SocialMediaLinks
