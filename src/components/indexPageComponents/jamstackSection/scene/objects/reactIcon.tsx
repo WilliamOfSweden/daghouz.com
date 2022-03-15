@@ -6,12 +6,13 @@ export const ReactIcon = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
+    mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) + 10
     mesh.current.rotation.x = state.clock.getElapsedTime()
     mesh.current.rotation.y = state.clock.getElapsedTime()
   })
 
   return (
-    <group position={[3.5, 3, 1]} ref={mesh} scale={1.8}>
+    <group position={[4, 4, -10]} ref={mesh} scale={4}>
       <Sphere args={[0.1, 32, 32]} castShadow>
         <meshPhysicalMaterial color='#61dbfb' metalness={0.1} roughness={0.5} />
       </Sphere>

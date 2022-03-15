@@ -7,14 +7,16 @@ export const JamstackIcon = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
-    mesh.current.position.y = Math.sin(state.clock.getElapsedTime() * 0.4) + 2
+    mesh.current.position.y =
+      Math.sin(state.clock.getElapsedTime() * 0.8) / 4 + 3.5
   })
 
   return (
     <group
-      position={[-1.5, 0, 3]}
+      castShadow
+      position={[-3.5, 0.5, 3]}
       ref={mesh}
-      rotation={[Math.PI / 2, 0, Math.PI / -4]}
+      rotation={[Math.PI / 2, 0, Math.PI / -7]}
       scale={0.4}
     >
       <Cylinder args={[2, 2, 0.4, 64]} castShadow position={[-3.5, 0, 0]}>

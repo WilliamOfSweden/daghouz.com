@@ -1,30 +1,32 @@
-import React, { Fragment } from 'react'
-import { PerspectiveCamera } from '@react-three/drei'
+import React from 'react'
+import { ContactShadows } from '@react-three/drei'
 
 import Lights from './lights/'
-import { Box, JamstackIcon, Plane, ReactIcon, Rocket, TsIcon } from './objects/'
+import { Box, JamstackIcon, Plane, ReactIcon, TsIcon } from './objects/'
 
 const Scene = () => (
-  <Fragment>
-    <PerspectiveCamera makeDefault position={[0, 1, 10]} fov={75} />
-    <group>
-      <Lights />
+  <group>
+    <ContactShadows
+      blur={2.5}
+      far={1.6}
+      height={15}
+      opacity={0.6}
+      position={[0, -1.6, 0]}
+      rotation={[Math.PI / 2, 0, 0]}
+      width={15}
+    />
+    <Lights />
+    <Plane />
+    <group position={[0, -4, 0]}>
       <Plane />
-      <group position={[0.3, 0, 0]}>
-        <Rocket />
-        <JamstackIcon />
-        <ReactIcon />
-        <group
-          position={[-0.1, 0, 7]}
-          rotation={[0, Math.PI / 6, 0]}
-          scale={0.6}
-        >
-          <Box />
-          <TsIcon />
-        </group>
+      <JamstackIcon />
+      <ReactIcon />
+      <group castShadow position={[0, 2.4, 4]} rotation={[0, 0, 0]} scale={1.4}>
+        <Box />
+        <TsIcon />
       </group>
     </group>
-  </Fragment>
+  </group>
 )
 
 export default Scene

@@ -13,7 +13,7 @@ interface Props {
 const LazyCanvas = ({ children }: Props) => (
   <div className={canvasStyles.outerCanvasWrapper}>
     <ThreeCanvas
-      camera={{ fov: 60, position: [-5, 2, 10] }}
+      camera={{ fov: 60, position: [-5, 1, 10] }}
       className={canvasStyles.innerCanvasWrapper}
       gl={{ alpha: true, antialias: true, precision: 'highp' }}
       shadows
