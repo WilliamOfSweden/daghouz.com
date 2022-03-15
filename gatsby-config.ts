@@ -1,8 +1,11 @@
+import { GatsbyConfig } from 'gatsby'
+import path from 'path'
+
 require('dotenv').config({
   path: `.env.${process.env.NODE_ENV}`,
 })
 
-module.exports = {
+const gatsbyConfig: GatsbyConfig = {
   siteMetadata: {
     ogDescription: `I create blazingly fast and artfully appealing websites and progressive web apps.`,
     ogImageUrl: `https://daghouz.com/banner.png`,
@@ -38,7 +41,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images/`,
+        path: path.resolve(`src/images/`),
       },
     },
     {
@@ -53,3 +56,5 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
   ],
 }
+
+export default gatsbyConfig
