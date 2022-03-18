@@ -2295,10 +2295,10 @@
   resolved "https://registry.yarnpkg.com/@react-spring/types/-/types-9.4.4.tgz#97c69881788e624d7cc68d4385fdaa9b5fd20642"
   integrity sha512-KpxKt/D//q/t/6FBcde/RE36LKp8PpWu7kFEMLwpzMGl9RpcexunmYOQJWwmJWtkQjgE1YRr7DzBMryz6La1cQ==
 
-"@react-three/drei@8.16.7":
-  version "8.16.7"
-  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-8.16.7.tgz#82a0b4f021a9f562a8c16adc5a440aee2c46fcf2"
-  integrity sha512-EMkm4Te7PoBwjai/helZVQu+0Gx7oEyyGIvRW/mY3Hs0FaXPGlCGhyX9QNFw54nDRpDJMKkZMAQW3KFrjtByqw==
+"@react-three/drei@8.17.1":
+  version "8.17.1"
+  resolved "https://registry.yarnpkg.com/@react-three/drei/-/drei-8.17.1.tgz#bca9bb1c612562d0f6829a271b21c179c8ca7fe4"
+  integrity sha512-DNKezlz5l/mIjFvt6ZgmSlgp23TjbRWTHZRzrJgBEy1+0/YqXsb60U5Sd0uObyJQpUH5NKmr5lbPcx+Tvzhg7Q==
   dependencies:
     "@babel/runtime" "^7.11.2"
     "@react-spring/three" "^9.3.1"
@@ -2307,6 +2307,7 @@
     glsl-noise "^0.0.0"
     lodash.omit "^4.5.0"
     lodash.pick "^4.4.0"
+    meshline "^2.0.4"
     react-composer "^5.0.2"
     react-merge-refs "^1.1.0"
     stats.js "^0.17.0"
@@ -8427,6 +8428,11 @@ meros@1.1.4:
   version "1.1.4"
   resolved "https://registry.yarnpkg.com/meros/-/meros-1.1.4.tgz#c17994d3133db8b23807f62bec7f0cb276cfd948"
   integrity sha512-E9ZXfK9iQfG9s73ars9qvvvbSIkJZF5yOo9j4tcwM5tN8mUKfj/EKN5PzOr3ZH0y5wL7dLAHw3RVEfpQV9Q7VQ==
+
+meshline@^2.0.4:
+  version "2.0.4"
+  resolved "https://registry.yarnpkg.com/meshline/-/meshline-2.0.4.tgz#39c7bcf36b503397642f2312e6211f2a8ecf75c5"
+  integrity sha512-Jh6DJl/zLqA4xsKvGv5950jr2ukyXQE1wgxs8u94cImHrvL6soVIggqjP+2hVHZXGYaKnWszhtjuCbKNeQyYiw==
 
 methods@~1.1.2:
   version "1.1.2"
