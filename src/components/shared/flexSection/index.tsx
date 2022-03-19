@@ -16,12 +16,12 @@ export const FlexSection = ({
   reverseFlexDirectionOnDesktop,
   scene,
 }: Props) => {
-  const flexDirectionClassName = reverseFlexDirectionOnDesktop ? 'reverse' : ''
+  const flexSectionClassNames = reverseFlexDirectionOnDesktop
+    ? `${flexSectionStyles.section} ${flexSectionStyles.reverse} container`
+    : `${flexSectionStyles.section} container`
 
   return (
-    <section
-      className={`${flexSectionStyles.section} ${flexSectionStyles[flexDirectionClassName]} container`}
-    >
+    <section className={flexSectionClassNames}>
       <Illustration mobileImage={mobileImage} scene={scene} />
       {content}
     </section>
