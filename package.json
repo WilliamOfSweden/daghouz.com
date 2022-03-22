@@ -20,7 +20,7 @@
         "@react-spring/three": "9.4.4",
         "@react-three/drei": "8.18.10",
         "@react-three/fiber": "7.0.26",
-        "gatsby": "4.10.1",
+        "gatsby": "4.10.2",
         "gatsby-plugin-hotjar": "^1.1.1",
         "gatsby-plugin-image": "2.10.0",
         "gatsby-plugin-mdx": "3.10.1",
