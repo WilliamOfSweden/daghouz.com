@@ -11,16 +11,14 @@ interface Props {
 }
 
 const LazyCanvas = ({ children }: Props) => (
-  <div className={canvasStyles.outerCanvasWrapper}>
-    <ThreeCanvas
-      camera={{ fov: 60, position: [-5, 1, 10] }}
-      className={canvasStyles.innerCanvasWrapper}
-      gl={{ alpha: true, antialias: true, precision: 'highp' }}
-      shadows
-    >
-      {children}
-    </ThreeCanvas>
-  </div>
+  <ThreeCanvas
+    camera={{ fov: 60, position: [-5, 1, 10] }}
+    className={canvasStyles.canvasWrapper}
+    gl={{ alpha: true, antialias: true, precision: 'highp' }}
+    shadows
+  >
+    {children}
+  </ThreeCanvas>
 )
 
 export default LazyCanvas
