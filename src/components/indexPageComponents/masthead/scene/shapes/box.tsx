@@ -6,17 +6,17 @@ export const Box = () => {
   const mesh = useRef<THREE.Mesh>(null!)
 
   useFrame(state => {
-    mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) + 10
+    mesh.current.position.y = Math.sin(state.clock.getElapsedTime()) + 7
     mesh.current.rotation.z = state.clock.getElapsedTime()
     mesh.current.rotation.y = Math.sin(state.clock.getElapsedTime())
   })
 
   return (
     <RoundedBox
-      args={[3, 3, 3]}
+      args={[1.5, 1.5, 1.5]}
       castShadow
-      position={[4, 4, -10]}
-      radius={0.3}
+      position={[0, 4, 0]}
+      radius={0.15}
       ref={mesh}
     >
       <meshStandardMaterial color='#7c7cf8' metalness={0.1} roughness={0.5} />

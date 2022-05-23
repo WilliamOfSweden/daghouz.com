@@ -14,7 +14,7 @@ export const Torus = () => {
     <DreiTorus
       args={[1.25, 0.625, 24, 24]}
       castShadow
-      position={[1.8, 4.2, 4]}
+      position={[1.7, 4.2, 4]}
       ref={mesh}
       scale={0.8}
     >

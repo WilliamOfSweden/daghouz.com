@@ -1,12 +1,15 @@
 import React from 'react'
 import { useStaticQuery, graphql } from 'gatsby'
 
-import { IndexPageMastheadData } from '../../../@types/'
+import { DefaultSectionData } from '../../../@types/'
 import { FlexSection } from '../../shared/'
 import { MobileImage } from './mobileImage/'
 import { Scene } from './scene/'
 import { TextWrapper } from './textWrapper/'
 
+interface IndexPageMastheadData extends DefaultSectionData {
+  colooredTitle: string
+}
 interface GraphQLData {
   contentfulIndexPageMasthead: IndexPageMastheadData
 }

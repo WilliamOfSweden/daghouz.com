@@ -1,5 +1,4 @@
 export * from './box'
 export * from './jamstackIcon'
-export * from './plane'
 export * from './reactIcon'
 export * from './tsIcon'

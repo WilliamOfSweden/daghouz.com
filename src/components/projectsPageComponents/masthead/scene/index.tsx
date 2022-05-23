@@ -15,13 +15,14 @@ export const Scene = () => (
     <Sphere />
     <Environment preset='lobby' />
     <ContactShadows
-      blur={2.5}
-      far={1.6}
-      height={15}
-      opacity={0.6}
-      position={[0, -1.6, 0]}
+      blur={3}
+      far={50}
+      height={0.6}
+      opacity={0.3}
+      position={[0, -1.7, 0]}
       rotation={[Math.PI / 2, 0, 0]}
-      width={15}
+      width={0.6}
+      color='#1d3a75'
     />
   </Fragment>
 )
