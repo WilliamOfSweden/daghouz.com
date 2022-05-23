@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import { SEO } from '../components/shared/'
 import { Layout } from '../components/layout/'
-import { Masthead } from '../components/404PageComponents/masthead/'
+import { Masthead } from '../components/404PageComponents/'
 
 const _404 = () => (
   <Fragment>
