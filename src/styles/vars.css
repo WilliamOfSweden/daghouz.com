@@ -7,6 +7,7 @@
   --color-primary-light: #3162c3cc;
   --color-primary-extra-light: #3162c322;
   --color-text: #707070;
+  --color-text-inverse: #ffffff;
 
   /* FONTS */
   --font-body: 'Roboto', Verdana, Sans-Serif;

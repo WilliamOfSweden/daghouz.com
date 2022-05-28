@@ -19,6 +19,10 @@
   width: 100%;
 }
 
+.btn:focus {
+  outline: 3px solid #7c7cf8;
+}
+
 .btn:hover {
   background: var(--color-primary-light);
 }
