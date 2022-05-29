@@ -8,7 +8,7 @@ import { Scene } from './scene/'
 import { TextWrapper } from './textWrapper/'
 
 interface IndexPageMastheadData extends DefaultSectionData {
-  colooredTitle: string
+  coloredTitle: string
 }
 interface GraphQLData {
   contentfulIndexPageMasthead: IndexPageMastheadData
