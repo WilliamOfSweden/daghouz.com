@@ -2,9 +2,13 @@ import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 
-import { IndexPageMastheadData } from '../../../../@types/'
+import { DefaultSectionData } from '../../../../@types/'
 import * as textWrapperStyles from './textWrapper.module.css'
 import { Heading } from './heading/'
+
+interface IndexPageMastheadData extends DefaultSectionData {
+  coloredTitle: string
+}
 
 interface Props {
   sectionContent: IndexPageMastheadData
