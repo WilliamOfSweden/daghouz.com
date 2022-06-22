@@ -5,3 +5,5 @@ import './src/styles/fonts/roboto400.css'
 import './src/styles/fonts/roboto500.css'
 import './src/styles/fonts/roboto700.css'
 import './src/styles/global.css'
+
+export { wrapPageElement } from "./gatsby-shared"

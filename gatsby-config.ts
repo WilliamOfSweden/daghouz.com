@@ -32,6 +32,7 @@ const gatsbyConfig: GatsbyConfig = {
       },
     ],
   },
+  partytownProxiedURLs: [`https://static.hotjar.com/c/hotjar-3033272.js?sv=6`],
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
