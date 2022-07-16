@@ -1057,10 +1057,17 @@
     core-js-pure "^3.20.2"
     regenerator-runtime "^0.13.4"
 
-"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.17.8", "@babel/runtime@^7.18.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
+"@babel/runtime@^7.0.0", "@babel/runtime@^7.10.0", "@babel/runtime@^7.10.2", "@babel/runtime@^7.11.2", "@babel/runtime@^7.12.5", "@babel/runtime@^7.15.4", "@babel/runtime@^7.16.3", "@babel/runtime@^7.16.7", "@babel/runtime@^7.18.0", "@babel/runtime@^7.7.2", "@babel/runtime@^7.8.4", "@babel/runtime@^7.9.2":
   version "7.18.3"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.3.tgz#c7b654b57f6f63cf7f8b418ac9ca04408c4579f4"
   integrity sha512-38Y8f7YUhce/K7RMwTp7m0uCumpv9hZkitCbBClqQIow1qSbCvGkcegKOXpEWCQLfWmevgRiWokZ1GkpfhbZug==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
+"@babel/runtime@^7.17.8":
+  version "7.18.6"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.18.6.tgz#6a1ef59f838debd670421f8c7f2cbb8da9751580"
+  integrity sha512-t9wi7/AW6XtKahAe20Yw0/mMljKq0B1r2fPdvaAdV/KPDZewFXdaaa6K7lxmZBZ8FBNpCiAT6iHPmd6QO9bKfQ==
   dependencies:
     regenerator-runtime "^0.13.4"
 
@@ -2680,10 +2687,10 @@
     utility-types "^3.10.0"
     zustand "^3.5.13"
 
-"@react-three/fiber@8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-8.1.0.tgz#b48a875aea126bd81d87a98c3893f7ff60da90ad"
-  integrity sha512-jtzwgmDq8Q4qi6/F6DETlRDdiTC5Mz/siIY1XoIk+xdw4gA6wqbH62enEKo4LpP+4o+hToGuGsKbARNA+x2tgQ==
+"@react-three/fiber@^8.2.0":
+  version "8.2.0"
+  resolved "https://registry.yarnpkg.com/@react-three/fiber/-/fiber-8.2.0.tgz#e8fdd20a7835e091ac507e66bcc779bb9beb172d"
+  integrity sha512-k9JZ7XrOplmzX3wPk1uVq0DBWzUBI8ydr0HhmgZvLp5sJ4c+DKljuTClNH1OIp5oXaHjhzP+QbSAGg+vH3bV1Q==
   dependencies:
     "@babel/runtime" "^7.17.8"
     "@types/react-reconciler" "^0.26.7"
