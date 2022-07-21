@@ -20,7 +20,7 @@
         "@react-spring/three": "9.5.0",
         "@react-three/drei": "9.17.1",
         "@react-three/fiber": "8.2.0",
-        "gatsby": "4.19.1",
+        "gatsby": "4.19.2",
         "gatsby-plugin-image": "2.19.0",
         "gatsby-plugin-mdx": "3.19.0",
         "gatsby-plugin-react-helmet": "5.19.0",
