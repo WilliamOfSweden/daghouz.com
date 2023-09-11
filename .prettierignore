@@ -1,0 +1,8 @@
+node_modules
+.env
+.env.*
+.cache
+package.json
+package-lock.json
+yarn.lock
+LICENSE
