@@ -1,0 +1,33 @@
+@import 'theme.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+  line-height: 1.5;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+#gatsby-focus-wrapper {
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
