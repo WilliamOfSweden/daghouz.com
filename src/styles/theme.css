@@ -1,0 +1,33 @@
+:root {
+  /* COLOR PALETTE */
+  --color-primary: hsl(220, 60%, 48%);
+  --color-primary-light: hsla(220, 60%, 48%, 0.8);
+  --color-primary-extra-light: hsla(220, 60%, 48%, 0.13);
+  --color-text: hsl(0, 0%, 44%);
+  --color-text-inverse: hsl(0, 0%, 100%);
+  --color-bg: hsl(0, 0%, 98%);
+  --color-bg-alt: hsl(240, 29%, 97%);
+  --color-logo-text: hsl(0, 0%, 73%);
+
+  /* FONTS */
+  --font-body: 'Roboto', Verdana, Sans-Serif;
+  --font-heading: 'Mulish', 'Roboto', Arial, Sans-Serif;
+
+  /* SPACING */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+
+  /* BREAKPOINTS */
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 900px;
+  --breakpoint-lg: 1280px;
+  --breakpoint-xl: 1536px;
+
+  /* SHAPES */
+  --shape-radius-sm: 0.25rem;
+  --shape-radius-md: 0.5rem;
+}
