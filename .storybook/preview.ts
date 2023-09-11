@@ -1,5 +1,8 @@
-/** @type { import('@storybook/react').Preview } */
-const preview = {
+import { Preview } from '@storybook/react'
+
+import '../src/styles/global.css'
+
+const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
