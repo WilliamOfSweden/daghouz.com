@@ -1,0 +1,8 @@
+.figure {
+  height: 1.6rem;
+}
+
+.figure  > svg {
+  color: var(--color-primary);
+  height: 1.6rem;
+}
