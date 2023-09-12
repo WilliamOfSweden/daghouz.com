@@ -1,13 +1,17 @@
 :root {
   /* COLOR PALETTE */
-  --color-primary: hsl(220, 60%, 48%);
-  --color-primary-light: hsla(220, 60%, 48%, 0.8);
-  --color-primary-extra-light: hsla(220, 60%, 48%, 0.13);
-  --color-text: hsl(0, 0%, 44%);
-  --color-text-inverse: hsl(0, 0%, 100%);
-  --color-bg: hsl(0, 0%, 98%);
-  --color-bg-alt: hsl(240, 29%, 97%);
+  --color-bg: hsl(221, 24%, 13%);
+  --color-bg-alpha-95: hsla(221, 24%, 13%, 0.95);
+  --color-bg-alt: hsl(221, 24%, 17%);
+  --color-btn-text: var(--color-bg);
   --color-logo-text: hsl(0, 0%, 73%);
+  --color-primary: hsl(163, 99%, 38%);
+  --color-primary-light: hsl(163, 99%, 43%);
+  --color-primary-extra-light: hsl(163, 99%, 48%);
+  --color-shadows-alpha-40: hsla(0, 0%, 0%, 0.4);
+  --color-shadows-alpha-20: hsla(0, 0%, 0%, 0.2);
+  --color-text: hsl(0, 0%, 100%);
+  --color-text-inverse: hsl(0, 0%, 100%);
 
   /* FONTS */
   --font-body: 'Roboto', Verdana, Sans-Serif;
@@ -19,6 +23,7 @@
   --space-md: 1rem;
   --space-lg: 1.5rem;
   --space-xl: 2rem;
+  --space-2xl: 2.5rem;
 
   /* BREAKPOINTS */
   --breakpoint-xs: 0;
@@ -30,4 +35,5 @@
   /* SHAPES */
   --shape-radius-sm: 0.25rem;
   --shape-radius-md: 0.5rem;
+  --shape-radius-lg: 1rem;
 }
