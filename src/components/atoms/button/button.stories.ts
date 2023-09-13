@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { StoryObj } from '@storybook/react'
 
 import { Button } from './'
 import styles from './button.module.css'
 
-const meta: Meta = {
+const meta = {
   component: Button,
   parameters: {
     controls: {
