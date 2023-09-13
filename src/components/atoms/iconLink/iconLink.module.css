@@ -1,0 +1,8 @@
+.a {
+  height: 2.33rem;
+}
+
+.a > svg {
+  fill: var(--color-text);
+  height: 2.33rem;
+}
