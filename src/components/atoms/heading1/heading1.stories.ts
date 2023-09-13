@@ -1,9 +1,9 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { StoryObj } from '@storybook/react'
 
 import { Heading1 } from './'
 import styles from './heading1.module.css'
 
-const meta: Meta = {
+const meta = {
   component: Heading1,
   parameters: {
     controls: {
