@@ -6,7 +6,7 @@
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 2px;
+  letter-spacing: 0.2ch;
   padding: var(--space-md);
   text-align: center;
   text-transform: uppercase;
