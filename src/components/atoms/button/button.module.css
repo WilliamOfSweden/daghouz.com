@@ -2,7 +2,7 @@
   background: var(--color-primary);
   border: none;
   border-radius: var(--shape-radius-sm);
-  color: var(--color-bg);
+  color: var(--color-btn-text);
   font-family: var(--font-body);
   font-size: 1rem;
   font-weight: 500;
