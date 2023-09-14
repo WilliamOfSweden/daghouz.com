@@ -12,7 +12,8 @@
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "clean-storybook": "rm -rf node_modules/.cache/storybook"
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "^16.1.2",
