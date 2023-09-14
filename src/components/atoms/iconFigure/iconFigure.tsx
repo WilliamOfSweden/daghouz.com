@@ -2,18 +2,18 @@ import React, { ComponentProps } from 'react'
 
 import * as styles from './iconFigure.module.css'
 
-export interface FeatureItemIconProps
-  extends Omit<ComponentProps<'figure'>, 'children'> {
-  svgContent: InnerHTML
+export interface IconFigureProps
+  extends Omit<
+    ComponentProps<'figure'>,
+    'children' | 'className' | 'dangerouslySetInnerHTML'
+  > {
+  svgContent: string
 }
 
-export const IconFigure = ({
-  svgContent,
-  ...restProps
-}: FeatureItemIconProps) => (
+export const IconFigure = ({ svgContent, ...restProps }: IconFigureProps) => (
   <figure
     className={styles.figure}
-    dangerouslySetInnerHTML={{ __html: svgContent.innerHTML }}
+    dangerouslySetInnerHTML={{ __html: svgContent }}
     {...restProps}
   />
 )
