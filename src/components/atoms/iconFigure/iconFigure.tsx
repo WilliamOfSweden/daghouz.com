@@ -7,13 +7,17 @@ export interface IconFigureProps
     ComponentProps<'figure'>,
     'children' | 'className' | 'dangerouslySetInnerHTML'
   > {
-  svgContent: string
+  svgContent: string | undefined
 }
 
-export const IconFigure = ({ svgContent, ...restProps }: IconFigureProps) => (
-  <figure
-    className={styles.figure}
-    dangerouslySetInnerHTML={{ __html: svgContent }}
-    {...restProps}
-  />
-)
+export const IconFigure = ({ svgContent, ...restProps }: IconFigureProps) => {
+  if (!svgContent) return null
+
+  return (
+    <figure
+      className={styles.figure}
+      dangerouslySetInnerHTML={{ __html: svgContent }}
+      {...restProps}
+    />
+  )
+}
