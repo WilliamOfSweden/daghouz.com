@@ -1,0 +1,10 @@
+.canvas {
+  aspect-ratio: 1 / 1;
+  display: none;
+}
+
+@media only screen and (min-width: 600px) {
+  .canvas {
+    display: block;
+  }
+}
