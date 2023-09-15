@@ -7,7 +7,7 @@ export interface IconLinkProps
     ComponentProps<'a'>,
     'children' | 'className' | 'dangerouslySetInnerHTML'
   > {
-  svgContent: string
+  svgContent: string | undefined
 }
 
 export const IconLink = ({ svgContent, ...restProps }: IconLinkProps) => {
