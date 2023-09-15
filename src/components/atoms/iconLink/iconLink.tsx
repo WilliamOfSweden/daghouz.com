@@ -2,29 +2,21 @@ import React, { ComponentProps } from 'react'
 
 import * as styles from './iconLink.module.css'
 
-type IconLinkProps = Omit<
-  ComponentProps<'a'>,
-  'children' | 'dangerouslySetInnerHTML'
-> & {
-  dangerouslySetInnerHTML:
-    | {
-        svg: { content: string | null } | null
-      }
-    | undefined
+export interface IconLinkProps
+  extends Omit<
+    ComponentProps<'a'>,
+    'children' | 'className' | 'dangerouslySetInnerHTML'
+  > {
+  svgContent: string
 }
 
-export const IconLink = ({
-  dangerouslySetInnerHTML,
-  ...restProps
-}: IconLinkProps) => {
-  if (!dangerouslySetInnerHTML?.svg?.content) return null
+export const IconLink = ({ svgContent, ...restProps }: IconLinkProps) => {
+  if (!svgContent) return null
 
   return (
     <a
       className={styles.a}
-      dangerouslySetInnerHTML={{
-        __html: dangerouslySetInnerHTML.svg.content,
-      }}
+      dangerouslySetInnerHTML={{ __html: svgContent }}
       {...restProps}
     />
   )
