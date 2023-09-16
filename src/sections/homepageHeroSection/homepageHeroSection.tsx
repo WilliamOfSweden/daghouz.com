@@ -20,18 +20,18 @@ import * as styles from './homepageHeroSection.module.css'
 
 export interface HomepageHeroSectionProps {
   buttonText: string | null
-  headingText: string | null
+  heading: string | null
   richText: RenderRichTextData<ContentfulRichTextGatsbyReference> | null
 }
 
 export const HomepageHeroSection = ({
   buttonText,
-  headingText,
+  heading,
   richText,
 }: HomepageHeroSectionProps) => (
   <section className={styles.section}>
     <TwistedSphereStaticImage />
-    <Heading1 headingText={headingText} />
+    <Heading1 headingText={heading} />
     <RichTextContent richText={richText} />
     <Button buttonText={buttonText} />
     <LazyCanvas>
