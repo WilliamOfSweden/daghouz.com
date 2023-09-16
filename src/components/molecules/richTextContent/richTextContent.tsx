@@ -8,7 +8,7 @@ import {
 import { MARKS } from '@contentful/rich-text-types'
 
 type Props = {
-  richText: RenderRichTextData<ContentfulRichTextGatsbyReference> | null
+  richText: RenderRichTextData<ContentfulRichTextGatsbyReference>
 }
 
 const renderRichTextOptions = {
@@ -17,8 +17,6 @@ const renderRichTextOptions = {
   },
 }
 
-export const RichTextContent = ({ richText }: Props) => {
-  if (!richText) return null
-
-  return <Fragment>{renderRichText(richText, renderRichTextOptions)}</Fragment>
-}
+export const RichTextContent = ({ richText }: Props) => (
+  <Fragment>{renderRichText(richText, renderRichTextOptions)}</Fragment>
+)

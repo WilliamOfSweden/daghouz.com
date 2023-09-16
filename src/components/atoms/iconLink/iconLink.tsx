@@ -7,17 +7,13 @@ export interface IconLinkProps
     ComponentProps<'a'>,
     'children' | 'className' | 'dangerouslySetInnerHTML'
   > {
-  svgContent: string | undefined
+  svgContent: string
 }
 
-export const IconLink = ({ svgContent, ...restProps }: IconLinkProps) => {
-  if (!svgContent) return null
-
-  return (
-    <a
-      className={styles.a}
-      dangerouslySetInnerHTML={{ __html: svgContent }}
-      {...restProps}
-    />
-  )
-}
+export const IconLink = ({ svgContent, ...restProps }: IconLinkProps) => (
+  <a
+    className={styles.a}
+    dangerouslySetInnerHTML={{ __html: svgContent }}
+    {...restProps}
+  />
+)

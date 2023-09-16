@@ -1,9 +1,5 @@
 import React from 'react'
 
-import {
-  ContentfulRichTextGatsbyReference,
-  RenderRichTextData,
-} from 'gatsby-source-contentful/rich-text'
 import { graphql } from 'gatsby'
 
 import {
@@ -19,9 +15,9 @@ import { LazyCanvas } from '../../components/organisms/'
 import * as styles from './homepageHeroSection.module.css'
 
 export interface HomepageHeroSectionProps {
-  buttonText: string | null
-  heading: string | null
-  richText: RenderRichTextData<ContentfulRichTextGatsbyReference> | null
+  buttonText: string
+  heading: string
+  richText: Record<string, null>
 }
 
 export const HomepageHeroSection = ({
