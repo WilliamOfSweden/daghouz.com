@@ -3,7 +3,7 @@ import React, { ComponentProps } from 'react'
 import * as styles from './heading1.module.css'
 
 interface Props extends Omit<ComponentProps<'h1'>, 'children'> {
-  headingText: string | null
+  headingText: string
 }
 
 export const Heading1 = ({ headingText, ...restProps }: Props) => (
