@@ -11,6 +11,7 @@
   text-align: center;
   text-transform: uppercase;
   transition: background-color 0.33s ease;
+  width: 100%;
 }
 
 .btn:hover {
@@ -21,4 +22,12 @@
 .btn[disabled] {
   background: var(--color-primary-light);
   cursor: not-allowed;
+}
+
+@media only screen and (min-width: 600px) {
+  .btn {
+    padding-left: var(--space-xl);
+    padding-right: var(--space-xl);
+    width: unset;
+  }
 }
