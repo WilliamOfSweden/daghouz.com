@@ -2,7 +2,7 @@ import React from 'react'
 
 import { graphql } from 'gatsby'
 
-import { Button, Heading1, TwistedSphereStaticImage } from '../../atoms'
+import { Button, Heading1 } from '../../atoms'
 import { RichTextContent, WebGlTwistedSphere } from '../../molecules'
 import { LazyCanvas } from '../../organisms'
 import * as styles from './homepageHeroSection.module.css'
@@ -19,13 +19,12 @@ export const HomepageHeroSection = ({
   richText,
 }: HomepageHeroSectionProps) => (
   <section className={styles.section}>
-    <TwistedSphereStaticImage />
-    <Heading1 headingText={heading} />
-    <RichTextContent richText={richText} />
-    <Button buttonText={buttonText} />
     <LazyCanvas>
       <WebGlTwistedSphere />
     </LazyCanvas>
+    <Heading1 headingText={heading} />
+    <RichTextContent richText={richText} />
+    <Button buttonText={buttonText} />
   </section>
 )
 

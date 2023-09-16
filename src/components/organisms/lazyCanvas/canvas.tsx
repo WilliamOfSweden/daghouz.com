@@ -12,7 +12,7 @@ const Canvas = ({
   <ThreeCanvas
     aria-hidden='true'
     camera={{ fov: 60, position: [-5, 1, 10] }}
-    className={styles.canvas}
+    className={styles.canvasWrapper}
     gl={{ alpha: true, antialias: true, precision: 'highp' }}
     shadows
     {...restProps}
