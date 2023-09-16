@@ -26,7 +26,7 @@ export const query = graphql`
     homepage {
       blocks: content {
         id
-        blocktype
+        blockType
         ...HomepageHeroSection
       }
       description
