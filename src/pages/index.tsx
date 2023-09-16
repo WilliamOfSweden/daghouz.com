@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import { graphql, PageProps } from 'gatsby'
 
-import { Block, SectionFactory } from '../sections/'
+import { Block, SectionFactory } from '../components/sections/'
 
 interface DataProps {
   homepage: {
