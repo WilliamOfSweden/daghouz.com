@@ -1,0 +1,4 @@
+.ul {
+  gap: var(--space-md);
+  display: flex;
+}
