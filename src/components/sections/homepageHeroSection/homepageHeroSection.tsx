@@ -2,9 +2,9 @@ import React from 'react'
 
 import { graphql } from 'gatsby'
 
-import { Button, Heading1 } from '../../atoms'
-import { RichTextContent, WebGlTwistedSphere } from '../../molecules'
-import { LazyCanvas } from '../../organisms'
+import { Button, Heading1 } from '@components/atoms/'
+import { RichTextContent, WebGlTwistedSphere } from '@components/molecules/'
+import { LazyCanvas } from '@components/organisms/'
 import * as styles from './homepageHeroSection.module.css'
 
 export interface HomepageHeroSectionProps {

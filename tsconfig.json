@@ -12,6 +12,10 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
+    "paths": {
+      "@components/*": ["components/*"],
+      "@pages/*": ["pages/*"],
+    },
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
