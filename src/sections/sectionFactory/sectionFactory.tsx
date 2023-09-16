@@ -11,7 +11,7 @@ type BlockTypes = keyof typeof Blocks
 type SectionProps = (typeof Blocks)[keyof typeof Blocks]
 
 type WithBlockType<B = BlockTypes, P = SectionProps> = {
-  blocktype: B
+  blockType: B
   id: string
 } & P
 
@@ -25,7 +25,7 @@ interface Props {
 }
 
 export const SectionFactory = ({ block }: Props) => {
-  switch (block.blocktype) {
+  switch (block.blockType) {
     case 'HomepageHeroSection':
       return <HomepageHeroSection {...block} />
     default:
