@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { HomepageHeroSection, HomepageHeroSectionProps } from '../index'
+import { HomepageHeroSection, HomepageHeroSectionProps } from '../'
 
 const Blocks = {
   HomepageHeroSection: HomepageHeroSection,
