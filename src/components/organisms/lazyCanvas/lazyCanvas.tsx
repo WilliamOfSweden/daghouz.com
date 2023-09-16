@@ -7,7 +7,6 @@ import React, {
 } from 'react'
 
 import { CanvasFallback } from './canvasFallback'
-import { useIsMobile } from '../../../hooks/'
 
 const Canvas = lazy(() => import('./canvas'))
 
@@ -22,17 +21,11 @@ export const LazyCanvas = ({ children }: Props) => {
     setIsMounted(true)
   }, [])
 
-  const isMobile = useIsMobile()
-
   /*
-  Since the canvas is not rendered on the server side render, we need to return a fallback component.
+  Since ueLayoutEffect will not be called on the server side, a fallback component needs to be returned.
   If instead null is returned, when the app is hydrated, the space that the Canvas component should be occupying will be empty, and the UI will be broken.
   */
-  if (typeof window === 'undefined') return <CanvasFallback />
-
-  if (!isMounted) return <CanvasFallback />
-
-  if (isMobile) return null
+  if (typeof window === 'undefined' || !isMounted) return <CanvasFallback />
 
   return (
     <Suspense fallback={<CanvasFallback />}>
