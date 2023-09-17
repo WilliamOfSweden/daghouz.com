@@ -30,13 +30,27 @@ export const query = graphql`
         blockType
         ...HomepageHeroSection
       }
-      description
       id
       image {
         id
         url
       }
-      title
+      seo {
+        description
+        ogDescription
+        ogImageUrl
+        ogSeeAlso
+        ogTitle
+        ogType
+        ogUrl
+        title
+        twitterCard
+        twitterCreator
+        twitterDescription
+        twitterImageUrl
+        twitterTitle
+        twitterUrl
+      }
     }
   }
 `
