@@ -1,0 +1,10 @@
+.header {
+  align-items: center;
+  display: flex;
+  gap: var(--space-md);
+  justify-content: space-between;
+  margin-inline: auto;
+  padding-bottom: var(--space-md);
+  padding-top: var(--space-md);
+  width: min(calc(100% - var(--space-md) * 2), 1264px);
+}
