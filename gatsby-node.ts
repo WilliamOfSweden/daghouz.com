@@ -71,16 +71,34 @@ exports.createSchemaCustomization = async ({
   })
 
   actions.createTypes(/* GraphQL */ `
+    interface SEO implements Node {
+      description: String!
+      id: ID!
+      ogDescription: String!
+      ogImageUrl: String!
+      ogSeeAlso: String!
+      ogTitle: String!
+      ogType: String!
+      ogUrl: String!
+      title: String!
+      twitterCard: String!
+      twitterCreator: String!
+      twitterDescription: String!
+      twitterImageUrl: String!
+      twitterTitle: String!
+      twitterUrl: String!
+    }
+
     interface Block implements Node {
-      blockType: String
+      blockType: String!
       id: ID!
     }
 
     interface Image implements Node {
-      alt: String
+      alt: String!
       gatsbyImageData: GatsbyImageData @imagePassthroughArgs
       id: ID!
-      url: String
+      url: String!
     }
 
     interface SubscriptionForm implements Node {
@@ -91,7 +109,7 @@ exports.createSchemaCustomization = async ({
     }
 
     interface CtaSection implements Node & Block {
-      blockType: String
+      blockType: String!
       content: SubscriptionForm
       id: ID!
       heading: String!
@@ -99,7 +117,7 @@ exports.createSchemaCustomization = async ({
     }
 
     interface HomepageHeroSection implements Node & Block {
-      blockType: String
+      blockType: String!
       buttonText: String!
       heading: String!
       id: ID!
@@ -107,121 +125,63 @@ exports.createSchemaCustomization = async ({
     }
 
     interface HomepageTechSection implements Node & Block {
-      blockType: String
+      blockType: String!
       buttonLink: String!
       buttonText: String!
       heading: String!
       id: ID!
-      image: Image
+      image: Image!
       richText: JSON! @richText
     }
 
     interface Homepage implements Node {
-      content: [Block]
-      description: String
+      content: [Block]!
       id: ID!
-      image: Image
-      title: String
+      image: Image!
+      seo: SEO!
     }
 
     interface HomepageFeatureItem implements Node {
-      heading: String
+      heading: String!
       id: ID!
-      image: Image
+      image: Image!
       richText: JSON! @richText
     }
 
     interface HomepageFeaturesSection implements Node & Block {
-      content: [HomepageFeatureItem]
-      blockType: String
+      blockType: String!
+      content: [HomepageFeatureItem]!
       heading: String!
       id: ID!
-    }
-
-    interface ProjectsPage implements Node {
-      content: [Block]
-      description: String
-      id: ID!
-      image: Image
-      title: String
-    }
-
-    interface ProjectsPageHeroSection implements Node & Block {
-      blockType: String
-      buttonLink: String!
-      buttonText: String!
-      heading: String!
-      id: ID!
-      image: Image
-      richText: JSON! @richText
-    }
-
-    interface ProjectsPageProjectItem implements Node {
-      ariaLabel: String!
-      heading: String
-      id: ID!
-      image: Image
-      link: String!
-      richText: JSON! @richText
-    }
-
-    interface ProjectsPageProjectsSection implements Node & Block {
-      blockType: String
-      buttonText: String!
-      content: [ProjectsPageProjectItem]
-      id: ID!
-    }
-
-    interface ContactPage implements Node {
-      content: [Block]
-      description: String
-      id: ID!
-      image: Image
-      title: String
-    }
-
-    interface ContactPageHeroSection implements Node & Block {
-      blockType: String
-      content: ContactForm
-      id: ID!
-      image: Image
-    }
-
-    interface ContactForm implements Node {
-      id: ID!
-      companyInputLabelText: String!
-      emailInputLabelText: String!
-      messageInputLabelText: String!
-      nameInputLabelText: String!
-      submitButtonText: String!
-    }
-
-    interface NotFoundPage implements Node {
-      content: [Block]
-      description: String
-      id: ID!
-      image: Image
-      title: String
-    }
-
-    interface NotFoundPageHeroSection implements Node & Block {
-      blockType: String
-      buttonLink: String!
-      buttonText: String!
-      heading: String!
-      id: ID!
-      richText: JSON! @richText
     }
   `)
 
   actions.createTypes(/* GraphQL */ `
     type ContentfulAsset implements Node & Image {
-      alt: String @proxy(from: "title")
+      alt: String! @proxy(from: "title")
       id: ID!
       gatsbyImageData: GatsbyImageData
-      url: String @imageUrl
-      file: JSON
-      title: String
+      url: String! @imageUrl
+      file: JSON!
+      title: String!
+    }
+
+    type ContentfulSeo implements Node & SEO @dontInfer {
+      description: String!
+      id: ID!
+      ogDescription: String!
+      ogImageUrl: String!
+      ogSeeAlso: String!
+      ogTitle: String!
+      ogType: String!
+      ogUrl: String!
+      title: String!
+      twitterCard: String!
+      twitterCreator: String!
+      twitterDescription: String!
+      twitterImageUrl: String!
+      twitterTitle: String!
+      twitterUrl: String!
     }
 
     type ContentfulSubscriptionForm implements Node & SubscriptionForm
@@ -233,8 +193,8 @@ exports.createSchemaCustomization = async ({
     }
 
     type ContentfulCtaSection implements Node & CtaSection & Block @dontInfer {
-      blockType: String @blockType
-      content: SubscriptionForm @link(from: "content___NODE")
+      blockType: String! @blockType
+      content: SubscriptionForm! @link(from: "content___NODE")
       heading: String!
       id: ID!
       richText: JSON! @richText
@@ -242,134 +202,47 @@ exports.createSchemaCustomization = async ({
 
     type ContentfulHomepageHeroSection implements Node & HomepageHeroSection & Block
       @dontInfer {
-      blockType: String @blockType
+      blockType: String! @blockType
       buttonText: String!
       buttonLink: String!
       heading: String!
       id: ID!
-      image: Image @link(from: "image___NODE")
+      image: Image! @link(from: "image___NODE")
       richText: JSON! @richText
     }
 
     type ContentfulHomepageTechSection implements Node & HomepageTechSection & Block
       @dontInfer {
-      blockType: String @blockType
+      blockType: String! @blockType
       buttonText: String!
       buttonLink: String!
       heading: String!
       id: ID!
-      image: Image @link(from: "image___NODE")
+      image: Image! @link(from: "image___NODE")
       richText: JSON! @richText
     }
 
     type ContentfulHomepageFeaturesSection implements Node & HomepageFeaturesSection & Block
       @dontInfer {
-      blockType: String @blockType
-      content: [HomepageFeatureItem] @link(from: "content___NODE")
+      blockType: String! @blockType
+      content: [HomepageFeatureItem]! @link(from: "content___NODE")
       heading: String!
       id: ID!
     }
 
     type ContentfulHomepageFeatureItem implements Node & HomepageFeatureItem
       @dontInfer {
-      heading: String
+      heading: String!
       id: ID!
-      image: Image @link(from: "image___NODE")
+      image: Image! @link(from: "image___NODE")
       richText: JSON! @richText
     }
 
     type ContentfulHomepage implements Node & Homepage @dontInfer {
       id: ID!
-      title: String
-      description: String
-      image: Image @link(from: "image___NODE")
-      content: [Block] @link(from: "content___NODE")
-    }
-  `)
-
-  actions.createTypes(/* GraphQL */ `
-    type ContentfulProjectsPageHeroSection implements Node & ProjectsPageHeroSection & Block
-      @dontInfer {
-      blockType: String @blockType
-      buttonText: String!
-      buttonLink: String!
-      heading: String!
-      id: ID!
-      image: Image @link(from: "image___NODE")
-      richText: JSON! @richText
-    }
-
-    type ContentfulProjectsPage implements Node & ProjectsPage @dontInfer {
-      id: ID!
-      content: [Block] @link(from: "content___NODE")
-      description: String
-      image: Image @link(from: "image___NODE")
-      title: String
-    }
-
-    type ContentfulProjectsPageProjectItem implements Node & ProjectsPageProjectItem
-      @dontInfer {
-      ariaLabel: String!
-      heading: String!
-      id: ID!
-      image: Image @link(from: "image___NODE")
-      link: String!
-      richText: JSON! @richText
-    }
-
-    type ContentfulProjectsPageProjectsSection implements Node & ProjectsPageProjectsSection & Block
-      @dontInfer {
-      blockType: String @blockType
-      buttonText: String!
-      content: [ProjectsPageProjectItem] @link(from: "content___NODE")
-      id: ID!
-    }
-  `)
-
-  actions.createTypes(/* GraphQL */ `
-    type ContentfulContactPage implements Node & ContactPage @dontInfer {
-      id: ID!
-      content: [Block] @link(from: "content___NODE")
-      description: String
-      image: Image @link(from: "image___NODE")
-      title: String
-    }
-
-    type ContentfulContactPageHeroSection implements Node & ContactPageHeroSection & Block
-      @dontInfer {
-      blockType: String @blockType
-      content: ContactForm @link(from: "content___NODE")
-      id: ID!
-      image: Image @link(from: "image___NODE")
-    }
-
-    type ContentfulContactForm implements Node & ContactForm @dontInfer {
-      id: ID!
-      companyInputLabelText: String!
-      emailInputLabelText: String!
-      messageInputLabelText: String!
-      nameInputLabelText: String!
-      submitButtonText: String!
-    }
-  `)
-
-  actions.createTypes(/* GraphQL */ `
-    type ContentfulNotFoundPage implements Node & NotFoundPage @dontInfer {
-      content: [Block] @link(from: "content___NODE")
-      description: String
-      id: ID!
-      image: Image @link(from: "image___NODE")
-      title: String
-    }
-
-    type ContentfulNotFoundPageHeroSection implements Node & NotFoundPageHeroSection & Block
-      @dontInfer {
-      blockType: String @blockType
-      buttonText: String!
-      buttonLink: String!
-      heading: String!
-      id: ID!
-      richText: JSON! @richText
+      image: Image! @link(from: "image___NODE")
+      content: [Block]! @link(from: "content___NODE")
+      seo: SEO! @link(from: "seo___NODE")
     }
   `)
 }
