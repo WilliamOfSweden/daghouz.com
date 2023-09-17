@@ -13,6 +13,7 @@ const storybookConfig: StorybookConfig = {
     name: '@storybook/react-webpack5',
     options: {},
   },
+  staticDirs: ['../static'],
   stories: ['../src/components/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
   webpackFinal: async config => {
     config.module?.rules?.push({
