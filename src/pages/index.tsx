@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react'
+import React from 'react'
 
 import { graphql, PageProps } from 'gatsby'
 
 import { Block, SectionFactory } from '@components/sections/'
+import { Layout } from '@components/layout/'
 
 interface DataProps {
   homepage: {
@@ -14,11 +15,11 @@ interface DataProps {
 }
 
 const IndexPage = ({ data }: PageProps<DataProps>) => (
-  <Fragment>
+  <Layout>
     {data.homepage.blocks.map(block => (
       <SectionFactory key={block.id} block={block} />
     ))}
-  </Fragment>
+  </Layout>
 )
 
 export const query = graphql`
