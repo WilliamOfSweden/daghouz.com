@@ -3,7 +3,7 @@ import React from 'react'
 import { IconLink } from '@components/atoms/'
 import * as styles from './iconLinkList.module.css'
 
-interface IconLinkListProps {
+export interface IconLinkListProps {
   links: {
     ariaLabel: string
     id: string
