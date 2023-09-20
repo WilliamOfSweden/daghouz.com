@@ -7,7 +7,7 @@ import { getGatsbyImageResolver } from 'gatsby-plugin-image/graphql-utils'
 import { ObjectTypeComposerArgumentConfigMapDefinition } from 'graphql-compose'
 import path from 'path'
 
-exports.onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
+export const onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
   actions.setWebpackConfig({
     resolve: {
       alias: {
@@ -18,7 +18,7 @@ exports.onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
   })
 }
 
-exports.createSchemaCustomization = async ({
+export const createSchemaCustomization = async ({
   actions,
 }: CreateSchemaCustomizationArgs) => {
   actions.createFieldExtension({
