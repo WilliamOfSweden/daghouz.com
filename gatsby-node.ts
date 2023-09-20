@@ -1,22 +1,9 @@
-import {
-  CreateSchemaCustomizationArgs,
-  CreateWebpackConfigArgs,
-  Node,
-} from 'gatsby'
+import { CreateSchemaCustomizationArgs, Node } from 'gatsby'
 import { getGatsbyImageResolver } from 'gatsby-plugin-image/graphql-utils'
 import { ObjectTypeComposerArgumentConfigMapDefinition } from 'graphql-compose'
-import path from 'path'
+import { createWebpackConfig } from './webpack'
 
-export const onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        '@components': path.resolve(__dirname, 'src/components'),
-        '@pages': path.resolve(__dirname, 'src/pages'),
-      },
-    },
-  })
-}
+export const onCreateWebpackConfig = createWebpackConfig(__dirname)
 
 export const createSchemaCustomization = async ({
   actions,
