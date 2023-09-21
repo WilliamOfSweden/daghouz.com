@@ -1,6 +1,11 @@
-import { CreateSchemaCustomizationArgs, Node } from 'gatsby'
-import { getGatsbyImageResolver } from 'gatsby-plugin-image/graphql-utils'
-import { ObjectTypeComposerArgumentConfigMapDefinition } from 'graphql-compose'
+import { CreateSchemaCustomizationArgs } from 'gatsby'
+
+import {
+  createBlockTypeExtension,
+  createImagePassthroughArgsExtension,
+  createImageUrlExtension,
+  createRichTextExtension,
+} from './schemas'
 import { createWebpackConfig } from './webpack'
 
 export const onCreateWebpackConfig = createWebpackConfig(__dirname)
@@ -8,54 +13,10 @@ export const onCreateWebpackConfig = createWebpackConfig(__dirname)
 export const createSchemaCustomization = async ({
   actions,
 }: CreateSchemaCustomizationArgs) => {
-  actions.createFieldExtension({
-    name: 'blockType',
-    extend() {
-      return {
-        resolve(source: Node) {
-          return source.internal.type.replace('Contentful', '')
-        },
-      }
-    },
-  })
-
-  actions.createFieldExtension({
-    name: 'imagePassthroughArgs',
-    extend(options: ObjectTypeComposerArgumentConfigMapDefinition) {
-      const { args } = getGatsbyImageResolver(() => null, options)
-      return {
-        args,
-      }
-    },
-  })
-
-  actions.createFieldExtension({
-    name: 'imageUrl',
-    extend() {
-      const addURLSchema = (str: string) => {
-        if (str.startsWith('//')) return `https:${str}`
-
-        return str
-      }
-
-      return {
-        resolve(source: { file: { url: string } }) {
-          return addURLSchema(source.file.url)
-        },
-      }
-    },
-  })
-
-  actions.createFieldExtension({
-    name: 'richText',
-    extend() {
-      return {
-        resolve(source: Node) {
-          return source.paragraph
-        },
-      }
-    },
-  })
+  createBlockTypeExtension(actions)
+  createImagePassthroughArgsExtension(actions)
+  createImageUrlExtension(actions)
+  createRichTextExtension(actions)
 
   actions.createTypes(/* GraphQL */ `
     interface SEO implements Node {
