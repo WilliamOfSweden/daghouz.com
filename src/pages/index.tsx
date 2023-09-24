@@ -31,10 +31,6 @@ export const query = graphql`
         ...HomepageHeroSection
       }
       id
-      image {
-        id
-        url
-      }
       seo {
         description
         ogDescription

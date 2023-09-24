@@ -137,7 +137,6 @@ exports.createSchemaCustomization = async ({
     interface Homepage implements Node {
       content: [Block]!
       id: ID!
-      image: Image!
       seo: SEO!
     }
 
@@ -240,7 +239,6 @@ exports.createSchemaCustomization = async ({
 
     type ContentfulHomepage implements Node & Homepage @dontInfer {
       id: ID!
-      image: Image! @link(from: "image___NODE")
       content: [Block]! @link(from: "content___NODE")
       seo: SEO! @link(from: "seo___NODE")
     }
