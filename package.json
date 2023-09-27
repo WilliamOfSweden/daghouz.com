@@ -20,7 +20,7 @@
     "@react-three/drei": "9.84.3",
     "@react-three/fiber": "8.14.3",
     "babel-plugin-glsl": "1.0.0",
-    "gatsby": "5.12.4",
+    "gatsby": "5.12.5",
     "gatsby-plugin-image": "3.12.0",
     "gatsby-plugin-sharp": "5.12.0",
     "gatsby-source-contentful": "8.12.0",
