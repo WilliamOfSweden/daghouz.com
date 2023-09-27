@@ -17,10 +17,10 @@
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "16.1.2",
-    "@react-three/drei": "9.84.3",
+    "@react-three/drei": "9.86.0",
     "@react-three/fiber": "8.14.3",
     "babel-plugin-glsl": "1.0.0",
-    "gatsby": "5.12.4",
+    "gatsby": "5.12.5",
     "gatsby-plugin-image": "3.12.0",
     "gatsby-plugin-sharp": "5.12.0",
     "gatsby-source-contentful": "8.12.0",
@@ -36,7 +36,7 @@
   "devDependencies": {
     "@babel/preset-env": "7.22.20",
     "@babel/preset-react": "7.22.15",
-    "@babel/preset-typescript": "7.22.15",
+    "@babel/preset-typescript": "7.23.0",
     "@storybook/addon-essentials": "7.4.5",
     "@storybook/addon-interactions": "7.4.5",
     "@storybook/blocks": "7.4.5",
