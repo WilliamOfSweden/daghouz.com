@@ -28,6 +28,18 @@ const gatsbyConfig: GatsbyConfig = {
     'gatsby-transformer-inline-svg',
     `gatsby-transformer-sharp`,
   ],
+  siteMetadata: {
+    navLinks: [
+      {
+        name: 'Home',
+        to: '/',
+      },
+      {
+        name: 'Articles',
+        to: '/articles',
+      },
+    ],
+  },
 }
 
 export default gatsbyConfig
