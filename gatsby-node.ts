@@ -19,6 +19,13 @@ export const createSchemaCustomization = async ({
   createRichTextExtension(actions)
 
   actions.createTypes(/* GraphQL */ `
+    interface Image implements Node {
+      alt: String!
+      gatsbyImageData: GatsbyImageData @imagePassthroughArgs
+      id: ID!
+      url: String!
+    }
+
     interface SEO implements Node {
       description: String!
       id: ID!
@@ -42,11 +49,10 @@ export const createSchemaCustomization = async ({
       id: ID!
     }
 
-    interface Image implements Node {
-      alt: String!
-      gatsbyImageData: GatsbyImageData @imagePassthroughArgs
+    interface Homepage implements Node {
+      content: [Block]!
       id: ID!
-      url: String!
+      seo: SEO!
     }
 
     interface SubscriptionForm implements Node {
@@ -80,12 +86,6 @@ export const createSchemaCustomization = async ({
       id: ID!
       image: Image!
       richText: JSON! @richText
-    }
-
-    interface Homepage implements Node {
-      content: [Block]!
-      id: ID!
-      seo: SEO!
     }
 
     interface HomepageFeatureItem implements Node {
