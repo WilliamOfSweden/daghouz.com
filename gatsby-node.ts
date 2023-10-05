@@ -1,76 +1,31 @@
+import { CreateSchemaCustomizationArgs } from 'gatsby'
+
 import {
-  CreateSchemaCustomizationArgs,
-  CreateWebpackConfigArgs,
-  Node,
-} from 'gatsby'
-import { getGatsbyImageResolver } from 'gatsby-plugin-image/graphql-utils'
-import { ObjectTypeComposerArgumentConfigMapDefinition } from 'graphql-compose'
-import path from 'path'
+  createBlockTypeExtension,
+  createImagePassthroughArgsExtension,
+  createImageUrlExtension,
+  createRichTextExtension,
+} from './schemas'
+import { createWebpackConfig } from './webpack'
 
-exports.onCreateWebpackConfig = ({ actions }: CreateWebpackConfigArgs) => {
-  actions.setWebpackConfig({
-    resolve: {
-      alias: {
-        '@components': path.resolve(__dirname, 'src/components'),
-        '@pages': path.resolve(__dirname, 'src/pages'),
-      },
-    },
-  })
-}
+export const onCreateWebpackConfig = createWebpackConfig(__dirname)
 
-exports.createSchemaCustomization = async ({
+export const createSchemaCustomization = async ({
   actions,
 }: CreateSchemaCustomizationArgs) => {
-  actions.createFieldExtension({
-    name: 'blockType',
-    extend() {
-      return {
-        resolve(source: Node) {
-          return source.internal.type.replace('Contentful', '')
-        },
-      }
-    },
-  })
-
-  actions.createFieldExtension({
-    name: 'imagePassthroughArgs',
-    extend(options: ObjectTypeComposerArgumentConfigMapDefinition) {
-      const { args } = getGatsbyImageResolver(() => null, options)
-      return {
-        args,
-      }
-    },
-  })
-
-  actions.createFieldExtension({
-    name: 'imageUrl',
-    extend() {
-      const addURLSchema = (str: string) => {
-        if (str.startsWith('//')) return `https:${str}`
-
-        return str
-      }
-
-      return {
-        resolve(source: { file: { url: string } }) {
-          return addURLSchema(source.file.url)
-        },
-      }
-    },
-  })
-
-  actions.createFieldExtension({
-    name: 'richText',
-    extend() {
-      return {
-        resolve(source: Node) {
-          return source.paragraph
-        },
-      }
-    },
-  })
+  createBlockTypeExtension(actions)
+  createImagePassthroughArgsExtension(actions)
+  createImageUrlExtension(actions)
+  createRichTextExtension(actions)
 
   actions.createTypes(/* GraphQL */ `
+    interface Image implements Node {
+      alt: String!
+      gatsbyImageData: GatsbyImageData @imagePassthroughArgs
+      id: ID!
+      url: String!
+    }
+
     interface SEO implements Node {
       description: String!
       id: ID!
@@ -94,11 +49,10 @@ exports.createSchemaCustomization = async ({
       id: ID!
     }
 
-    interface Image implements Node {
-      alt: String!
-      gatsbyImageData: GatsbyImageData @imagePassthroughArgs
+    interface Homepage implements Node {
+      content: [Block]!
       id: ID!
-      url: String!
+      seo: SEO!
     }
 
     interface SubscriptionForm implements Node {
@@ -132,12 +86,6 @@ exports.createSchemaCustomization = async ({
       id: ID!
       image: Image!
       richText: JSON! @richText
-    }
-
-    interface Homepage implements Node {
-      content: [Block]!
-      id: ID!
-      seo: SEO!
     }
 
     interface HomepageFeatureItem implements Node {
