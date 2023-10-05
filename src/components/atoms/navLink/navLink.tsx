@@ -1,19 +1,19 @@
 import React from 'react'
 
-import { Link } from 'gatsby'
+import { GatsbyLinkProps, Link } from 'gatsby'
 
 import * as navLinkStyles from './navLink.module.css'
 
-export interface NavLinkProps {
-  link: string
-  name: string
+export interface NavLinkProps
+  extends Omit<GatsbyLinkProps<{}>, 'children' | 'ref'> {
+  readonly name: string | null
 }
 
-export const NavLink = ({ link, name }: NavLinkProps) => (
+export const NavLink = ({ name, ...restProps }: NavLinkProps) => (
   <Link
-    activeClassName={navLinkStyles.navLinkActive}
-    className={navLinkStyles.navLink}
-    to={link}
+    activeClassName={navLinkStyles.linkActive}
+    className={navLinkStyles.link}
+    {...restProps}
   >
     {name}
   </Link>

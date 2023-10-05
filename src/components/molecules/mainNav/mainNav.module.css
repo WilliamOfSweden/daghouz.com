@@ -1,0 +1,6 @@
+.nav {
+  display: flex;
+  gap: var(--space-xl);
+  justify-content: flex-end;
+  width: 100%;
+}

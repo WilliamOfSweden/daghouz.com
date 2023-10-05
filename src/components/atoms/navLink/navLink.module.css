@@ -1,4 +1,4 @@
-.navLink {
+.link {
   color: var(--color-text);
   font-family: var(--font-heading);
   font-size: 0.8rem;
@@ -7,6 +7,6 @@
   text-transform: uppercase;
 }
 
-.navLinkActive {
+.linkActive {
   border-bottom: var(--color-primary) solid 2px;
 }

@@ -9,6 +9,14 @@ interface DataProps {
   contentfulLayout: {
     header: HeaderProps
   }
+  site: {
+    siteMetadata: {
+      navLinks: ReadonlyArray<{
+        name: string
+        to: string
+      }>
+    }
+  }
 }
 
 interface Props {
@@ -17,9 +25,22 @@ interface Props {
 
 export const Layout = ({ children }: Props) => {
   const {
-    contentfulLayout: { header },
+    contentfulLayout: {
+      header: { socialMediaLinks },
+    },
+    site: {
+      siteMetadata: { navLinks },
+    },
   } = useStaticQuery<DataProps>(graphql`
     query Layout {
+      site {
+        siteMetadata {
+          navLinks {
+            name
+            to
+          }
+        }
+      }
       contentfulLayout {
         header {
           socialMediaLinks {
@@ -41,7 +62,7 @@ export const Layout = ({ children }: Props) => {
 
   return (
     <Fragment>
-      <Header socialMediaLinks={header.socialMediaLinks} />
+      <Header navLinks={navLinks} socialMediaLinks={socialMediaLinks} />
       <main className={layoutStyles.main} id='main-content' ref={ref}>
         {children}
       </main>
