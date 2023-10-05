@@ -23,7 +23,7 @@
     "gatsby": "5.12.5",
     "gatsby-plugin-image": "3.12.0",
     "gatsby-plugin-sharp": "5.12.0",
-    "gatsby-source-contentful": "8.12.0",
+    "gatsby-source-contentful": "8.12.1",
     "gatsby-transformer-inline-svg": "1.2.0",
     "gatsby-transformer-sharp": "5.12.0",
     "glsl-rotate": "2.0.0",
