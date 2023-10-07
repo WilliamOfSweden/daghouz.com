@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@contentful/rich-text-html-renderer": "16.2.0",
-    "@react-three/drei": "9.86.3",
+    "@react-three/drei": "9.86.4",
     "@react-three/fiber": "8.14.5",
     "babel-plugin-glsl": "1.0.0",
     "gatsby": "5.12.5",
