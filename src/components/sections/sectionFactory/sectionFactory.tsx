@@ -1,6 +1,11 @@
 import React from 'react'
 
-import { HomepageHeroSection, HomepageHeroSectionProps } from '../'
+import {
+  HomepageHeroSection,
+  HomepageHeroSectionProps,
+  IconAndTextGridSection,
+  IconAndTextGridSectionProps,
+} from '../'
 
 const Blocks = {
   HomepageHeroSection: HomepageHeroSection,
@@ -15,10 +20,9 @@ type WithBlockType<B = BlockTypes, P = SectionProps> = {
   id: string
 } & P
 
-export type Block = WithBlockType<
-  'HomepageHeroSection',
-  HomepageHeroSectionProps
->
+export type Block =
+  | WithBlockType<'HomepageHeroSection', HomepageHeroSectionProps>
+  | WithBlockType<'IconAndTextGridSection', IconAndTextGridSectionProps>
 
 interface Props {
   block: Block
@@ -28,6 +32,8 @@ export const SectionFactory = ({ block }: Props) => {
   switch (block.blockType) {
     case 'HomepageHeroSection':
       return <HomepageHeroSection {...block} />
+    case 'IconAndTextGridSection':
+      return <IconAndTextGridSection {...block} />
     default:
       return null
   }

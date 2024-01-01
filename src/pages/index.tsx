@@ -29,6 +29,7 @@ export const query = graphql`
         id
         blockType
         ...HomepageHeroSection
+        ...IconAndTextGridSection
       }
       id
       seo {
