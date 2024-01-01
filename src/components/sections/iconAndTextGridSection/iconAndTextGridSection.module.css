@@ -1,0 +1,18 @@
+.section {
+  margin-bottom: 0;
+  margin-inline: auto;
+  padding-bottom: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  width: min(calc(100% - var(--space-md) * 2), 1264px);
+}
+
+.section > ul {
+  display: grid;
+  grid-gap: 3rem;
+}
+
+@media (min-width: 880px) {
+  .section > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

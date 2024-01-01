@@ -88,16 +88,16 @@ export const createSchemaCustomization = async ({
       richText: JSON! @richText
     }
 
-    interface HomepageFeatureItem implements Node {
+    interface IconAndTextItem implements Node {
       heading: String!
       id: ID!
       image: Image!
       richText: JSON! @richText
     }
 
-    interface HomepageFeaturesSection implements Node & Block {
+    interface IconAndTextGridSection implements Node & Block {
       blockType: String!
-      content: [HomepageFeatureItem]!
+      content: [IconAndTextItem]!
       heading: String!
       id: ID!
     }
@@ -169,15 +169,15 @@ export const createSchemaCustomization = async ({
       richText: JSON! @richText
     }
 
-    type ContentfulHomepageFeaturesSection implements Node & HomepageFeaturesSection & Block
+    type ContentfulIconAndTextGridSection implements Node & IconAndTextGridSection & Block
       @dontInfer {
       blockType: String! @blockType
-      content: [HomepageFeatureItem]! @link(from: "content___NODE")
+      content: [IconAndTextItem]! @link(from: "content___NODE")
       heading: String!
       id: ID!
     }
 
-    type ContentfulHomepageFeatureItem implements Node & HomepageFeatureItem
+    type ContentfulIconAndTextItem implements Node & IconAndTextItem
       @dontInfer {
       heading: String!
       id: ID!
