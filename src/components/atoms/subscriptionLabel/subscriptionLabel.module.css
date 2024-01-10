@@ -1,0 +1,9 @@
+.label {
+  align-items: center;
+  border: 1px dotted var(--color-primary);
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+  width: 2.5rem;
+}

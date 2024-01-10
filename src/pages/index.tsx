@@ -28,6 +28,7 @@ export const query = graphql`
       blocks: content {
         id
         blockType
+        ...CtaSection
         ...HomepageHeroSection
         ...IconAndTextGridSection
       }
