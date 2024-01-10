@@ -14,9 +14,9 @@
 
 .input {
   background: var(--color-bg);
-  color: var(--color-text);
   border: 1px dotted var(--color-primary);
   border-radius: var(--shape-radius-sm);
+  color: var(--color-text);
   padding: var(--space-sm);
 }
 
