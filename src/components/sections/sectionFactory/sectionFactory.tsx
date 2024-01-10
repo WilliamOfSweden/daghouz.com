@@ -1,6 +1,8 @@
 import React from 'react'
 
 import {
+  CtaSection,
+  CtaBannerSectionProps,
   HomepageHeroSection,
   HomepageHeroSectionProps,
   IconAndTextGridSection,
@@ -8,7 +10,9 @@ import {
 } from '../'
 
 const Blocks = {
+  CtaSection: CtaSection,
   HomepageHeroSection: HomepageHeroSection,
+  IconAndTextGridSection: IconAndTextGridSection,
 } as const
 
 type BlockTypes = keyof typeof Blocks
@@ -21,6 +25,7 @@ type WithBlockType<B = BlockTypes, P = SectionProps> = {
 } & P
 
 export type Block =
+  | WithBlockType<'CtaSection', CtaBannerSectionProps>
   | WithBlockType<'HomepageHeroSection', HomepageHeroSectionProps>
   | WithBlockType<'IconAndTextGridSection', IconAndTextGridSectionProps>
 
@@ -34,6 +39,8 @@ export const SectionFactory = ({ block }: Props) => {
       return <HomepageHeroSection {...block} />
     case 'IconAndTextGridSection':
       return <IconAndTextGridSection {...block} />
+    case 'CtaSection':
+      return <CtaSection {...block} />
     default:
       return null
   }

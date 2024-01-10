@@ -4,7 +4,7 @@ import * as styles from './button.module.css'
 
 interface Props
   extends Omit<ComponentProps<'button'>, 'children' | 'className'> {
-  buttonText: string
+  buttonText: string | undefined
 }
 
 export const Button = ({ buttonText, ...restProps }: Props) => (
