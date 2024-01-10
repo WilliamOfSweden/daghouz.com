@@ -1,5 +1,5 @@
 .li {
-  /*list-style-image: url(../../icons/check-circle.svg);*/
+  list-style-image: url(../../icons/check-circle.svg);
   list-style-type: disc;
   margin-bottom: var(--space-lg);
   padding-inline-start: var(--space-md);
