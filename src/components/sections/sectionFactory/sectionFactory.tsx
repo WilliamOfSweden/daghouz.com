@@ -5,6 +5,8 @@ import {
   CtaBannerSectionProps,
   HomepageHeroSection,
   HomepageHeroSectionProps,
+  HomepageTechSection,
+  HomepageTechSectionProps,
   IconAndTextGridSection,
   IconAndTextGridSectionProps,
 } from '../'
@@ -12,6 +14,7 @@ import {
 const Blocks = {
   CtaSection: CtaSection,
   HomepageHeroSection: HomepageHeroSection,
+  HomepageTechSection: HomepageTechSection,
   IconAndTextGridSection: IconAndTextGridSection,
 } as const
 
@@ -27,6 +30,7 @@ type WithBlockType<B = BlockTypes, P = SectionProps> = {
 export type Block =
   | WithBlockType<'CtaSection', CtaBannerSectionProps>
   | WithBlockType<'HomepageHeroSection', HomepageHeroSectionProps>
+  | WithBlockType<'HomepageTechSection', HomepageTechSectionProps>
   | WithBlockType<'IconAndTextGridSection', IconAndTextGridSectionProps>
 
 interface Props {
@@ -35,12 +39,14 @@ interface Props {
 
 export const SectionFactory = ({ block }: Props) => {
   switch (block.blockType) {
-    case 'HomepageHeroSection':
-      return <HomepageHeroSection {...block} />
-    case 'IconAndTextGridSection':
-      return <IconAndTextGridSection {...block} />
     case 'CtaSection':
       return <CtaSection {...block} />
+    case 'HomepageHeroSection':
+      return <HomepageHeroSection {...block} />
+    case 'HomepageTechSection':
+      return <HomepageTechSection {...block} />
+    case 'IconAndTextGridSection':
+      return <IconAndTextGridSection {...block} />
     default:
       return null
   }
