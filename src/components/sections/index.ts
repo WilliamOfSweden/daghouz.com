@@ -1,4 +1,5 @@
 export * from './ctaSection/'
 export * from './homepageHeroSection/'
+export * from './homepageTechSection/'
 export * from './iconAndTextGridSection/'
 export * from './sectionFactory/'

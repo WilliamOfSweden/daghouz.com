@@ -30,6 +30,7 @@ export const query = graphql`
         blockType
         ...CtaSection
         ...HomepageHeroSection
+        ...HomepageTechSection
         ...IconAndTextGridSection
       }
       id

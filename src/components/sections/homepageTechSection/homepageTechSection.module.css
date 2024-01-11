@@ -1,0 +1,13 @@
+.section {
+  margin-inline: auto;
+  padding-bottom: var(--space-2xl);
+  padding-top: var(--space-2xl);
+  width: min(calc(100% - var(--space-md) * 2), 1264px);
+}
+
+@media only screen and (min-width: 768px) {
+  .section {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
