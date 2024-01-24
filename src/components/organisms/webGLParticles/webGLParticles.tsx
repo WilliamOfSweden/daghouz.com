@@ -24,7 +24,7 @@ const WebGLParticles = (props: ComponentProps<typeof Particles>) => {
         detectRetina: true,
         particles: {
           color: {
-            value: '#01c38d',
+            value: '#01da9d',
           },
           links: {
             color: '#ffffff',

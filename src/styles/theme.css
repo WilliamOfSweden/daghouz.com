@@ -5,9 +5,9 @@
   --color-bg-alt: hsl(221, 24%, 17%);
   --color-btn-text: var(--color-bg);
   --color-logo-text: hsl(0, 0%, 73%);
-  --color-primary: hsl(163, 99%, 38%);
-  --color-primary-light: hsl(163, 99%, 43%);
-  --color-primary-extra-light: hsl(163, 99%, 48%);
+  --color-primary: hsl(163, 99%, 43%);
+  --color-primary-light: hsl(163, 99%, 48%);
+  --color-primary-extra-light: hsl(163, 99%, 53%);
   --color-shadows-alpha-40: hsla(0, 0%, 0%, 0.4);
   --color-shadows-alpha-20: hsla(0, 0%, 0%, 0.2);
   --color-text: hsl(0, 0%, 100%);
