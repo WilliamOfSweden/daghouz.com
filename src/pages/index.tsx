@@ -32,6 +32,7 @@ export const query = graphql`
         ...HomepageHeroSection
         ...HomepageTechSection
         ...IconAndTextGridSection
+        ...WorldMapSection
       }
       id
       seo {

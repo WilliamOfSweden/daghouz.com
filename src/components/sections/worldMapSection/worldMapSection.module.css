@@ -1,0 +1,15 @@
+.section {
+  margin-inline: auto;
+  padding-block-end: var(--space-2xl);
+  padding-block-start: calc(2 * var(--space-2xl));
+  width: min(1264px, 100% - 2rem);
+}
+
+.section > *:first-child {
+  margin-block-end: var(--space-2xl);
+  text-align: center;
+}
+
+.section > *:first-child > strong {
+  border-bottom: var(--space-xs) dotted var(--color-primary);
+}

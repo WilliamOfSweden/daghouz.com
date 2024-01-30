@@ -1,5 +1,6 @@
 export * from './header/'
 export * from './lazyCanvas/'
+export * from './lazyCanvas2D/'
 export * from './richTextContent/'
 export * from './sectionContentWrapper/'
 export * from './subscriptionForm/'

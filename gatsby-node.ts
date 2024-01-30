@@ -101,6 +101,12 @@ export const createSchemaCustomization = async ({
       heading: String!
       id: ID!
     }
+
+    interface WorldMapSection implements Node & Block {
+      blockType: String!
+      id: ID!
+      richText: JSON! @richText
+    }
   `)
 
   actions.createTypes(/* GraphQL */ `
@@ -182,6 +188,13 @@ export const createSchemaCustomization = async ({
       heading: String!
       id: ID!
       image: Image! @link(from: "image___NODE")
+      richText: JSON! @richText
+    }
+
+    type ContentfulWorldMapSection implements Node & WorldMapSection & Block
+      @dontInfer {
+      blockType: String! @blockType
+      id: ID!
       richText: JSON! @richText
     }
 
