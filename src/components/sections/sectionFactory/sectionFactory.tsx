@@ -9,6 +9,8 @@ import {
   HomepageTechSectionProps,
   IconAndTextGridSection,
   IconAndTextGridSectionProps,
+  WorldMapSection,
+  WorldMapSectionProps,
 } from '../'
 
 const Blocks = {
@@ -16,6 +18,7 @@ const Blocks = {
   HomepageHeroSection: HomepageHeroSection,
   HomepageTechSection: HomepageTechSection,
   IconAndTextGridSection: IconAndTextGridSection,
+  WorldMapSection: WorldMapSection,
 } as const
 
 type BlockTypes = keyof typeof Blocks
@@ -32,6 +35,7 @@ export type Block =
   | WithBlockType<'HomepageHeroSection', HomepageHeroSectionProps>
   | WithBlockType<'HomepageTechSection', HomepageTechSectionProps>
   | WithBlockType<'IconAndTextGridSection', IconAndTextGridSectionProps>
+  | WithBlockType<'WorldMapSection', WorldMapSectionProps>
 
 interface Props {
   block: Block
@@ -47,6 +51,8 @@ export const SectionFactory = ({ block }: Props) => {
       return <HomepageTechSection {...block} />
     case 'IconAndTextGridSection':
       return <IconAndTextGridSection {...block} />
+    case 'WorldMapSection':
+      return <WorldMapSection {...block} />
     default:
       return null
   }
