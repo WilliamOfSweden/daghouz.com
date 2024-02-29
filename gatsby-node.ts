@@ -102,6 +102,13 @@ export const createSchemaCustomization = async ({
       id: ID!
     }
 
+    interface PartnersSection implements Node & Block {
+      blockType: String!
+      heading: String!
+      logos: [Image]!
+      id: ID!
+    }
+
     interface WorldMapSection implements Node & Block {
       blockType: String!
       id: ID!
@@ -189,6 +196,14 @@ export const createSchemaCustomization = async ({
       id: ID!
       image: Image! @link(from: "image___NODE")
       richText: JSON! @richText
+    }
+
+    type ContentfulPartnersSection implements Node & PartnersSection & Block
+      @dontInfer {
+      blockType: String! @blockType
+      heading: String!
+      logos: [Image]! @link(from: "logos___NODE")
+      id: ID!
     }
 
     type ContentfulWorldMapSection implements Node & WorldMapSection & Block

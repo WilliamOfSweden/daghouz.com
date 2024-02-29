@@ -14,13 +14,16 @@ interface DataProps {
   }
 }
 
-const IndexPage = ({ data }: PageProps<DataProps>) => (
-  <Layout>
-    {data.homepage.blocks.map(block => (
-      <SectionFactory key={block.id} block={block} />
-    ))}
-  </Layout>
-)
+const IndexPage = ({ data }: PageProps<DataProps>) => {
+  console.log(data)
+  return (
+    <Layout>
+      {data.homepage.blocks.map(block => (
+        <SectionFactory key={block.id} block={block} />
+      ))}
+    </Layout>
+  )
+}
 
 export const query = graphql`
   {
@@ -32,6 +35,7 @@ export const query = graphql`
         ...HomepageHeroSection
         ...HomepageTechSection
         ...IconAndTextGridSection
+        ...PartnersSection
         ...WorldMapSection
       }
       id
