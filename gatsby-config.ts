@@ -39,6 +39,17 @@ const gatsbyConfig: GatsbyConfig = {
         to: '/articles',
       },
     ],
+    ogDescription: `I create blazingly fast and artfully appealing websites and progressive web apps.`,
+    ogImageUrl: `https://daghouz.com/banner.png`,
+    ogSeeAlso: 'https://twitter.com/WilliamDaghouz',
+    ogType: 'website',
+    siteDescription: `Personal website for William Daghouz, Front-end Developer.`,
+    siteTitle: `William Daghouz | Front-end Developer`,
+    siteTitleShort: `William Daghouz`,
+    siteUrl: `https://daghouz.com`,
+    twitterCard: 'summary_large_image',
+    twitterCreator: '@WilliamDaghouz',
+    twitterTitle: 'Web Developer | William Daghouz',
   },
 }
 
