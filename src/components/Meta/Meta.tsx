@@ -60,6 +60,7 @@ export const Meta = ({ description, title }: Props) => {
 
   return (
     <Fragment>
+      <html lang='en' />
       <meta content={description ?? siteDescription} name='description' />
       <meta content={ogDescription} name='twitter:description' />
       <meta content={ogDescription} property='og:description' />
