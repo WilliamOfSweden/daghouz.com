@@ -2,9 +2,9 @@ import React from 'react'
 
 import { graphql } from 'gatsby'
 
-import { Button, Heading1 } from '@components/atoms/'
+import { ContactForm, Dialog, LazyCanvas } from '@components/organisms/'
+import { Heading1 } from '@components/atoms/'
 import { RichTextContent, WebGlTwistedSphere } from '@components/molecules/'
-import { LazyCanvas } from '@components/organisms/'
 import * as styles from './homepageHeroSection.module.css'
 
 export interface HomepageHeroSectionProps {
@@ -24,7 +24,9 @@ export const HomepageHeroSection = ({
     </LazyCanvas>
     <Heading1 headingText={heading} />
     <RichTextContent richText={richText} />
-    <Button buttonText={buttonText} />
+    <Dialog dialogTitle={buttonText} triggerButtonText={buttonText}>
+      <ContactForm />
+    </Dialog>
   </section>
 )
 
