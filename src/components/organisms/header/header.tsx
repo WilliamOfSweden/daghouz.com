@@ -16,6 +16,6 @@ export interface HeaderProps {
 export const Header = ({ navLinks, socialMediaLinks }: HeaderProps) => (
   <header className={styles.header}>
     <IconLinkList links={socialMediaLinks} />
-    <MainNav navLinks={navLinks} />
+    {/*<MainNav navLinks={navLinks} />*/}
   </header>
 )
