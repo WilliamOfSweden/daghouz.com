@@ -1,7 +1,7 @@
 .section {
   margin-inline: auto;
   padding-block-end: var(--space-2xl);
-  padding-block-start: calc(2 * var(--space-2xl));
+  padding-block-start: var(--space-2xl);
   width: min(1264px, 100% - 2rem);
 }
 
@@ -12,4 +12,24 @@
 
 .section > *:first-child > strong {
   border-bottom: var(--space-xs) dotted var(--color-primary);
+}
+
+@media (min-width: 900px) {
+  .section {
+    padding-block-start: var(--space-3xl);
+  }
+
+  .section > *:first-child {
+    margin-block-end: var(--space-3xl);
+  }
+}
+
+@media (min-width: 1280px) {
+  .section {
+    padding-block-start: var(--space-5xl);
+  }
+
+  .section > *:first-child {
+    margin-block-end: var(--space-5xl);
+  }
 }

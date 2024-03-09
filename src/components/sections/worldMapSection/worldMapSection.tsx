@@ -13,22 +13,12 @@ export interface WorldMapSectionProps {
   richText: RenderRichTextData<ContentfulRichTextGatsbyReference>
 }
 
-export const WorldMapSection = ({ richText }: WorldMapSectionProps) => {
-  console.log('-=================', richText)
-  return (
-    <section className={styles.section}>
-      <RichTextContent richText={richText} />
-      {/*<h2 style={{ textAlign: 'center', marginBottom: '4rem' }}>*/}
-      {/*  */}
-      {/*  Collaborated with Companies Across*/}
-      {/*  <strong style={{ borderBottom: '4px solid var(--color-primary)' }}>*/}
-      {/*    4 Continents*/}
-      {/*  </strong>*/}
-      {/*</h2>*/}
-      <LazyCanvas2D />
-    </section>
-  )
-}
+export const WorldMapSection = ({ richText }: WorldMapSectionProps) => (
+  <section className={styles.section}>
+    <RichTextContent richText={richText} />
+    <LazyCanvas2D />
+  </section>
+)
 
 export const WorldMapSectionQuery = graphql`
   fragment WorldMapSection on WorldMapSection {
