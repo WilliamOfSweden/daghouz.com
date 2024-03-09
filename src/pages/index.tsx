@@ -4,6 +4,7 @@ import { graphql, PageProps } from 'gatsby'
 
 import { Block, SectionFactory } from '@components/sections/'
 import { Layout } from '@components/layout/'
+import { Meta } from '@components/Meta/'
 
 interface DataProps {
   homepage: {
@@ -14,16 +15,13 @@ interface DataProps {
   }
 }
 
-const IndexPage = ({ data }: PageProps<DataProps>) => {
-  console.log(data)
-  return (
-    <Layout>
-      {data.homepage.blocks.map(block => (
-        <SectionFactory key={block.id} block={block} />
-      ))}
-    </Layout>
-  )
-}
+const IndexPage = ({ data }: PageProps<DataProps>) => (
+  <Layout>
+    {data.homepage.blocks.map(block => (
+      <SectionFactory key={block.id} block={block} />
+    ))}
+  </Layout>
+)
 
 export const query = graphql`
   {
@@ -41,22 +39,14 @@ export const query = graphql`
       id
       seo {
         description
-        ogDescription
-        ogImageUrl
-        ogSeeAlso
-        ogTitle
-        ogType
-        ogUrl
         title
-        twitterCard
-        twitterCreator
-        twitterDescription
-        twitterImageUrl
-        twitterTitle
-        twitterUrl
       }
     }
   }
 `
 
 export default IndexPage
+
+export const Head = ({ data: { homepage } }: PageProps<DataProps>) => (
+  <Meta description={homepage.description} title={homepage.title} />
+)
