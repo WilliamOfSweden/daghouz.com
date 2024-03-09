@@ -25,6 +25,11 @@ export const SubscriptionForm = ({
     name='subscription-form'
     {...restProps}
   >
+    <input name='form-name' type='hidden' value='subscription-form' />
+    <p hidden>
+      <label htmlFor='bot-field'>BOT FIELD</label>
+      <input name='bot-field' />
+    </p>
     <SubscriptionLabel aria-label={emailInputLabelAriaLabel} />
     <input
       id='email'

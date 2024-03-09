@@ -38,6 +38,7 @@ export const ContactForm = () => {
       method='POST'
       name='contact-form'
     >
+      <input name='form-name' type='hidden' value='contact-form' />
       <p hidden>
         <label htmlFor='bot-field'>BOT FIELD</label>
         <input name='bot-field' />
