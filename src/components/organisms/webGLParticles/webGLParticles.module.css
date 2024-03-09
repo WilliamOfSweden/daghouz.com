@@ -3,12 +3,17 @@
 }
 
 .fallback {
-  aspect-ratio: 1000 / 917.628;
-  flex: 6;
+  display: none;
 }
 
 @media screen and (min-width: 768px) {
   .container {
+    aspect-ratio: 1000 / 917.628;
+    display: block;
+    flex: 6;
+  }
+
+  .fallback {
     aspect-ratio: 1000 / 917.628;
     display: block;
     flex: 6;
