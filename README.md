@@ -1,4 +1,4 @@
-# Personal website & portfolio
+# Personal website
 
 [![Screenshot of landing page.](https://www.daghouz.com/banner.png)](https://daghouz.com)
 [www.daghouz.com](https://daghouz.com 'Live demo!')
