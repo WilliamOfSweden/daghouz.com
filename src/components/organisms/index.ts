@@ -1,3 +1,5 @@
+export * from './contactForm/'
+export * from './dialog/'
 export * from './header/'
 export * from './lazyCanvas/'
 export * from './lazyCanvas2D/'

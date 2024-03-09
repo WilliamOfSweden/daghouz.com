@@ -62,6 +62,15 @@ export const createSchemaCustomization = async ({
       submitButtonText: String!
     }
 
+    interface ContactForm implements Node {
+      id: ID!
+      companyInputLabelText: String!
+      emailInputLabelText: String!
+      messageInputLabelText: String!
+      nameInputLabelText: String!
+      submitButtonText: String!
+    }
+
     interface CtaSection implements Node & Block {
       blockType: String!
       content: SubscriptionForm
@@ -149,6 +158,15 @@ export const createSchemaCustomization = async ({
       id: ID!
       emailInputLabelAriaLabel: String!
       buttonAriaLabel: String!
+      submitButtonText: String!
+    }
+
+    type ContentfulContactForm implements Node & ContactForm @dontInfer {
+      id: ID!
+      companyInputLabelText: String!
+      emailInputLabelText: String!
+      messageInputLabelText: String!
+      nameInputLabelText: String!
       submitButtonText: String!
     }
 
