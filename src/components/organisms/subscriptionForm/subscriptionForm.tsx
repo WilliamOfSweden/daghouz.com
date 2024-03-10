@@ -6,7 +6,7 @@ import { Button, SubscriptionLabel } from '@components/atoms/'
 interface Props extends ComponentProps<'form'> {
   buttonAriaLabel: string | undefined
   buttonText: string | undefined
-  emailInputLabelAriaLabel?: string | undefined
+  emailInputLabelAriaLabel: string | undefined
 }
 
 export const SubscriptionForm = ({
