@@ -6,6 +6,7 @@ dotenv.config({
 })
 
 const gatsbyConfig: GatsbyConfig = {
+  partytownProxiedURLs: [`https://static.hotjar.com/c/hotjar-3033272.js?sv=6`],
   plugins: [
     {
       resolve: 'gatsby-source-contentful',
@@ -43,12 +44,12 @@ const gatsbyConfig: GatsbyConfig = {
     ogImageUrl: `https://daghouz.com/banner.png`,
     ogSeeAlso: 'https://twitter.com/WilliamDaghouz',
     ogType: 'website',
-    siteDescription: `Personal website for William Daghouz, Front-end Developer.`,
-    siteTitle: `William Daghouz | Front-end Developer`,
+    siteDescription: `Personal website for William Daghouz, Web Developer.`,
+    siteTitle: `William Daghouz | Web Developer`,
     siteTitleShort: `William Daghouz`,
     siteUrl: `https://daghouz.com`,
     twitterCard: 'summary_large_image',
-    twitterCreator: '@WilliamDaghouz',
+    twitterCreator: '@tughuz',
     twitterTitle: 'Web Developer | William Daghouz',
   },
 }
