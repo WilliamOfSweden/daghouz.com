@@ -1,10 +1,11 @@
-import React, { ComponentProps } from 'react'
+import React from 'react'
 
+import { ShaderMaterialProps } from '@react-three/fiber'
 import { webGlTwistFragmentShader } from './webGlTwistFragmentShader'
 import { webGlTwistVertexShader } from './webGlTwistVertexShader'
 
 export const WebGlTwistShaderMaterial = (
-  props: Omit<ComponentProps<'shaderMaterial'>, 'children'>,
+  props: Omit<ShaderMaterialProps, 'children'>,
 ) => (
   <shaderMaterial
     defines={{ PI: Math.PI }}

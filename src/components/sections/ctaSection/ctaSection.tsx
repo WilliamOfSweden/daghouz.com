@@ -15,9 +15,9 @@ export interface CtaBannerSectionProps {
   richText: RenderRichTextData<ContentfulRichTextGatsbyReference>
   submitFormContent: {
     submitButtonText: string | undefined
-    emailInputLabelAriaLabel?: string | undefined
+    emailInputLabelAriaLabel: string | undefined
   }
-  emailInputLabelAriaLabel?: string | undefined
+  emailInputLabelAriaLabel: string | undefined
 }
 
 export const CtaSection = ({

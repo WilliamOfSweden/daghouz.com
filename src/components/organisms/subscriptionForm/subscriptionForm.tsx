@@ -4,7 +4,7 @@ import * as subscribeFormStyles from './subscriptionForm.module.css'
 import { Button, SubscriptionLabel } from '@components/atoms/'
 
 interface Props extends ComponentProps<'form'> {
-  buttonAriaLabel?: string | undefined
+  buttonAriaLabel: string | undefined
   buttonText: string | undefined
   emailInputLabelAriaLabel?: string | undefined
 }
