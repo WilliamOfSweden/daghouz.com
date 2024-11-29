@@ -6506,10 +6506,10 @@ glsl-resolve@0.0.1:
     resolve "^0.6.1"
     xtend "^2.1.2"
 
-glsl-rotate@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/glsl-rotate/-/glsl-rotate-2.0.0.tgz#2f82ceb50e371f6ba4462e23d8cdc676ba2a513d"
-  integrity sha512-g8EUX6o88Bawe33uta2jPjzQBTHE+AHF8OUErAKqo3X76PY049M9yKJqsKDYB213D4f6nWK7tj/mcox/4tLvOA==
+glsl-rotate@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/glsl-rotate/-/glsl-rotate-2.0.1.tgz#dddbeab2bd2b4b388161e4e62fc6c5c5c0f59ee2"
+  integrity sha512-+of2zdsHn03EDAHHlQOqdPRFd7kL5lH4GOquQSWIFze44Qkq1+1mBODdR+G2Nx73cEE+HA+rStPViKoz+Ydd5w==
 
 glsl-token-assignments@^2.0.0:
   version "2.0.2"
