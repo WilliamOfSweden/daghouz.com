@@ -1173,13 +1173,12 @@
     "@vercel/stega" "^0.1.2"
     json-pointer "^0.6.2"
 
-"@contentful/rich-text-html-renderer@17.1.0":
-  version "17.1.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-17.1.0.tgz#ef063dd9cb915c9fb13d3aac5277536b2617e8d8"
-  integrity sha512-ALyLVFnZZNr5o7at/JuZk5Ve/AjLJfzPllTade66vYiev5J5wVVxHzESTQ3/0Xpg4dCeaB3JvM5YN/iEZoceyA==
+"@contentful/rich-text-html-renderer@17.2.3":
+  version "17.2.3"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-html-renderer/-/rich-text-html-renderer-17.2.3.tgz#37a17b6086f57c3e414f1c2f43157e11cd5cdda6"
+  integrity sha512-n1KnEVm1P4ZGFII6X9DLCgiNkysuuOK9cT1PzG0UYka+kFEaKj5KNdF+VuF3g04wSas1y3Su7SbAUC0ICqOhFw==
   dependencies:
-    "@contentful/rich-text-types" "^17.1.0"
-    escape-html "^1.0.3"
+    "@contentful/rich-text-types" "^17.2.7"
 
 "@contentful/rich-text-react-renderer@^15.22.11":
   version "15.22.11"
@@ -1193,12 +1192,10 @@
   resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-16.8.5.tgz#832c8b428612f5181908bc1033c6ef9f48f1ce83"
   integrity sha512-q18RJuJCOuYveGiCIjE5xLCQc5lZ3L2Qgxrlg/H2YEobDFqdtmklazRi1XwEWaK3tMg6yVXBzKKkQfLB4qW14A==
 
-"@contentful/rich-text-types@^17.1.0":
-  version "17.1.0"
-  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-17.1.0.tgz#48be22639d2b645dc3d41a8f48c7792be532029b"
-  integrity sha512-L0rok1VoMUbtQPJefR0Oxr5z1ow9/ZDIvuNWu16VT4IVVOKkeL4sVsjNj08cCT3ON+HUUzbPWVzyTuyvee2TSg==
-  dependencies:
-    is-plain-obj "^3.0.0"
+"@contentful/rich-text-types@^17.2.7":
+  version "17.2.7"
+  resolved "https://registry.yarnpkg.com/@contentful/rich-text-types/-/rich-text-types-17.2.7.tgz#fdb485298c0fb18504277ac75ea8738f0bc6e208"
+  integrity sha512-aIdozk8vk5gsYcallOrwEiL6+GSlMXZorDOmiVELfpbVaXMJPJPlf2CBw3LUzviAqCw0UPQcKHHCwG7SdY7u5w==
 
 "@eslint-community/eslint-utils@^4.2.0":
   version "4.4.0"
@@ -5186,7 +5183,7 @@ escalade@^3.2.0:
   resolved "https://registry.yarnpkg.com/escalade/-/escalade-3.2.0.tgz#011a3f69856ba189dffa7dc8fcce99d2a87903e5"
   integrity sha512-WUj2qlxaQtO4g6Pq5c29GTcWGDyd8itL8zTlipgECz3JesAiiOKotd8JU6otB3PACgG6xkJUyVhboMS+bje/jA==
 
-escape-html@^1.0.3, escape-html@~1.0.3:
+escape-html@~1.0.3:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/escape-html/-/escape-html-1.0.3.tgz#0258eae4d3d0c0974de1c169188ef0051d1d1988"
   integrity sha512-NiSupZ4OeuGwr68lGIeym/ksIZMJodUGOSCZ/FSnTxcrekbvqrgdUxlJOMpijaKZVjAJrWrGs/6Jy8OMuyj9ow==
@@ -7304,11 +7301,6 @@ is-online@^10.0.0:
     p-any "^4.0.0"
     p-timeout "^5.1.0"
     public-ip "^5.0.0"
-
-is-plain-obj@^3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/is-plain-obj/-/is-plain-obj-3.0.0.tgz#af6f2ea14ac5a646183a5bbdb5baabbc156ad9d7"
-  integrity sha512-gwsOE28k+23GP1B6vFl1oVh/WOzmawBrKwo5Ev6wMKzPkaXaCDIQKzLnvsA42DRlbVTWorkgTKIviAKCWkfUwA==
 
 is-plain-object@^2.0.4:
   version "2.0.4"
